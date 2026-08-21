@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Multitrac.Api/Multitrac.Api.csproj" />
+    <Project Path="src/Multitrac.Application/Multitrac.Application.csproj" />
+    <Project Path="src/Multitrac.Domain/Multitrac.Domain.csproj" />
+    <Project Path="src/Multitrac.Infrastructure/Multitrac.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Multitrac.IntegrationTests/Multitrac.IntegrationTests.csproj" />
+    <Project Path="tests/Multitrac.UnitTests/Multitrac.UnitTests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,15 @@
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\obj\Debug\net10.0\Multitrac.Application.csproj.AssemblyReference.cache
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\obj\Debug\net10.0\Multitrac.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\obj\Debug\net10.0\Multitrac.Application.AssemblyInfoInputs.cache
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\obj\Debug\net10.0\Multitrac.Application.AssemblyInfo.cs
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\obj\Debug\net10.0\Multitrac.Application.csproj.CoreCompileInputs.cache
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\bin\Debug\net10.0\Multitrac.Application.deps.json
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\bin\Debug\net10.0\Multitrac.Application.dll
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\bin\Debug\net10.0\Multitrac.Application.pdb
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\bin\Debug\net10.0\Multitrac.Domain.dll
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\bin\Debug\net10.0\Multitrac.Domain.pdb
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\obj\Debug\net10.0\Multitra.200C05CD.Up2Date
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\obj\Debug\net10.0\Multitrac.Application.dll
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\obj\Debug\net10.0\refint\Multitrac.Application.dll
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\obj\Debug\net10.0\Multitrac.Application.pdb
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\obj\Debug\net10.0\ref\Multitrac.Application.dll
