@@ -11,10 +11,14 @@ namespace Multitrac.Api.Controllers;
 public class ClienteController : ControllerBase
 {
     private readonly IService<ClienteDto, Cliente> _service;
+    private readonly IValidator<ClienteDto> _validator;
 
-    public ClienteController(IService<ClienteDto, Cliente> service)
+    public ClienteController(
+        IService<ClienteDto, Cliente> service,
+        IValidator<ClienteDto> validator)
     {
         _service = service;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -42,6 +46,10 @@ public class ClienteController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<ClienteDto>> Create([FromBody] ClienteDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         var result = await _service.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = result.IdCliente }, result);
     }
@@ -49,6 +57,10 @@ public class ClienteController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] ClienteDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         await _service.UpdateAsync(id, dto);
         return NoContent();
     }
@@ -66,10 +78,14 @@ public class ClienteController : ControllerBase
 public class ProveedorController : ControllerBase
 {
     private readonly IService<ProveedorDto, Proveedor> _service;
+    private readonly IValidator<ProveedorDto> _validator;
 
-    public ProveedorController(IService<ProveedorDto, Proveedor> service)
+    public ProveedorController(
+        IService<ProveedorDto, Proveedor> service,
+        IValidator<ProveedorDto> validator)
     {
         _service = service;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -97,6 +113,10 @@ public class ProveedorController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<ProveedorDto>> Create([FromBody] ProveedorDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         var result = await _service.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = result.PrvCod }, result);
     }
@@ -104,6 +124,10 @@ public class ProveedorController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] ProveedorDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         await _service.UpdateAsync(id, dto);
         return NoContent();
     }
@@ -121,10 +145,14 @@ public class ProveedorController : ControllerBase
 public class AreaController : ControllerBase
 {
     private readonly IService<AreaDto, Area> _service;
+    private readonly IValidator<AreaDto> _validator;
 
-    public AreaController(IService<AreaDto, Area> service)
+    public AreaController(
+        IService<AreaDto, Area> service,
+        IValidator<AreaDto> validator)
     {
         _service = service;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -152,6 +180,10 @@ public class AreaController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<AreaDto>> Create([FromBody] AreaDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         var result = await _service.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = result.AreCod }, result);
     }
@@ -159,6 +191,10 @@ public class AreaController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] AreaDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         await _service.UpdateAsync(id, dto);
         return NoContent();
     }
@@ -176,10 +212,14 @@ public class AreaController : ControllerBase
 public class TipoDocumentoController : ControllerBase
 {
     private readonly IService<TipoDocumentoDto, TipoDocumento> _service;
+    private readonly IValidator<TipoDocumentoDto> _validator;
 
-    public TipoDocumentoController(IService<TipoDocumentoDto, TipoDocumento> service)
+    public TipoDocumentoController(
+        IService<TipoDocumentoDto, TipoDocumento> service,
+        IValidator<TipoDocumentoDto> validator)
     {
         _service = service;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -207,6 +247,10 @@ public class TipoDocumentoController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<TipoDocumentoDto>> Create([FromBody] TipoDocumentoDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         var result = await _service.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = result.TipCod }, result);
     }
@@ -214,6 +258,10 @@ public class TipoDocumentoController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] TipoDocumentoDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         await _service.UpdateAsync(id, dto);
         return NoContent();
     }
@@ -231,10 +279,14 @@ public class TipoDocumentoController : ControllerBase
 public class EmpresaController : ControllerBase
 {
     private readonly IService<EmpresaDto, Empresa> _service;
+    private readonly IValidator<EmpresaDto> _validator;
 
-    public EmpresaController(IService<EmpresaDto, Empresa> service)
+    public EmpresaController(
+        IService<EmpresaDto, Empresa> service,
+        IValidator<EmpresaDto> validator)
     {
         _service = service;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -262,6 +314,10 @@ public class EmpresaController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<EmpresaDto>> Create([FromBody] EmpresaDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         var result = await _service.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = result.IdEmpresa }, result);
     }
@@ -269,6 +325,10 @@ public class EmpresaController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] EmpresaDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         await _service.UpdateAsync(id, dto);
         return NoContent();
     }
@@ -286,10 +346,14 @@ public class EmpresaController : ControllerBase
 public class ConvoyDataController : ControllerBase
 {
     private readonly IService<ConvoyDto, Convoy> _service;
+    private readonly IValidator<ConvoyDto> _validator;
 
-    public ConvoyDataController(IService<ConvoyDto, Convoy> service)
+    public ConvoyDataController(
+        IService<ConvoyDto, Convoy> service,
+        IValidator<ConvoyDto> validator)
     {
         _service = service;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -317,6 +381,10 @@ public class ConvoyDataController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<ConvoyDto>> Create([FromBody] ConvoyDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         var result = await _service.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = result.IdConvoy }, result);
     }
@@ -324,6 +392,10 @@ public class ConvoyDataController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] ConvoyDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         await _service.UpdateAsync(id, dto);
         return NoContent();
     }
@@ -341,10 +413,14 @@ public class ConvoyDataController : ControllerBase
 public class TurnoDataController : ControllerBase
 {
     private readonly IService<TurnoDto, Turno> _service;
+    private readonly IValidator<TurnoDto> _validator;
 
-    public TurnoDataController(IService<TurnoDto, Turno> service)
+    public TurnoDataController(
+        IService<TurnoDto, Turno> service,
+        IValidator<TurnoDto> validator)
     {
         _service = service;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -372,6 +448,10 @@ public class TurnoDataController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<TurnoDto>> Create([FromBody] TurnoDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         var result = await _service.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = result.IdTurno }, result);
     }
@@ -379,6 +459,10 @@ public class TurnoDataController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] TurnoDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         await _service.UpdateAsync(id, dto);
         return NoContent();
     }

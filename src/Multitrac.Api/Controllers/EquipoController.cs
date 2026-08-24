@@ -1,3 +1,4 @@
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Multitrac.Application.DTOs;
 using Multitrac.Application.Interfaces;
@@ -10,10 +11,14 @@ namespace Multitrac.Api.Controllers;
 public class EquipoDataController : ControllerBase
 {
     private readonly IService<EquipoDto, Equipo> _service;
+    private readonly IValidator<EquipoDto> _validator;
 
-    public EquipoDataController(IService<EquipoDto, Equipo> service)
+    public EquipoDataController(
+        IService<EquipoDto, Equipo> service,
+        IValidator<EquipoDto> validator)
     {
         _service = service;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -41,6 +46,10 @@ public class EquipoDataController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<EquipoDto>> Create([FromBody] EquipoDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         var result = await _service.CreateAsync(dto);
         return Created(string.Empty, result);
     }
@@ -48,6 +57,10 @@ public class EquipoDataController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] EquipoDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         await _service.UpdateAsync(id, dto);
         return NoContent();
     }
@@ -65,10 +78,14 @@ public class EquipoDataController : ControllerBase
 public class EquipoCombustibleController : ControllerBase
 {
     private readonly IService<EquipoCombustibleDto, EquipoCombustible> _service;
+    private readonly IValidator<EquipoCombustibleDto> _validator;
 
-    public EquipoCombustibleController(IService<EquipoCombustibleDto, EquipoCombustible> service)
+    public EquipoCombustibleController(
+        IService<EquipoCombustibleDto, EquipoCombustible> service,
+        IValidator<EquipoCombustibleDto> validator)
     {
         _service = service;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -96,6 +113,10 @@ public class EquipoCombustibleController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<EquipoCombustibleDto>> Create([FromBody] EquipoCombustibleDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         var result = await _service.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = result.IdCombustibleEquipo }, result);
     }
@@ -103,6 +124,10 @@ public class EquipoCombustibleController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] EquipoCombustibleDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         await _service.UpdateAsync(id, dto);
         return NoContent();
     }
@@ -120,10 +145,14 @@ public class EquipoCombustibleController : ControllerBase
 public class EquipoKilometrajeController : ControllerBase
 {
     private readonly IService<EquipoKilometrajeDto, EquipoKilometraje> _service;
+    private readonly IValidator<EquipoKilometrajeDto> _validator;
 
-    public EquipoKilometrajeController(IService<EquipoKilometrajeDto, EquipoKilometraje> service)
+    public EquipoKilometrajeController(
+        IService<EquipoKilometrajeDto, EquipoKilometraje> service,
+        IValidator<EquipoKilometrajeDto> validator)
     {
         _service = service;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -151,6 +180,10 @@ public class EquipoKilometrajeController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<EquipoKilometrajeDto>> Create([FromBody] EquipoKilometrajeDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         var result = await _service.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = result.IdEquipoKilometraje }, result);
     }
@@ -158,6 +191,10 @@ public class EquipoKilometrajeController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] EquipoKilometrajeDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         await _service.UpdateAsync(id, dto);
         return NoContent();
     }
@@ -175,10 +212,14 @@ public class EquipoKilometrajeController : ControllerBase
 public class EquipoMantenimientoController : ControllerBase
 {
     private readonly IService<EquipoMantenimientoDto, EquipoMantenimiento> _service;
+    private readonly IValidator<EquipoMantenimientoDto> _validator;
 
-    public EquipoMantenimientoController(IService<EquipoMantenimientoDto, EquipoMantenimiento> service)
+    public EquipoMantenimientoController(
+        IService<EquipoMantenimientoDto, EquipoMantenimiento> service,
+        IValidator<EquipoMantenimientoDto> validator)
     {
         _service = service;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -206,6 +247,10 @@ public class EquipoMantenimientoController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<EquipoMantenimientoDto>> Create([FromBody] EquipoMantenimientoDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         var result = await _service.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = result.IdEquipoMantenimiento }, result);
     }
@@ -213,6 +258,10 @@ public class EquipoMantenimientoController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] EquipoMantenimientoDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         await _service.UpdateAsync(id, dto);
         return NoContent();
     }

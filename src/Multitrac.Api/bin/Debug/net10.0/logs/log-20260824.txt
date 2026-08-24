@@ -309,3 +309,200 @@ OFFSET @p ROWS FETCH NEXT @p0 ROWS ONLY
 2026-08-24 17:12:32.660 -05:00 [INF] Executed action Multitrac.Api.Controllers.PersonalDataController.GetPaged (Multitrac.Api) in 444.8376ms
 2026-08-24 17:12:32.662 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.PersonalDataController.GetPaged (Multitrac.Api)'
 2026-08-24 17:12:32.664 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/personaldata/paged?page=1&pageSize=5&search=GARCIA - 200 null application/json; charset=utf-8 463.4781ms
+2026-08-24 17:52:38.815 -05:00 [INF] Starting Multitrac API
+2026-08-24 17:52:38.906 -05:00 [INF] Now listening on: http://localhost:5100
+2026-08-24 17:52:38.909 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-24 17:52:38.910 -05:00 [INF] Hosting environment: Production
+2026-08-24 17:52:38.911 -05:00 [INF] Content root path: C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Api\bin\Debug\net10.0
+2026-08-24 17:52:46.232 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/moneda - application/json 44
+2026-08-24 17:52:46.268 -05:00 [WRN] Failed to determine the https port for redirect.
+2026-08-24 17:52:46.272 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.MonedaController.Create (Multitrac.Api)'
+2026-08-24 17:52:46.303 -05:00 [INF] Route matched with {action = "Create", controller = "Moneda"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.MonedaDto]] Create(Multitrac.Application.DTOs.MonedaDto) on controller Multitrac.Api.Controllers.MonedaController (Multitrac.Api).
+2026-08-24 17:52:46.708 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.List`1[[FluentValidation.Results.ValidationFailure, FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0]]'.
+2026-08-24 17:52:46.737 -05:00 [INF] Executed action Multitrac.Api.Controllers.MonedaController.Create (Multitrac.Api) in 429.8395ms
+2026-08-24 17:52:46.739 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.MonedaController.Create (Multitrac.Api)'
+2026-08-24 17:52:46.742 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/moneda - 400 null application/json; charset=utf-8 512.0314ms
+2026-08-24 17:52:46.883 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/moneda - application/json 54
+2026-08-24 17:52:46.888 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.MonedaController.Create (Multitrac.Api)'
+2026-08-24 17:52:46.890 -05:00 [INF] Route matched with {action = "Create", controller = "Moneda"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.MonedaDto]] Create(Multitrac.Application.DTOs.MonedaDto) on controller Multitrac.Api.Controllers.MonedaController (Multitrac.Api).
+2026-08-24 17:52:47.546 -05:00 [WRN] No store type was specified for the decimal property 'Comision' on entity type 'Afp'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.548 -05:00 [WRN] No store type was specified for the decimal property 'PagoxMes' on entity type 'Area'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.549 -05:00 [WRN] No store type was specified for the decimal property 'Alto' on entity type 'Equipo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.551 -05:00 [WRN] No store type was specified for the decimal property 'Ancho' on entity type 'Equipo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.552 -05:00 [WRN] No store type was specified for the decimal property 'CargaUtil' on entity type 'Equipo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.553 -05:00 [WRN] No store type was specified for the decimal property 'KilometrajeMantto' on entity type 'Equipo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.554 -05:00 [WRN] No store type was specified for the decimal property 'Largo' on entity type 'Equipo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.555 -05:00 [WRN] No store type was specified for the decimal property 'Cantidad' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.556 -05:00 [WRN] No store type was specified for the decimal property 'CantidadContabilidad' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.556 -05:00 [WRN] No store type was specified for the decimal property 'Costo' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.557 -05:00 [WRN] No store type was specified for the decimal property 'CostoUnitario' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.558 -05:00 [WRN] No store type was specified for the decimal property 'Descuento' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.559 -05:00 [WRN] No store type was specified for the decimal property 'KilometrajeDespacho' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.562 -05:00 [WRN] No store type was specified for the decimal property 'Kilometraje' on entity type 'EquipoKilometraje'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.563 -05:00 [WRN] No store type was specified for the decimal property 'Budget' on entity type 'Flota'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.565 -05:00 [WRN] No store type was specified for the decimal property 'CostoFlete' on entity type 'Operacion'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.566 -05:00 [WRN] No store type was specified for the decimal property 'Dimension' on entity type 'Operacion'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.567 -05:00 [WRN] No store type was specified for the decimal property 'KilometrajeRecorrido' on entity type 'Operacion'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.568 -05:00 [WRN] No store type was specified for the decimal property 'Peso' on entity type 'Operacion'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.569 -05:00 [WRN] No store type was specified for the decimal property 'ValorRefrencial' on entity type 'Operacion'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.570 -05:00 [WRN] No store type was specified for the decimal property 'CalculoComision' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.570 -05:00 [WRN] No store type was specified for the decimal property 'CalculoComisionTerceros' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.571 -05:00 [WRN] No store type was specified for the decimal property 'CalculoLiquidez' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.572 -05:00 [WRN] No store type was specified for the decimal property 'ComisionMultitrac' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.573 -05:00 [WRN] No store type was specified for the decimal property 'ComisionTerceros' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.574 -05:00 [WRN] No store type was specified for the decimal property 'PesoPromedioTn' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.575 -05:00 [WRN] No store type was specified for the decimal property 'PorcFlete' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.576 -05:00 [WRN] No store type was specified for the decimal property 'ValorReferencial' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.578 -05:00 [WRN] No store type was specified for the decimal property 'ValorVentaFlete' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.580 -05:00 [WRN] No store type was specified for the decimal property 'Peso' on entity type 'OperacionGeneral'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.581 -05:00 [WRN] No store type was specified for the decimal property 'Cantidad' on entity type 'PersonalEppKardex'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:47.582 -05:00 [WRN] No store type was specified for the decimal property 'Concentracion' on entity type 'TipoCarga'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-08-24 17:52:48.262 -05:00 [ERR] Failed executing DbCommand (110ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 50) (DbType = AnsiString), @p2='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [MONEDA] ([Id_Moneda], [Abreviatura_Moneda], [NombreMoneda])
+VALUES (@p0, @p1, @p2);
+2026-08-24 17:52:48.293 -05:00 [ERR] An exception occurred in the database while saving changes for context type 'Multitrac.Infrastructure.Data.BdmultitracContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_MONEDA'. Cannot insert duplicate key in object 'dbo.MONEDA'. The duplicate key value is (0).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:3036f78c-6922-4ca2-92f0-9011248a0e55
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_MONEDA'. Cannot insert duplicate key in object 'dbo.MONEDA'. The duplicate key value is (0).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:3036f78c-6922-4ca2-92f0-9011248a0e55
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-08-24 17:52:48.307 -05:00 [INF] Executed action Multitrac.Api.Controllers.MonedaController.Create (Multitrac.Api) in 1415.2979ms
+2026-08-24 17:52:48.308 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.MonedaController.Create (Multitrac.Api)'
+2026-08-24 17:52:48.313 -05:00 [ERR] Connection id "0HNO269L1TF26", Request id "0HNO269L1TF26:00000002": An unhandled exception was thrown by the application.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_MONEDA'. Cannot insert duplicate key in object 'dbo.MONEDA'. The duplicate key value is (0).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:3036f78c-6922-4ca2-92f0-9011248a0e55
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Multitrac.Infrastructure.Repositories.UnitOfWork.SaveChangesAsync(CancellationToken cancellationToken) in C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Infrastructure\Repositories\UnitOfWork.cs:line 29
+   at Multitrac.Application.Services.MonedaService.CreateAsync(MonedaDto dto) in C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\Services\CatalogServices.cs:line 29
+   at Multitrac.Api.Controllers.MonedaController.Create(MonedaDto dto) in C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Api\Controllers\MonedaController.cs:line 53
+   at lambda_method4(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2026-08-24 17:52:48.332 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/moneda - 500 0 null 1449.587ms
+2026-08-24 17:52:48.335 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/operaciongeneral - application/json 33
+2026-08-24 17:52:48.337 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.OperacionGeneralController.Create (Multitrac.Api)'
+2026-08-24 17:52:48.346 -05:00 [INF] Route matched with {action = "Create", controller = "OperacionGeneral"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.OperacionGeneralDto]] Create(Multitrac.Application.DTOs.OperacionGeneralDto) on controller Multitrac.Api.Controllers.OperacionGeneralController (Multitrac.Api).
+2026-08-24 17:52:48.375 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.List`1[[FluentValidation.Results.ValidationFailure, FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0]]'.
+2026-08-24 17:52:48.381 -05:00 [INF] Executed action Multitrac.Api.Controllers.OperacionGeneralController.Create (Multitrac.Api) in 34.2041ms
+2026-08-24 17:52:48.383 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.OperacionGeneralController.Create (Multitrac.Api)'
+2026-08-24 17:52:48.384 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/operaciongeneral - 400 null application/json; charset=utf-8 48.8459ms
+2026-08-24 17:52:48.387 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/equipodata - application/json 32
+2026-08-24 17:52:48.389 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.EquipoDataController.Create (Multitrac.Api)'
+2026-08-24 17:52:48.396 -05:00 [INF] Route matched with {action = "Create", controller = "EquipoData"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.EquipoDto]] Create(Multitrac.Application.DTOs.EquipoDto) on controller Multitrac.Api.Controllers.EquipoDataController (Multitrac.Api).
+2026-08-24 17:52:48.432 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.List`1[[FluentValidation.Results.ValidationFailure, FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0]]'.
+2026-08-24 17:52:48.434 -05:00 [INF] Executed action Multitrac.Api.Controllers.EquipoDataController.Create (Multitrac.Api) in 35.6684ms
+2026-08-24 17:52:48.435 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.EquipoDataController.Create (Multitrac.Api)'
+2026-08-24 17:52:48.435 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/equipodata - 400 null application/json; charset=utf-8 48.2841ms
+2026-08-24 17:52:48.439 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/cliente - application/json 2
+2026-08-24 17:52:48.441 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.ClienteController.Create (Multitrac.Api)'
+2026-08-24 17:52:48.449 -05:00 [INF] Route matched with {action = "Create", controller = "Cliente"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.ClienteDto]] Create(Multitrac.Application.DTOs.ClienteDto) on controller Multitrac.Api.Controllers.ClienteController (Multitrac.Api).
+2026-08-24 17:52:48.465 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.List`1[[FluentValidation.Results.ValidationFailure, FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0]]'.
+2026-08-24 17:52:48.466 -05:00 [INF] Executed action Multitrac.Api.Controllers.ClienteController.Create (Multitrac.Api) in 16.1015ms
+2026-08-24 17:52:48.467 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.ClienteController.Create (Multitrac.Api)'
+2026-08-24 17:52:48.468 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/cliente - 400 null application/json; charset=utf-8 29.0765ms
+2026-08-24 17:52:48.472 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/moneda/1 - null null
+2026-08-24 17:52:48.474 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.MonedaController.GetById (Multitrac.Api)'
+2026-08-24 17:52:48.483 -05:00 [INF] Route matched with {action = "GetById", controller = "Moneda"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.MonedaDto]] GetById(Int32) on controller Multitrac.Api.Controllers.MonedaController (Multitrac.Api).
+2026-08-24 17:52:48.797 -05:00 [INF] Executed DbCommand (10ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id_Moneda], [m].[Abreviatura_Moneda], [m].[NombreMoneda]
+FROM [MONEDA] AS [m]
+WHERE [m].[Id_Moneda] = @p
+2026-08-24 17:52:48.818 -05:00 [INF] Executing OkObjectResult, writing value of type 'Multitrac.Application.DTOs.MonedaDto'.
+2026-08-24 17:52:48.821 -05:00 [INF] Executed action Multitrac.Api.Controllers.MonedaController.GetById (Multitrac.Api) in 336.4202ms
+2026-08-24 17:52:48.822 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.MonedaController.GetById (Multitrac.Api)'
+2026-08-24 17:52:48.823 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/moneda/1 - 200 null application/json; charset=utf-8 351.0214ms
+2026-08-24 17:52:48.875 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5100/api/moneda/6 - null 0
+2026-08-24 17:52:48.879 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.MonedaController.Delete (Multitrac.Api)'
+2026-08-24 17:52:48.885 -05:00 [INF] Route matched with {action = "Delete", controller = "Moneda"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller Multitrac.Api.Controllers.MonedaController (Multitrac.Api).
+2026-08-24 17:52:48.903 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id_Moneda], [m].[Abreviatura_Moneda], [m].[NombreMoneda]
+FROM [MONEDA] AS [m]
+WHERE [m].[Id_Moneda] = @p
+2026-08-24 17:52:48.909 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-08-24 17:52:48.911 -05:00 [INF] Executed action Multitrac.Api.Controllers.MonedaController.Delete (Multitrac.Api) in 24.5805ms
+2026-08-24 17:52:48.913 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.MonedaController.Delete (Multitrac.Api)'
+2026-08-24 17:52:48.914 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5100/api/moneda/6 - 204 null null 38.1864ms

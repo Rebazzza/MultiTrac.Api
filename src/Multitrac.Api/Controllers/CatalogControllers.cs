@@ -11,10 +11,12 @@ namespace Multitrac.Api.Controllers;
 public class FlotaController : ControllerBase
 {
     private readonly IService<FlotaDto, Flota> _service;
+    private readonly IValidator<FlotaDto> _validator;
 
-    public FlotaController(IService<FlotaDto, Flota> service)
+    public FlotaController(IService<FlotaDto, Flota> service, IValidator<FlotaDto> validator)
     {
         _service = service;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -42,6 +44,10 @@ public class FlotaController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<FlotaDto>> Create([FromBody] FlotaDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         var result = await _service.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = result.IdFlota }, result);
     }
@@ -49,6 +55,10 @@ public class FlotaController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] FlotaDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         await _service.UpdateAsync(id, dto);
         return NoContent();
     }
@@ -66,10 +76,12 @@ public class FlotaController : ControllerBase
 public class ActividadController : ControllerBase
 {
     private readonly IService<ActividadDto, Actividad> _service;
+    private readonly IValidator<ActividadDto> _validator;
 
-    public ActividadController(IService<ActividadDto, Actividad> service)
+    public ActividadController(IService<ActividadDto, Actividad> service, IValidator<ActividadDto> validator)
     {
         _service = service;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -97,6 +109,10 @@ public class ActividadController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<ActividadDto>> Create([FromBody] ActividadDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         var result = await _service.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = result.IdActividad }, result);
     }
@@ -104,6 +120,10 @@ public class ActividadController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] ActividadDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         await _service.UpdateAsync(id, dto);
         return NoContent();
     }
@@ -121,10 +141,12 @@ public class ActividadController : ControllerBase
 public class TipoPagoController : ControllerBase
 {
     private readonly IService<TipoPagoDto, TipoPago> _service;
+    private readonly IValidator<TipoPagoDto> _validator;
 
-    public TipoPagoController(IService<TipoPagoDto, TipoPago> service)
+    public TipoPagoController(IService<TipoPagoDto, TipoPago> service, IValidator<TipoPagoDto> validator)
     {
         _service = service;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -152,6 +174,10 @@ public class TipoPagoController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<TipoPagoDto>> Create([FromBody] TipoPagoDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         var result = await _service.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = result.IdTipoPago }, result);
     }
@@ -159,6 +185,10 @@ public class TipoPagoController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] TipoPagoDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         await _service.UpdateAsync(id, dto);
         return NoContent();
     }
@@ -176,10 +206,12 @@ public class TipoPagoController : ControllerBase
 public class TipoOcurrenciaController : ControllerBase
 {
     private readonly IService<TipoOcurrenciaDto, TipoOcurrencia> _service;
+    private readonly IValidator<TipoOcurrenciaDto> _validator;
 
-    public TipoOcurrenciaController(IService<TipoOcurrenciaDto, TipoOcurrencia> service)
+    public TipoOcurrenciaController(IService<TipoOcurrenciaDto, TipoOcurrencia> service, IValidator<TipoOcurrenciaDto> validator)
     {
         _service = service;
+        _validator = validator;
     }
 
     [HttpGet]
@@ -207,6 +239,10 @@ public class TipoOcurrenciaController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<TipoOcurrenciaDto>> Create([FromBody] TipoOcurrenciaDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         var result = await _service.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = result.IdTipoOcurrencia }, result);
     }
@@ -214,6 +250,10 @@ public class TipoOcurrenciaController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] TipoOcurrenciaDto dto)
     {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
         await _service.UpdateAsync(id, dto);
         return NoContent();
     }
