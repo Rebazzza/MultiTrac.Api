@@ -1,0 +1,392 @@
+using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
+using Multitrac.Application.DTOs;
+using Multitrac.Application.Interfaces;
+using Multitrac.Domain.Entities;
+
+namespace Multitrac.Api.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class ClienteController : ControllerBase
+{
+    private readonly IService<ClienteDto, Cliente> _service;
+
+    public ClienteController(IService<ClienteDto, Cliente> service)
+    {
+        _service = service;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<ClienteDto>>> GetAll()
+    {
+        var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<ClienteDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<ClienteDto>> GetById(int id)
+    {
+        var result = await _service.GetByIdAsync(id);
+        if (result == null) return NotFound();
+        return Ok(result);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<ClienteDto>> Create([FromBody] ClienteDto dto)
+    {
+        var result = await _service.CreateAsync(dto);
+        return CreatedAtAction(nameof(GetById), new { id = result.IdCliente }, result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] ClienteDto dto)
+    {
+        await _service.UpdateAsync(id, dto);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _service.DeleteAsync(id);
+        return NoContent();
+    }
+}
+
+[ApiController]
+[Route("api/[controller]")]
+public class ProveedorController : ControllerBase
+{
+    private readonly IService<ProveedorDto, Proveedor> _service;
+
+    public ProveedorController(IService<ProveedorDto, Proveedor> service)
+    {
+        _service = service;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<ProveedorDto>>> GetAll()
+    {
+        var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<ProveedorDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<ProveedorDto>> GetById(int id)
+    {
+        var result = await _service.GetByIdAsync(id);
+        if (result == null) return NotFound();
+        return Ok(result);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<ProveedorDto>> Create([FromBody] ProveedorDto dto)
+    {
+        var result = await _service.CreateAsync(dto);
+        return CreatedAtAction(nameof(GetById), new { id = result.PrvCod }, result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] ProveedorDto dto)
+    {
+        await _service.UpdateAsync(id, dto);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _service.DeleteAsync(id);
+        return NoContent();
+    }
+}
+
+[ApiController]
+[Route("api/[controller]")]
+public class AreaController : ControllerBase
+{
+    private readonly IService<AreaDto, Area> _service;
+
+    public AreaController(IService<AreaDto, Area> service)
+    {
+        _service = service;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<AreaDto>>> GetAll()
+    {
+        var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<AreaDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<AreaDto>> GetById(int id)
+    {
+        var result = await _service.GetByIdAsync(id);
+        if (result == null) return NotFound();
+        return Ok(result);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<AreaDto>> Create([FromBody] AreaDto dto)
+    {
+        var result = await _service.CreateAsync(dto);
+        return CreatedAtAction(nameof(GetById), new { id = result.AreCod }, result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] AreaDto dto)
+    {
+        await _service.UpdateAsync(id, dto);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _service.DeleteAsync(id);
+        return NoContent();
+    }
+}
+
+[ApiController]
+[Route("api/[controller]")]
+public class TipoDocumentoController : ControllerBase
+{
+    private readonly IService<TipoDocumentoDto, TipoDocumento> _service;
+
+    public TipoDocumentoController(IService<TipoDocumentoDto, TipoDocumento> service)
+    {
+        _service = service;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<TipoDocumentoDto>>> GetAll()
+    {
+        var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<TipoDocumentoDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<TipoDocumentoDto>> GetById(int id)
+    {
+        var result = await _service.GetByIdAsync(id);
+        if (result == null) return NotFound();
+        return Ok(result);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<TipoDocumentoDto>> Create([FromBody] TipoDocumentoDto dto)
+    {
+        var result = await _service.CreateAsync(dto);
+        return CreatedAtAction(nameof(GetById), new { id = result.TipCod }, result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] TipoDocumentoDto dto)
+    {
+        await _service.UpdateAsync(id, dto);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _service.DeleteAsync(id);
+        return NoContent();
+    }
+}
+
+[ApiController]
+[Route("api/[controller]")]
+public class EmpresaController : ControllerBase
+{
+    private readonly IService<EmpresaDto, Empresa> _service;
+
+    public EmpresaController(IService<EmpresaDto, Empresa> service)
+    {
+        _service = service;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<EmpresaDto>>> GetAll()
+    {
+        var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<EmpresaDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<EmpresaDto>> GetById(int id)
+    {
+        var result = await _service.GetByIdAsync(id);
+        if (result == null) return NotFound();
+        return Ok(result);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<EmpresaDto>> Create([FromBody] EmpresaDto dto)
+    {
+        var result = await _service.CreateAsync(dto);
+        return CreatedAtAction(nameof(GetById), new { id = result.IdEmpresa }, result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] EmpresaDto dto)
+    {
+        await _service.UpdateAsync(id, dto);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _service.DeleteAsync(id);
+        return NoContent();
+    }
+}
+
+[ApiController]
+[Route("api/[controller]")]
+public class ConvoyDataController : ControllerBase
+{
+    private readonly IService<ConvoyDto, Convoy> _service;
+
+    public ConvoyDataController(IService<ConvoyDto, Convoy> service)
+    {
+        _service = service;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<ConvoyDto>>> GetAll()
+    {
+        var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<ConvoyDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<ConvoyDto>> GetById(int id)
+    {
+        var result = await _service.GetByIdAsync(id);
+        if (result == null) return NotFound();
+        return Ok(result);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<ConvoyDto>> Create([FromBody] ConvoyDto dto)
+    {
+        var result = await _service.CreateAsync(dto);
+        return CreatedAtAction(nameof(GetById), new { id = result.IdConvoy }, result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] ConvoyDto dto)
+    {
+        await _service.UpdateAsync(id, dto);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _service.DeleteAsync(id);
+        return NoContent();
+    }
+}
+
+[ApiController]
+[Route("api/[controller]")]
+public class TurnoDataController : ControllerBase
+{
+    private readonly IService<TurnoDto, Turno> _service;
+
+    public TurnoDataController(IService<TurnoDto, Turno> service)
+    {
+        _service = service;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<TurnoDto>>> GetAll()
+    {
+        var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<TurnoDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<TurnoDto>> GetById(int id)
+    {
+        var result = await _service.GetByIdAsync(id);
+        if (result == null) return NotFound();
+        return Ok(result);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<TurnoDto>> Create([FromBody] TurnoDto dto)
+    {
+        var result = await _service.CreateAsync(dto);
+        return CreatedAtAction(nameof(GetById), new { id = result.IdTurno }, result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] TurnoDto dto)
+    {
+        await _service.UpdateAsync(id, dto);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _service.DeleteAsync(id);
+        return NoContent();
+    }
+}

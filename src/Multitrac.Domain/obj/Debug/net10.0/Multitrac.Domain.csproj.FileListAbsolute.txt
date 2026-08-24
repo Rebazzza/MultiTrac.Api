@@ -9,3 +9,4 @@ C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Domain\obj\Debug\net10.0\Mult
 C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Domain\obj\Debug\net10.0\refint\Multitrac.Domain.dll
 C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Domain\obj\Debug\net10.0\Multitrac.Domain.pdb
 C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Domain\obj\Debug\net10.0\ref\Multitrac.Domain.dll
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Domain\obj\Debug\net10.0\Multitrac.Domain.sourcelink.json

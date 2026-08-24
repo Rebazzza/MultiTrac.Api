@@ -1,3 +1,5 @@
+using Multitrac.Application.DTOs;
+
 namespace Multitrac.Application.Interfaces;
 
 public interface IService<TDto, TEntity> where TEntity : class
@@ -8,4 +10,5 @@ public interface IService<TDto, TEntity> where TEntity : class
     Task UpdateAsync(int id, TDto dto);
     Task DeleteAsync(int id);
     Task<bool> ExistsAsync(int id);
+    Task<PaginatedResult<TDto>> GetPaginatedAsync(PaginationRequest request);
 }

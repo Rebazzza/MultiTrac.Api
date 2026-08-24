@@ -28,6 +28,13 @@ public class BancoController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<BancoDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<BancoDto>> GetById(int id)
     {

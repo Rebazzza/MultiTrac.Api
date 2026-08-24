@@ -113,3 +113,4 @@ C:\Users\fabri\Downloads\MultitracV2\tests\Multitrac.UnitTests\obj\Debug\net10.0
 C:\Users\fabri\Downloads\MultitracV2\tests\Multitrac.UnitTests\obj\Debug\net10.0\Multitrac.UnitTests.pdb
 C:\Users\fabri\Downloads\MultitracV2\tests\Multitrac.UnitTests\obj\Debug\net10.0\Multitrac.UnitTests.genruntimeconfig.cache
 C:\Users\fabri\Downloads\MultitracV2\tests\Multitrac.UnitTests\obj\Debug\net10.0\ref\Multitrac.UnitTests.dll
+C:\Users\fabri\Downloads\MultitracV2\tests\Multitrac.UnitTests\obj\Debug\net10.0\Multitrac.UnitTests.sourcelink.json

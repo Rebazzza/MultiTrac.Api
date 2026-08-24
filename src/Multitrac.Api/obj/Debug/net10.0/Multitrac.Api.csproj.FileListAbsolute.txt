@@ -93,3 +93,4 @@ C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Api\obj\Debug\net10.0\refint\
 C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Api\obj\Debug\net10.0\Multitrac.Api.pdb
 C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Api\obj\Debug\net10.0\Multitrac.Api.genruntimeconfig.cache
 C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Api\obj\Debug\net10.0\ref\Multitrac.Api.dll
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Api\obj\Debug\net10.0\Multitrac.Api.sourcelink.json

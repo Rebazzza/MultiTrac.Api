@@ -23,6 +23,13 @@ public class EquipoDataController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<EquipoDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<EquipoDto>> GetById(int id)
     {
@@ -68,6 +75,13 @@ public class EquipoCombustibleController : ControllerBase
     public async Task<ActionResult<IEnumerable<EquipoCombustibleDto>>> GetAll()
     {
         var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<EquipoCombustibleDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
         return Ok(result);
     }
 
@@ -119,6 +133,13 @@ public class EquipoKilometrajeController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<EquipoKilometrajeDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<EquipoKilometrajeDto>> GetById(int id)
     {
@@ -164,6 +185,13 @@ public class EquipoMantenimientoController : ControllerBase
     public async Task<ActionResult<IEnumerable<EquipoMantenimientoDto>>> GetAll()
     {
         var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<EquipoMantenimientoDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
         return Ok(result);
     }
 

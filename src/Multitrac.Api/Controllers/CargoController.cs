@@ -28,6 +28,13 @@ public class CargoController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<CargoDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<CargoDto>> GetById(int id)
     {

@@ -74,6 +74,14 @@ builder.Services.AddScoped<IService<EquipoCombustibleDto, EquipoCombustible>, Eq
 builder.Services.AddScoped<IService<EquipoKilometrajeDto, EquipoKilometraje>, EquipoKilometrajeService>();
 builder.Services.AddScoped<IService<EquipoMantenimientoDto, EquipoMantenimiento>, EquipoMantenimientoService>();
 
+// Configure Services - Cliente/Proveedor/Area/Empresa/Convoy
+builder.Services.AddScoped<IService<ClienteDto, Cliente>, ClienteService>();
+builder.Services.AddScoped<IService<ProveedorDto, Proveedor>, ProveedorService>();
+builder.Services.AddScoped<IService<AreaDto, Area>, AreaService>();
+builder.Services.AddScoped<IService<TipoDocumentoDto, TipoDocumento>, TipoDocumentoService>();
+builder.Services.AddScoped<IService<EmpresaDto, Empresa>, EmpresaService>();
+builder.Services.AddScoped<IService<ConvoyDto, Convoy>, ConvoyService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline

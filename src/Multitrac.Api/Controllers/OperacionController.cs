@@ -23,6 +23,13 @@ public class OperacionController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<OperacionDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<OperacionDto>> GetById(int id)
     {
@@ -68,6 +75,13 @@ public class OperacionGeneralController : ControllerBase
     public async Task<ActionResult<IEnumerable<OperacionGeneralDto>>> GetAll()
     {
         var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<OperacionGeneralDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
         return Ok(result);
     }
 
@@ -119,6 +133,13 @@ public class OperacionGeneralEquipoController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<OperacionGeneralEquipoDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<OperacionGeneralEquipoDto>> GetById(int id)
     {
@@ -164,6 +185,13 @@ public class TipoCargaController : ControllerBase
     public async Task<ActionResult<IEnumerable<TipoCargaDto>>> GetAll()
     {
         var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<TipoCargaDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
         return Ok(result);
     }
 
@@ -215,6 +243,13 @@ public class UnidadController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<UnidadDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<UnidadDto>> GetById(int id)
     {
@@ -263,6 +298,13 @@ public class OperacionFleteController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<OperacionFleteDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<OperacionFleteDto>> GetById(int id)
     {
@@ -308,6 +350,13 @@ public class OperacionInformeController : ControllerBase
     public async Task<ActionResult<IEnumerable<OperacionInformeDto>>> GetAll()
     {
         var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<OperacionInformeDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
         return Ok(result);
     }
 

@@ -61,6 +61,13 @@ public class BdmultitracContext : DbContext
     // Contratistas
     public virtual DbSet<Contratista> Contratistas { get; set; } = null!;
 
+    // Cliente/Proveedor/Area/Empresa
+    public virtual DbSet<Cliente> Clientes { get; set; } = null!;
+    public virtual DbSet<Proveedor> Proveedores { get; set; } = null!;
+    public virtual DbSet<Area> Areas { get; set; } = null!;
+    public virtual DbSet<TipoDocumento> TipoDocumentos { get; set; } = null!;
+    public virtual DbSet<Empresa> Empresas { get; set; } = null!;
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(BdmultitracContext).Assembly);

@@ -1,3 +1,5 @@
+using System.Linq.Expressions;
+
 namespace Multitrac.Domain.Interfaces;
 
 public interface IRepository<T> where T : class
@@ -8,4 +10,9 @@ public interface IRepository<T> where T : class
     Task UpdateAsync(T entity);
     Task DeleteAsync(int id);
     Task<bool> ExistsAsync(int id);
+    Task<(IEnumerable<T> Items, int TotalCount)> GetPaginatedAsync(
+        int page, int pageSize,
+        Expression<Func<T, bool>>? filter = null,
+        string? sortBy = null,
+        bool descending = false);
 }

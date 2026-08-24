@@ -13,3 +13,4 @@ C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\obj\Debug\net10.0
 C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\obj\Debug\net10.0\refint\Multitrac.Application.dll
 C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\obj\Debug\net10.0\Multitrac.Application.pdb
 C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\obj\Debug\net10.0\ref\Multitrac.Application.dll
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Application\obj\Debug\net10.0\Multitrac.Application.sourcelink.json

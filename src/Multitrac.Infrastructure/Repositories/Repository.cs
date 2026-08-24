@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Multitrac.Domain.Interfaces;
 using Multitrac.Infrastructure.Data;
+using System.Linq.Expressions;
 
 namespace Multitrac.Infrastructure.Repositories;
 
@@ -50,5 +51,39 @@ public class Repository<T> : IRepository<T> where T : class
     public async Task<bool> ExistsAsync(int id)
     {
         return await _dbSet.FindAsync(id) != null;
+    }
+
+    public async Task<(IEnumerable<T> Items, int TotalCount)> GetPaginatedAsync(
+        int page, int pageSize,
+        Expression<Func<T, bool>>? filter = null,
+        string? sortBy = null,
+        bool descending = false)
+    {
+        IQueryable<T> query = _dbSet;
+
+        if (filter != null)
+        {
+            query = query.Where(filter);
+        }
+
+        var totalCount = await query.CountAsync();
+
+        if (!string.IsNullOrEmpty(sortBy))
+        {
+            var parameter = Expression.Parameter(typeof(T), "x");
+            var property = Expression.Property(parameter, sortBy);
+            var lambda = Expression.Lambda<Func<T, object>>(Expression.Convert(property, typeof(object)), parameter);
+
+            query = descending
+                ? Queryable.OrderByDescending(query, lambda)
+                : Queryable.OrderBy(query, lambda);
+        }
+
+        var items = await query
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+
+        return (items, totalCount);
     }
 }

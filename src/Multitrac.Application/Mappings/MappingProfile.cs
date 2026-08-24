@@ -56,5 +56,12 @@ public class MappingProfile : Profile
         CreateMap<EquipoMantenimientoDetalle, EquipoMantenimientoDetalleDto>().ReverseMap();
         CreateMap<EquipoDocumentoTracto, EquipoDocumentoTractoDto>().ReverseMap();
         CreateMap<EquipoDocumentoCarreta, EquipoDocumentoCarretaDto>().ReverseMap();
+
+        // Cliente/Proveedor/Area/Empresa
+        CreateMap<Cliente, ClienteDto>().ReverseMap();
+        CreateMap<Proveedor, ProveedorDto>().ReverseMap();
+        CreateMap<Area, AreaDto>().ReverseMap();
+        CreateMap<TipoDocumento, TipoDocumentoDto>().ReverseMap();
+        CreateMap<Empresa, EmpresaDto>().ReverseMap();
     }
 }

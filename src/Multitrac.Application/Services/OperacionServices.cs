@@ -6,30 +6,23 @@ using Multitrac.Domain.Interfaces;
 
 namespace Multitrac.Application.Services;
 
-public class OperacionService : IService<OperacionDto, Operacion>
+public class OperacionService : ServiceBase<OperacionDto, Operacion>
 {
-    private readonly IUnitOfWork _unitOfWork;
-    private readonly IMapper _mapper;
+    public OperacionService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
 
-    public OperacionService(IUnitOfWork unitOfWork, IMapper mapper)
-    {
-        _unitOfWork = unitOfWork;
-        _mapper = mapper;
-    }
-
-    public async Task<OperacionDto?> GetByIdAsync(int id)
+    public override async Task<OperacionDto?> GetByIdAsync(int id)
     {
         var entity = await _unitOfWork.Repository<Operacion>().GetByIdAsync(id);
         return entity == null ? null : _mapper.Map<OperacionDto>(entity);
     }
 
-    public async Task<IEnumerable<OperacionDto>> GetAllAsync()
+    public override async Task<IEnumerable<OperacionDto>> GetAllAsync()
     {
         var entities = await _unitOfWork.Repository<Operacion>().GetAllAsync();
         return _mapper.Map<IEnumerable<OperacionDto>>(entities);
     }
 
-    public async Task<OperacionDto> CreateAsync(OperacionDto dto)
+    public override async Task<OperacionDto> CreateAsync(OperacionDto dto)
     {
         var entity = _mapper.Map<Operacion>(dto);
         await _unitOfWork.Repository<Operacion>().CreateAsync(entity);
@@ -37,7 +30,7 @@ public class OperacionService : IService<OperacionDto, Operacion>
         return _mapper.Map<OperacionDto>(entity);
     }
 
-    public async Task UpdateAsync(int id, OperacionDto dto)
+    public override async Task UpdateAsync(int id, OperacionDto dto)
     {
         var entity = await _unitOfWork.Repository<Operacion>().GetByIdAsync(id);
         if (entity == null) throw new KeyNotFoundException($"Operacion with ID {id} not found");
@@ -47,42 +40,35 @@ public class OperacionService : IService<OperacionDto, Operacion>
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public async Task DeleteAsync(int id)
+    public override async Task DeleteAsync(int id)
     {
         await _unitOfWork.Repository<Operacion>().DeleteAsync(id);
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public async Task<bool> ExistsAsync(int id)
+    public override async Task<bool> ExistsAsync(int id)
     {
         return await _unitOfWork.Repository<Operacion>().ExistsAsync(id);
     }
 }
 
-public class OperacionGeneralService : IService<OperacionGeneralDto, OperacionGeneral>
+public class OperacionGeneralService : ServiceBase<OperacionGeneralDto, OperacionGeneral>
 {
-    private readonly IUnitOfWork _unitOfWork;
-    private readonly IMapper _mapper;
+    public OperacionGeneralService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
 
-    public OperacionGeneralService(IUnitOfWork unitOfWork, IMapper mapper)
-    {
-        _unitOfWork = unitOfWork;
-        _mapper = mapper;
-    }
-
-    public async Task<OperacionGeneralDto?> GetByIdAsync(int id)
+    public override async Task<OperacionGeneralDto?> GetByIdAsync(int id)
     {
         var entity = await _unitOfWork.Repository<OperacionGeneral>().GetByIdAsync(id);
         return entity == null ? null : _mapper.Map<OperacionGeneralDto>(entity);
     }
 
-    public async Task<IEnumerable<OperacionGeneralDto>> GetAllAsync()
+    public override async Task<IEnumerable<OperacionGeneralDto>> GetAllAsync()
     {
         var entities = await _unitOfWork.Repository<OperacionGeneral>().GetAllAsync();
         return _mapper.Map<IEnumerable<OperacionGeneralDto>>(entities);
     }
 
-    public async Task<OperacionGeneralDto> CreateAsync(OperacionGeneralDto dto)
+    public override async Task<OperacionGeneralDto> CreateAsync(OperacionGeneralDto dto)
     {
         var entity = _mapper.Map<OperacionGeneral>(dto);
         await _unitOfWork.Repository<OperacionGeneral>().CreateAsync(entity);
@@ -90,7 +76,7 @@ public class OperacionGeneralService : IService<OperacionGeneralDto, OperacionGe
         return _mapper.Map<OperacionGeneralDto>(entity);
     }
 
-    public async Task UpdateAsync(int id, OperacionGeneralDto dto)
+    public override async Task UpdateAsync(int id, OperacionGeneralDto dto)
     {
         var entity = await _unitOfWork.Repository<OperacionGeneral>().GetByIdAsync(id);
         if (entity == null) throw new KeyNotFoundException($"OperacionGeneral with ID {id} not found");
@@ -100,42 +86,35 @@ public class OperacionGeneralService : IService<OperacionGeneralDto, OperacionGe
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public async Task DeleteAsync(int id)
+    public override async Task DeleteAsync(int id)
     {
         await _unitOfWork.Repository<OperacionGeneral>().DeleteAsync(id);
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public async Task<bool> ExistsAsync(int id)
+    public override async Task<bool> ExistsAsync(int id)
     {
         return await _unitOfWork.Repository<OperacionGeneral>().ExistsAsync(id);
     }
 }
 
-public class OperacionGeneralEquipoService : IService<OperacionGeneralEquipoDto, OperacionGeneralEquipo>
+public class OperacionGeneralEquipoService : ServiceBase<OperacionGeneralEquipoDto, OperacionGeneralEquipo>
 {
-    private readonly IUnitOfWork _unitOfWork;
-    private readonly IMapper _mapper;
+    public OperacionGeneralEquipoService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
 
-    public OperacionGeneralEquipoService(IUnitOfWork unitOfWork, IMapper mapper)
-    {
-        _unitOfWork = unitOfWork;
-        _mapper = mapper;
-    }
-
-    public async Task<OperacionGeneralEquipoDto?> GetByIdAsync(int id)
+    public override async Task<OperacionGeneralEquipoDto?> GetByIdAsync(int id)
     {
         var entity = await _unitOfWork.Repository<OperacionGeneralEquipo>().GetByIdAsync(id);
         return entity == null ? null : _mapper.Map<OperacionGeneralEquipoDto>(entity);
     }
 
-    public async Task<IEnumerable<OperacionGeneralEquipoDto>> GetAllAsync()
+    public override async Task<IEnumerable<OperacionGeneralEquipoDto>> GetAllAsync()
     {
         var entities = await _unitOfWork.Repository<OperacionGeneralEquipo>().GetAllAsync();
         return _mapper.Map<IEnumerable<OperacionGeneralEquipoDto>>(entities);
     }
 
-    public async Task<OperacionGeneralEquipoDto> CreateAsync(OperacionGeneralEquipoDto dto)
+    public override async Task<OperacionGeneralEquipoDto> CreateAsync(OperacionGeneralEquipoDto dto)
     {
         var entity = _mapper.Map<OperacionGeneralEquipo>(dto);
         await _unitOfWork.Repository<OperacionGeneralEquipo>().CreateAsync(entity);
@@ -143,7 +122,7 @@ public class OperacionGeneralEquipoService : IService<OperacionGeneralEquipoDto,
         return _mapper.Map<OperacionGeneralEquipoDto>(entity);
     }
 
-    public async Task UpdateAsync(int id, OperacionGeneralEquipoDto dto)
+    public override async Task UpdateAsync(int id, OperacionGeneralEquipoDto dto)
     {
         var entity = await _unitOfWork.Repository<OperacionGeneralEquipo>().GetByIdAsync(id);
         if (entity == null) throw new KeyNotFoundException($"OperacionGeneralEquipo with ID {id} not found");
@@ -153,42 +132,35 @@ public class OperacionGeneralEquipoService : IService<OperacionGeneralEquipoDto,
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public async Task DeleteAsync(int id)
+    public override async Task DeleteAsync(int id)
     {
         await _unitOfWork.Repository<OperacionGeneralEquipo>().DeleteAsync(id);
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public async Task<bool> ExistsAsync(int id)
+    public override async Task<bool> ExistsAsync(int id)
     {
         return await _unitOfWork.Repository<OperacionGeneralEquipo>().ExistsAsync(id);
     }
 }
 
-public class OperacionFleteService : IService<OperacionFleteDto, OperacionFlete>
+public class OperacionFleteService : ServiceBase<OperacionFleteDto, OperacionFlete>
 {
-    private readonly IUnitOfWork _unitOfWork;
-    private readonly IMapper _mapper;
+    public OperacionFleteService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
 
-    public OperacionFleteService(IUnitOfWork unitOfWork, IMapper mapper)
-    {
-        _unitOfWork = unitOfWork;
-        _mapper = mapper;
-    }
-
-    public async Task<OperacionFleteDto?> GetByIdAsync(int id)
+    public override async Task<OperacionFleteDto?> GetByIdAsync(int id)
     {
         var entity = await _unitOfWork.Repository<OperacionFlete>().GetByIdAsync(id);
         return entity == null ? null : _mapper.Map<OperacionFleteDto>(entity);
     }
 
-    public async Task<IEnumerable<OperacionFleteDto>> GetAllAsync()
+    public override async Task<IEnumerable<OperacionFleteDto>> GetAllAsync()
     {
         var entities = await _unitOfWork.Repository<OperacionFlete>().GetAllAsync();
         return _mapper.Map<IEnumerable<OperacionFleteDto>>(entities);
     }
 
-    public async Task<OperacionFleteDto> CreateAsync(OperacionFleteDto dto)
+    public override async Task<OperacionFleteDto> CreateAsync(OperacionFleteDto dto)
     {
         var entity = _mapper.Map<OperacionFlete>(dto);
         await _unitOfWork.Repository<OperacionFlete>().CreateAsync(entity);
@@ -196,7 +168,7 @@ public class OperacionFleteService : IService<OperacionFleteDto, OperacionFlete>
         return _mapper.Map<OperacionFleteDto>(entity);
     }
 
-    public async Task UpdateAsync(int id, OperacionFleteDto dto)
+    public override async Task UpdateAsync(int id, OperacionFleteDto dto)
     {
         var entity = await _unitOfWork.Repository<OperacionFlete>().GetByIdAsync(id);
         if (entity == null) throw new KeyNotFoundException($"OperacionFlete with ID {id} not found");
@@ -206,42 +178,35 @@ public class OperacionFleteService : IService<OperacionFleteDto, OperacionFlete>
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public async Task DeleteAsync(int id)
+    public override async Task DeleteAsync(int id)
     {
         await _unitOfWork.Repository<OperacionFlete>().DeleteAsync(id);
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public async Task<bool> ExistsAsync(int id)
+    public override async Task<bool> ExistsAsync(int id)
     {
         return await _unitOfWork.Repository<OperacionFlete>().ExistsAsync(id);
     }
 }
 
-public class OperacionInformeService : IService<OperacionInformeDto, OperacionInforme>
+public class OperacionInformeService : ServiceBase<OperacionInformeDto, OperacionInforme>
 {
-    private readonly IUnitOfWork _unitOfWork;
-    private readonly IMapper _mapper;
+    public OperacionInformeService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
 
-    public OperacionInformeService(IUnitOfWork unitOfWork, IMapper mapper)
-    {
-        _unitOfWork = unitOfWork;
-        _mapper = mapper;
-    }
-
-    public async Task<OperacionInformeDto?> GetByIdAsync(int id)
+    public override async Task<OperacionInformeDto?> GetByIdAsync(int id)
     {
         var entity = await _unitOfWork.Repository<OperacionInforme>().GetByIdAsync(id);
         return entity == null ? null : _mapper.Map<OperacionInformeDto>(entity);
     }
 
-    public async Task<IEnumerable<OperacionInformeDto>> GetAllAsync()
+    public override async Task<IEnumerable<OperacionInformeDto>> GetAllAsync()
     {
         var entities = await _unitOfWork.Repository<OperacionInforme>().GetAllAsync();
         return _mapper.Map<IEnumerable<OperacionInformeDto>>(entities);
     }
 
-    public async Task<OperacionInformeDto> CreateAsync(OperacionInformeDto dto)
+    public override async Task<OperacionInformeDto> CreateAsync(OperacionInformeDto dto)
     {
         var entity = _mapper.Map<OperacionInforme>(dto);
         await _unitOfWork.Repository<OperacionInforme>().CreateAsync(entity);
@@ -249,7 +214,7 @@ public class OperacionInformeService : IService<OperacionInformeDto, OperacionIn
         return _mapper.Map<OperacionInformeDto>(entity);
     }
 
-    public async Task UpdateAsync(int id, OperacionInformeDto dto)
+    public override async Task UpdateAsync(int id, OperacionInformeDto dto)
     {
         var entity = await _unitOfWork.Repository<OperacionInforme>().GetByIdAsync(id);
         if (entity == null) throw new KeyNotFoundException($"OperacionInforme with ID {id} not found");
@@ -259,42 +224,35 @@ public class OperacionInformeService : IService<OperacionInformeDto, OperacionIn
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public async Task DeleteAsync(int id)
+    public override async Task DeleteAsync(int id)
     {
         await _unitOfWork.Repository<OperacionInforme>().DeleteAsync(id);
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public async Task<bool> ExistsAsync(int id)
+    public override async Task<bool> ExistsAsync(int id)
     {
         return await _unitOfWork.Repository<OperacionInforme>().ExistsAsync(id);
     }
 }
 
-public class TipoCargaService : IService<TipoCargaDto, TipoCarga>
+public class TipoCargaService : ServiceBase<TipoCargaDto, TipoCarga>
 {
-    private readonly IUnitOfWork _unitOfWork;
-    private readonly IMapper _mapper;
+    public TipoCargaService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
 
-    public TipoCargaService(IUnitOfWork unitOfWork, IMapper mapper)
-    {
-        _unitOfWork = unitOfWork;
-        _mapper = mapper;
-    }
-
-    public async Task<TipoCargaDto?> GetByIdAsync(int id)
+    public override async Task<TipoCargaDto?> GetByIdAsync(int id)
     {
         var entity = await _unitOfWork.Repository<TipoCarga>().GetByIdAsync(id);
         return entity == null ? null : _mapper.Map<TipoCargaDto>(entity);
     }
 
-    public async Task<IEnumerable<TipoCargaDto>> GetAllAsync()
+    public override async Task<IEnumerable<TipoCargaDto>> GetAllAsync()
     {
         var entities = await _unitOfWork.Repository<TipoCarga>().GetAllAsync();
         return _mapper.Map<IEnumerable<TipoCargaDto>>(entities);
     }
 
-    public async Task<TipoCargaDto> CreateAsync(TipoCargaDto dto)
+    public override async Task<TipoCargaDto> CreateAsync(TipoCargaDto dto)
     {
         var entity = _mapper.Map<TipoCarga>(dto);
         await _unitOfWork.Repository<TipoCarga>().CreateAsync(entity);
@@ -302,7 +260,7 @@ public class TipoCargaService : IService<TipoCargaDto, TipoCarga>
         return _mapper.Map<TipoCargaDto>(entity);
     }
 
-    public async Task UpdateAsync(int id, TipoCargaDto dto)
+    public override async Task UpdateAsync(int id, TipoCargaDto dto)
     {
         var entity = await _unitOfWork.Repository<TipoCarga>().GetByIdAsync(id);
         if (entity == null) throw new KeyNotFoundException($"TipoCarga with ID {id} not found");
@@ -312,42 +270,35 @@ public class TipoCargaService : IService<TipoCargaDto, TipoCarga>
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public async Task DeleteAsync(int id)
+    public override async Task DeleteAsync(int id)
     {
         await _unitOfWork.Repository<TipoCarga>().DeleteAsync(id);
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public async Task<bool> ExistsAsync(int id)
+    public override async Task<bool> ExistsAsync(int id)
     {
         return await _unitOfWork.Repository<TipoCarga>().ExistsAsync(id);
     }
 }
 
-public class UnidadService : IService<UnidadDto, Unidad>
+public class UnidadService : ServiceBase<UnidadDto, Unidad>
 {
-    private readonly IUnitOfWork _unitOfWork;
-    private readonly IMapper _mapper;
+    public UnidadService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
 
-    public UnidadService(IUnitOfWork unitOfWork, IMapper mapper)
-    {
-        _unitOfWork = unitOfWork;
-        _mapper = mapper;
-    }
-
-    public async Task<UnidadDto?> GetByIdAsync(int id)
+    public override async Task<UnidadDto?> GetByIdAsync(int id)
     {
         var entity = await _unitOfWork.Repository<Unidad>().GetByIdAsync(id);
         return entity == null ? null : _mapper.Map<UnidadDto>(entity);
     }
 
-    public async Task<IEnumerable<UnidadDto>> GetAllAsync()
+    public override async Task<IEnumerable<UnidadDto>> GetAllAsync()
     {
         var entities = await _unitOfWork.Repository<Unidad>().GetAllAsync();
         return _mapper.Map<IEnumerable<UnidadDto>>(entities);
     }
 
-    public async Task<UnidadDto> CreateAsync(UnidadDto dto)
+    public override async Task<UnidadDto> CreateAsync(UnidadDto dto)
     {
         var entity = _mapper.Map<Unidad>(dto);
         await _unitOfWork.Repository<Unidad>().CreateAsync(entity);
@@ -355,7 +306,7 @@ public class UnidadService : IService<UnidadDto, Unidad>
         return _mapper.Map<UnidadDto>(entity);
     }
 
-    public async Task UpdateAsync(int id, UnidadDto dto)
+    public override async Task UpdateAsync(int id, UnidadDto dto)
     {
         var entity = await _unitOfWork.Repository<Unidad>().GetByIdAsync(id);
         if (entity == null) throw new KeyNotFoundException($"Unidad with ID {id} not found");
@@ -365,13 +316,13 @@ public class UnidadService : IService<UnidadDto, Unidad>
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public async Task DeleteAsync(int id)
+    public override async Task DeleteAsync(int id)
     {
         await _unitOfWork.Repository<Unidad>().DeleteAsync(id);
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public async Task<bool> ExistsAsync(int id)
+    public override async Task<bool> ExistsAsync(int id)
     {
         return await _unitOfWork.Repository<Unidad>().ExistsAsync(id);
     }

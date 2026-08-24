@@ -24,6 +24,13 @@ public class FlotaController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<FlotaDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<FlotaDto>> GetById(int id)
     {
@@ -69,6 +76,13 @@ public class ActividadController : ControllerBase
     public async Task<ActionResult<IEnumerable<ActividadDto>>> GetAll()
     {
         var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<ActividadDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
         return Ok(result);
     }
 
@@ -120,6 +134,13 @@ public class TipoPagoController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<TipoPagoDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<TipoPagoDto>> GetById(int id)
     {
@@ -165,6 +186,13 @@ public class TipoOcurrenciaController : ControllerBase
     public async Task<ActionResult<IEnumerable<TipoOcurrenciaDto>>> GetAll()
     {
         var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<TipoOcurrenciaDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
         return Ok(result);
     }
 

@@ -23,6 +23,13 @@ public class PersonalDataController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<PersonalDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<PersonalDto>> GetById(int id)
     {
@@ -71,6 +78,13 @@ public class PersonalCargoController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<PersonalCargoDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<PersonalCargoDto>> GetById(int id)
     {
@@ -116,6 +130,13 @@ public class ContratistaController : ControllerBase
     public async Task<ActionResult<IEnumerable<ContratistaDto>>> GetAll()
     {
         var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<ContratistaDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
         return Ok(result);
     }
 
