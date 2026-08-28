@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Multitrac.Domain.Interfaces;
 using Multitrac.Infrastructure.Data;
 
@@ -27,6 +28,11 @@ public class UnitOfWork : IUnitOfWork
     public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
         return await _context.SaveChangesAsync(cancellationToken);
+    }
+
+    public async Task<int> ExecuteSqlRawAsync(string sql, params object[] parameters)
+    {
+        return await _context.Database.ExecuteSqlRawAsync(sql, parameters);
     }
 
     public void Dispose()

@@ -8,12 +8,12 @@ namespace Multitrac.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class PersonalDataController : ControllerBase
+public class PersonalController : ControllerBase
 {
     private readonly IService<PersonalDto, Personal> _service;
     private readonly IValidator<PersonalDto> _validator;
 
-    public PersonalDataController(
+    public PersonalController(
         IService<PersonalDto, Personal> service,
         IValidator<PersonalDto> validator)
     {
@@ -39,7 +39,6 @@ public class PersonalDataController : ControllerBase
     public async Task<ActionResult<PersonalDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -106,7 +105,6 @@ public class PersonalCargoController : ControllerBase
     public async Task<ActionResult<PersonalCargoDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -173,7 +171,6 @@ public class ContratistaController : ControllerBase
     public async Task<ActionResult<ContratistaDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -190,6 +187,72 @@ public class ContratistaController : ControllerBase
 
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] ContratistaDto dto)
+    {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
+        await _service.UpdateAsync(id, dto);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _service.DeleteAsync(id);
+        return NoContent();
+    }
+}
+
+[ApiController]
+[Route("api/[controller]")]
+public class PersonalVacacionesController : ControllerBase
+{
+    private readonly IService<PersonalVacacionesDto, PersonalVacaciones> _service;
+    private readonly IValidator<PersonalVacacionesDto> _validator;
+
+    public PersonalVacacionesController(
+        IService<PersonalVacacionesDto, PersonalVacaciones> service,
+        IValidator<PersonalVacacionesDto> validator)
+    {
+        _service = service;
+        _validator = validator;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<PersonalVacacionesDto>>> GetAll()
+    {
+        var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<PersonalVacacionesDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<PersonalVacacionesDto>> GetById(int id)
+    {
+        var result = await _service.GetByIdAsync(id);
+        return Ok(result);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<PersonalVacacionesDto>> Create([FromBody] PersonalVacacionesDto dto)
+    {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
+        var result = await _service.CreateAsync(dto);
+        return CreatedAtAction(nameof(GetById), new { id = result.IdPersonalVacaciones }, result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] PersonalVacacionesDto dto)
     {
         var validationResult = await _validator.ValidateAsync(dto);
         if (!validationResult.IsValid)

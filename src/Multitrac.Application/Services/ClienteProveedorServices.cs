@@ -2,6 +2,7 @@ using AutoMapper;
 using Multitrac.Application.DTOs;
 using Multitrac.Application.Interfaces;
 using Multitrac.Domain.Entities;
+using Multitrac.Domain.Exceptions;
 using Multitrac.Domain.Interfaces;
 
 namespace Multitrac.Application.Services;
@@ -12,8 +13,8 @@ public class ClienteService : ServiceBase<ClienteDto, Cliente>
 
     public override async Task<ClienteDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Cliente>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<ClienteDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<ClienteDto>(entity);
     }
 
     public override async Task<IEnumerable<ClienteDto>> GetAllAsync()
@@ -32,9 +33,9 @@ public class ClienteService : ServiceBase<ClienteDto, Cliente>
 
     public override async Task UpdateAsync(int id, ClienteDto dto)
     {
-        var entity = await _unitOfWork.Repository<Cliente>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Cliente>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -57,8 +58,8 @@ public class ProveedorService : ServiceBase<ProveedorDto, Proveedor>
 
     public override async Task<ProveedorDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Proveedor>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<ProveedorDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<ProveedorDto>(entity);
     }
 
     public override async Task<IEnumerable<ProveedorDto>> GetAllAsync()
@@ -77,9 +78,9 @@ public class ProveedorService : ServiceBase<ProveedorDto, Proveedor>
 
     public override async Task UpdateAsync(int id, ProveedorDto dto)
     {
-        var entity = await _unitOfWork.Repository<Proveedor>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Proveedor>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -102,8 +103,8 @@ public class AreaService : ServiceBase<AreaDto, Area>
 
     public override async Task<AreaDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Area>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<AreaDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<AreaDto>(entity);
     }
 
     public override async Task<IEnumerable<AreaDto>> GetAllAsync()
@@ -122,9 +123,9 @@ public class AreaService : ServiceBase<AreaDto, Area>
 
     public override async Task UpdateAsync(int id, AreaDto dto)
     {
-        var entity = await _unitOfWork.Repository<Area>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Area>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -147,8 +148,8 @@ public class TipoDocumentoService : ServiceBase<TipoDocumentoDto, TipoDocumento>
 
     public override async Task<TipoDocumentoDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<TipoDocumento>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<TipoDocumentoDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<TipoDocumentoDto>(entity);
     }
 
     public override async Task<IEnumerable<TipoDocumentoDto>> GetAllAsync()
@@ -160,6 +161,7 @@ public class TipoDocumentoService : ServiceBase<TipoDocumentoDto, TipoDocumento>
     public override async Task<TipoDocumentoDto> CreateAsync(TipoDocumentoDto dto)
     {
         var entity = _mapper.Map<TipoDocumento>(dto);
+        await SetNextIdAsync(entity);
         await _unitOfWork.Repository<TipoDocumento>().CreateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
         return _mapper.Map<TipoDocumentoDto>(entity);
@@ -167,9 +169,9 @@ public class TipoDocumentoService : ServiceBase<TipoDocumentoDto, TipoDocumento>
 
     public override async Task UpdateAsync(int id, TipoDocumentoDto dto)
     {
-        var entity = await _unitOfWork.Repository<TipoDocumento>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<TipoDocumento>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -192,8 +194,8 @@ public class EmpresaService : ServiceBase<EmpresaDto, Empresa>
 
     public override async Task<EmpresaDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Empresa>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<EmpresaDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<EmpresaDto>(entity);
     }
 
     public override async Task<IEnumerable<EmpresaDto>> GetAllAsync()
@@ -212,9 +214,9 @@ public class EmpresaService : ServiceBase<EmpresaDto, Empresa>
 
     public override async Task UpdateAsync(int id, EmpresaDto dto)
     {
-        var entity = await _unitOfWork.Repository<Empresa>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Empresa>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -237,8 +239,8 @@ public class ConvoyService : ServiceBase<ConvoyDto, Convoy>
 
     public override async Task<ConvoyDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Convoy>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<ConvoyDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<ConvoyDto>(entity);
     }
 
     public override async Task<IEnumerable<ConvoyDto>> GetAllAsync()
@@ -257,9 +259,9 @@ public class ConvoyService : ServiceBase<ConvoyDto, Convoy>
 
     public override async Task UpdateAsync(int id, ConvoyDto dto)
     {
-        var entity = await _unitOfWork.Repository<Convoy>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Convoy>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }

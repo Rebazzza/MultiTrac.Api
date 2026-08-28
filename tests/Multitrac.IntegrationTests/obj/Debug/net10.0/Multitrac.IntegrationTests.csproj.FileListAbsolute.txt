@@ -481,3 +481,4 @@ C:\Users\fabri\Downloads\MultitracV2\tests\Multitrac.IntegrationTests\obj\Debug\
 C:\Users\fabri\Downloads\MultitracV2\tests\Multitrac.IntegrationTests\obj\Debug\net10.0\Multitrac.IntegrationTests.genruntimeconfig.cache
 C:\Users\fabri\Downloads\MultitracV2\tests\Multitrac.IntegrationTests\obj\Debug\net10.0\ref\Multitrac.IntegrationTests.dll
 C:\Users\fabri\Downloads\MultitracV2\tests\Multitrac.IntegrationTests\obj\Debug\net10.0\Multitrac.IntegrationTests.sourcelink.json
+C:\Users\fabri\Downloads\MultitracV2\tests\Multitrac.IntegrationTests\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

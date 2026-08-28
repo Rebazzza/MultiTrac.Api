@@ -22,7 +22,7 @@ public class BancoConfiguration : IEntityTypeConfiguration<Banco>
     {
         builder.HasKey(e => e.IdBanco);
         builder.ToTable("BANCO");
-        builder.Property(e => e.IdBanco).HasColumnName("Id_Banco").ValueGeneratedNever();
+        builder.Property(e => e.IdBanco).HasColumnName("Id_Banco").ValueGeneratedOnAdd();
         builder.Property(e => e.BancoNombre).HasColumnName("Banco").HasMaxLength(250).IsUnicode(false);
         builder.Property(e => e.Observaciones).HasColumnName("Observaciones").HasMaxLength(250).IsUnicode(false);
     }
@@ -34,7 +34,7 @@ public class CargoConfiguration : IEntityTypeConfiguration<Cargo>
     {
         builder.HasKey(e => e.IdCargo);
         builder.ToTable("CARGO");
-        builder.Property(e => e.IdCargo).HasColumnName("IdCargo").ValueGeneratedNever();
+        builder.Property(e => e.IdCargo).HasColumnName("IdCargo").ValueGeneratedOnAdd();
         builder.Property(e => e.TituloCargo).HasColumnName("Titulo_Cargo").HasMaxLength(50).IsUnicode(false);
         builder.Property(e => e.DescripcionCargo).HasColumnName("Descripcion_Cargo").HasMaxLength(50).IsUnicode(false);
         builder.Property(e => e.CrgCod).HasColumnName("CRG_COD");
@@ -68,7 +68,7 @@ public class AfpConfiguration : IEntityTypeConfiguration<Afp>
     {
         builder.HasKey(e => e.IdAfp);
         builder.ToTable("AFP");
-        builder.Property(e => e.IdAfp).HasColumnName("Id_AFP").ValueGeneratedNever();
+        builder.Property(e => e.IdAfp).HasColumnName("Id_AFP").ValueGeneratedOnAdd();
         builder.Property(e => e.CodigoExcel).HasColumnName("CodigoExcel").HasMaxLength(5).IsUnicode(false);
         builder.Property(e => e.NomAfp).HasColumnName("Nom_AFP").HasMaxLength(200).IsUnicode(false);
         builder.Property(e => e.Estado).HasColumnName("Estado").HasMaxLength(1).IsUnicode(false);
@@ -82,7 +82,7 @@ public class FlotaConfiguration : IEntityTypeConfiguration<Flota>
     {
         builder.HasKey(e => e.IdFlota);
         builder.ToTable("FLOTA");
-        builder.Property(e => e.IdFlota).HasColumnName("IdFlota").ValueGeneratedNever();
+        builder.Property(e => e.IdFlota).HasColumnName("IdFlota").ValueGeneratedOnAdd();
         builder.Property(e => e.DescFlota).HasColumnName("DescFlota").HasMaxLength(255).IsUnicode(false);
         builder.Property(e => e.Nivel).HasColumnName("Nivel").HasMaxLength(3).IsUnicode(false);
         builder.Property(e => e.Tipo).HasColumnName("Tipo").HasMaxLength(1).IsUnicode(false);
@@ -95,7 +95,7 @@ public class ActividadConfiguration : IEntityTypeConfiguration<Actividad>
     {
         builder.HasKey(e => e.IdActividad);
         builder.ToTable("ACTIVIDAD");
-        builder.Property(e => e.IdActividad).HasColumnName("Id_Actividad").ValueGeneratedNever();
+        builder.Property(e => e.IdActividad).HasColumnName("Id_Actividad").ValueGeneratedOnAdd();
         builder.Property(e => e.Descripcion).HasColumnName("Descripcion").HasMaxLength(255).IsUnicode(false);
     }
 }
@@ -106,7 +106,7 @@ public class TurnoConfiguration : IEntityTypeConfiguration<Turno>
     {
         builder.HasKey(e => e.IdTurno);
         builder.ToTable("TURNO");
-        builder.Property(e => e.IdTurno).HasColumnName("Id_Turno").ValueGeneratedNever();
+        builder.Property(e => e.IdTurno).HasColumnName("Id_Turno").ValueGeneratedOnAdd();
         builder.Property(e => e.IdContratista).HasColumnName("Id_Contratista");
         builder.Property(e => e.IdOperacion).HasColumnName("Id_Operacion");
         builder.Property(e => e.PosicionTurno).HasColumnName("Posicion_Turno");
@@ -134,7 +134,7 @@ public class TipoOcurrenciaConfiguration : IEntityTypeConfiguration<TipoOcurrenc
     {
         builder.HasKey(e => e.IdTipoOcurrencia);
         builder.ToTable("TIPO_OCURRENCIA");
-        builder.Property(e => e.IdTipoOcurrencia).HasColumnName("Id_TipoOcurrencia").ValueGeneratedNever();
+        builder.Property(e => e.IdTipoOcurrencia).HasColumnName("Id_TipoOcurrencia").ValueGeneratedOnAdd();
         builder.Property(e => e.TipoOcurrenciaNombre).HasColumnName("TipoOcurrencia").HasMaxLength(50).IsUnicode(false);
         builder.Property(e => e.Observaciones).HasColumnName("Observaciones").HasMaxLength(250).IsUnicode(false);
     }

@@ -2,6 +2,7 @@ using AutoMapper;
 using Multitrac.Application.DTOs;
 using Multitrac.Application.Interfaces;
 using Multitrac.Domain.Entities;
+using Multitrac.Domain.Exceptions;
 using Multitrac.Domain.Interfaces;
 
 namespace Multitrac.Application.Services;
@@ -12,8 +13,8 @@ public class PersonalService : ServiceBase<PersonalDto, Personal>
 
     public override async Task<PersonalDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Personal>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<PersonalDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<PersonalDto>(entity);
     }
 
     public override async Task<IEnumerable<PersonalDto>> GetAllAsync()
@@ -32,18 +33,19 @@ public class PersonalService : ServiceBase<PersonalDto, Personal>
 
     public override async Task UpdateAsync(int id, PersonalDto dto)
     {
-        var entity = await _unitOfWork.Repository<Personal>().GetByIdAsync(id);
-        if (entity == null) throw new KeyNotFoundException($"Personal with ID {id} not found");
-
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Personal>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
 
     public override async Task DeleteAsync(int id)
     {
-        await _unitOfWork.Repository<Personal>().DeleteAsync(id);
-        await _unitOfWork.SaveChangesAsync();
+        var deleted = await _unitOfWork.ExecuteSqlRawAsync(
+            "DELETE FROM PERSONAL WHERE Id_Personal = {0}", id);
+        if (deleted == 0)
+            throw new NotFoundException(typeof(Personal).Name, id);
     }
 
     public override async Task<bool> ExistsAsync(int id)
@@ -58,8 +60,8 @@ public class PersonalCargoService : ServiceBase<PersonalCargoDto, PersonalCargo>
 
     public override async Task<PersonalCargoDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<PersonalCargo>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<PersonalCargoDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<PersonalCargoDto>(entity);
     }
 
     public override async Task<IEnumerable<PersonalCargoDto>> GetAllAsync()
@@ -78,10 +80,9 @@ public class PersonalCargoService : ServiceBase<PersonalCargoDto, PersonalCargo>
 
     public override async Task UpdateAsync(int id, PersonalCargoDto dto)
     {
-        var entity = await _unitOfWork.Repository<PersonalCargo>().GetByIdAsync(id);
-        if (entity == null) throw new KeyNotFoundException($"PersonalCargo with ID {id} not found");
-
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<PersonalCargo>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -104,8 +105,8 @@ public class PersonalVacacionesService : ServiceBase<PersonalVacacionesDto, Pers
 
     public override async Task<PersonalVacacionesDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<PersonalVacaciones>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<PersonalVacacionesDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<PersonalVacacionesDto>(entity);
     }
 
     public override async Task<IEnumerable<PersonalVacacionesDto>> GetAllAsync()
@@ -117,6 +118,7 @@ public class PersonalVacacionesService : ServiceBase<PersonalVacacionesDto, Pers
     public override async Task<PersonalVacacionesDto> CreateAsync(PersonalVacacionesDto dto)
     {
         var entity = _mapper.Map<PersonalVacaciones>(dto);
+        await SetNextIdAsync(entity);
         await _unitOfWork.Repository<PersonalVacaciones>().CreateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
         return _mapper.Map<PersonalVacacionesDto>(entity);
@@ -124,10 +126,9 @@ public class PersonalVacacionesService : ServiceBase<PersonalVacacionesDto, Pers
 
     public override async Task UpdateAsync(int id, PersonalVacacionesDto dto)
     {
-        var entity = await _unitOfWork.Repository<PersonalVacaciones>().GetByIdAsync(id);
-        if (entity == null) throw new KeyNotFoundException($"PersonalVacaciones with ID {id} not found");
-
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<PersonalVacaciones>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -150,8 +151,8 @@ public class ContratistaService : ServiceBase<ContratistaDto, Contratista>
 
     public override async Task<ContratistaDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Contratista>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<ContratistaDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<ContratistaDto>(entity);
     }
 
     public override async Task<IEnumerable<ContratistaDto>> GetAllAsync()
@@ -163,6 +164,7 @@ public class ContratistaService : ServiceBase<ContratistaDto, Contratista>
     public override async Task<ContratistaDto> CreateAsync(ContratistaDto dto)
     {
         var entity = _mapper.Map<Contratista>(dto);
+        await SetNextIdAsync(entity);
         await _unitOfWork.Repository<Contratista>().CreateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
         return _mapper.Map<ContratistaDto>(entity);
@@ -170,10 +172,9 @@ public class ContratistaService : ServiceBase<ContratistaDto, Contratista>
 
     public override async Task UpdateAsync(int id, ContratistaDto dto)
     {
-        var entity = await _unitOfWork.Repository<Contratista>().GetByIdAsync(id);
-        if (entity == null) throw new KeyNotFoundException($"Contratista with ID {id} not found");
-
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Contratista>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }

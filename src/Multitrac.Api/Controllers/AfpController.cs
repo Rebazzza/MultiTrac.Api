@@ -39,7 +39,6 @@ public class AfpController : ControllerBase
     public async Task<ActionResult<AfpDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 

@@ -2,6 +2,7 @@ using AutoMapper;
 using Multitrac.Application.DTOs;
 using Multitrac.Application.Interfaces;
 using Multitrac.Domain.Entities;
+using Multitrac.Domain.Exceptions;
 using Multitrac.Domain.Interfaces;
 
 namespace Multitrac.Application.Services;
@@ -12,8 +13,8 @@ public class OperacionService : ServiceBase<OperacionDto, Operacion>
 
     public override async Task<OperacionDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Operacion>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<OperacionDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<OperacionDto>(entity);
     }
 
     public override async Task<IEnumerable<OperacionDto>> GetAllAsync()
@@ -32,10 +33,9 @@ public class OperacionService : ServiceBase<OperacionDto, Operacion>
 
     public override async Task UpdateAsync(int id, OperacionDto dto)
     {
-        var entity = await _unitOfWork.Repository<Operacion>().GetByIdAsync(id);
-        if (entity == null) throw new KeyNotFoundException($"Operacion with ID {id} not found");
-
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Operacion>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -58,8 +58,8 @@ public class OperacionGeneralService : ServiceBase<OperacionGeneralDto, Operacio
 
     public override async Task<OperacionGeneralDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<OperacionGeneral>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<OperacionGeneralDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<OperacionGeneralDto>(entity);
     }
 
     public override async Task<IEnumerable<OperacionGeneralDto>> GetAllAsync()
@@ -78,10 +78,9 @@ public class OperacionGeneralService : ServiceBase<OperacionGeneralDto, Operacio
 
     public override async Task UpdateAsync(int id, OperacionGeneralDto dto)
     {
-        var entity = await _unitOfWork.Repository<OperacionGeneral>().GetByIdAsync(id);
-        if (entity == null) throw new KeyNotFoundException($"OperacionGeneral with ID {id} not found");
-
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<OperacionGeneral>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -104,8 +103,8 @@ public class OperacionGeneralEquipoService : ServiceBase<OperacionGeneralEquipoD
 
     public override async Task<OperacionGeneralEquipoDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<OperacionGeneralEquipo>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<OperacionGeneralEquipoDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<OperacionGeneralEquipoDto>(entity);
     }
 
     public override async Task<IEnumerable<OperacionGeneralEquipoDto>> GetAllAsync()
@@ -124,10 +123,9 @@ public class OperacionGeneralEquipoService : ServiceBase<OperacionGeneralEquipoD
 
     public override async Task UpdateAsync(int id, OperacionGeneralEquipoDto dto)
     {
-        var entity = await _unitOfWork.Repository<OperacionGeneralEquipo>().GetByIdAsync(id);
-        if (entity == null) throw new KeyNotFoundException($"OperacionGeneralEquipo with ID {id} not found");
-
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<OperacionGeneralEquipo>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -146,12 +144,17 @@ public class OperacionGeneralEquipoService : ServiceBase<OperacionGeneralEquipoD
 
 public class OperacionFleteService : ServiceBase<OperacionFleteDto, OperacionFlete>
 {
-    public OperacionFleteService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
+    private readonly IOperacionFleteSpRepository _spRepository;
+
+    public OperacionFleteService(IUnitOfWork unitOfWork, IMapper mapper, IOperacionFleteSpRepository spRepository) : base(unitOfWork, mapper)
+    {
+        _spRepository = spRepository;
+    }
 
     public override async Task<OperacionFleteDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<OperacionFlete>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<OperacionFleteDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<OperacionFleteDto>(entity);
     }
 
     public override async Task<IEnumerable<OperacionFleteDto>> GetAllAsync()
@@ -170,10 +173,9 @@ public class OperacionFleteService : ServiceBase<OperacionFleteDto, OperacionFle
 
     public override async Task UpdateAsync(int id, OperacionFleteDto dto)
     {
-        var entity = await _unitOfWork.Repository<OperacionFlete>().GetByIdAsync(id);
-        if (entity == null) throw new KeyNotFoundException($"OperacionFlete with ID {id} not found");
-
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<OperacionFlete>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -188,6 +190,31 @@ public class OperacionFleteService : ServiceBase<OperacionFleteDto, OperacionFle
     {
         return await _unitOfWork.Repository<OperacionFlete>().ExistsAsync(id);
     }
+
+    public async Task<CalcularFleteResponseDto?> GetFleteByIdOperacionAsync(int idOperacion)
+    {
+        return await _spRepository.GetFleteByIdOperacionAsync(idOperacion);
+    }
+
+    public async Task<IEnumerable<CalcularFleteResponseDto>> GetFletesByClienteAndTipoCargaAsync(int idCliente, int idTipoCarga)
+    {
+        return await _spRepository.GetFletesByClienteAndTipoCargaAsync(idCliente, idTipoCarga);
+    }
+
+    public async Task<IEnumerable<ReporteFacturacionResponseDto>> GetReporteFacturacionAsync(ReporteFacturacionRequestDto request)
+    {
+        return await _spRepository.GetReporteFacturacionAsync(request);
+    }
+
+    public async Task<IEnumerable<IndicadoresResponseDto>> CalcularIndicadoresAsync(int anio, int mes)
+    {
+        return await _spRepository.CalcularIndicadoresAsync(anio, mes);
+    }
+
+    public async Task<IEnumerable<ContratistaDescuentoDto>> GetContratistaDescuentosAsync(int idOperacionGeneral)
+    {
+        return await _spRepository.GetContratistaDescuentosByIdOperacionGeneralAsync(idOperacionGeneral);
+    }
 }
 
 public class OperacionInformeService : ServiceBase<OperacionInformeDto, OperacionInforme>
@@ -196,8 +223,8 @@ public class OperacionInformeService : ServiceBase<OperacionInformeDto, Operacio
 
     public override async Task<OperacionInformeDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<OperacionInforme>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<OperacionInformeDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<OperacionInformeDto>(entity);
     }
 
     public override async Task<IEnumerable<OperacionInformeDto>> GetAllAsync()
@@ -216,10 +243,9 @@ public class OperacionInformeService : ServiceBase<OperacionInformeDto, Operacio
 
     public override async Task UpdateAsync(int id, OperacionInformeDto dto)
     {
-        var entity = await _unitOfWork.Repository<OperacionInforme>().GetByIdAsync(id);
-        if (entity == null) throw new KeyNotFoundException($"OperacionInforme with ID {id} not found");
-
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<OperacionInforme>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -242,8 +268,8 @@ public class TipoCargaService : ServiceBase<TipoCargaDto, TipoCarga>
 
     public override async Task<TipoCargaDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<TipoCarga>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<TipoCargaDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<TipoCargaDto>(entity);
     }
 
     public override async Task<IEnumerable<TipoCargaDto>> GetAllAsync()
@@ -262,10 +288,9 @@ public class TipoCargaService : ServiceBase<TipoCargaDto, TipoCarga>
 
     public override async Task UpdateAsync(int id, TipoCargaDto dto)
     {
-        var entity = await _unitOfWork.Repository<TipoCarga>().GetByIdAsync(id);
-        if (entity == null) throw new KeyNotFoundException($"TipoCarga with ID {id} not found");
-
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<TipoCarga>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -288,8 +313,8 @@ public class UnidadService : ServiceBase<UnidadDto, Unidad>
 
     public override async Task<UnidadDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Unidad>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<UnidadDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<UnidadDto>(entity);
     }
 
     public override async Task<IEnumerable<UnidadDto>> GetAllAsync()
@@ -308,10 +333,9 @@ public class UnidadService : ServiceBase<UnidadDto, Unidad>
 
     public override async Task UpdateAsync(int id, UnidadDto dto)
     {
-        var entity = await _unitOfWork.Repository<Unidad>().GetByIdAsync(id);
-        if (entity == null) throw new KeyNotFoundException($"Unidad with ID {id} not found");
-
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Unidad>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }

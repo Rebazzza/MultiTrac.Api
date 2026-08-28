@@ -39,7 +39,6 @@ public class BancoController : ControllerBase
     public async Task<ActionResult<BancoDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 

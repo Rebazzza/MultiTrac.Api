@@ -90,8 +90,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -100,7 +104,7 @@
               "RelativeDocumentMoniker": "src\\Multitrac.Application\\Services\\CatalogServices.cs",
               "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\CatalogServices.cs",
               "RelativeToolTip": "src\\Multitrac.Application\\Services\\CatalogServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-24T22:22:57.952Z",
               "EditorCaption": ""
@@ -115,8 +119,7 @@
               "RelativeToolTip": "src\\Multitrac.Application\\Services\\EquipoServices.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAAAUwFUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:39:05.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-24T21:39:05.328Z"
             },
             {
               "$type": "Document",
@@ -128,12 +131,7 @@
               "RelativeToolTip": "src\\Multitrac.Application\\Services\\ClienteProveedorServices.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:38:50.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "WhenOpened": "2026-08-24T21:38:50.681Z"
             },
             {
               "$type": "Document",
@@ -145,8 +143,7 @@
               "RelativeToolTip": "src\\Multitrac.Domain\\Interfaces\\IRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:16:14.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-24T21:16:14.049Z"
             },
             {
               "$type": "Document",
@@ -158,8 +155,7 @@
               "RelativeToolTip": "src\\Multitrac.Domain\\Interfaces\\IUnitOfWork.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:16:12.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-24T21:16:12.713Z"
             },
             {
               "$type": "Document",
@@ -171,8 +167,7 @@
               "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\Operacion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:16:01.242Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-24T21:16:01.242Z"
             },
             {
               "$type": "Document",
@@ -184,8 +179,7 @@
               "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\EquipoSupport.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:13:03.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-24T21:13:03.344Z"
             },
             {
               "$type": "Document",
@@ -197,8 +191,7 @@
               "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\CatalogEntities.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:12:50.668Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-24T21:12:50.668Z"
             },
             {
               "$type": "Document",
@@ -210,8 +203,7 @@
               "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\ClienteProveedorEntities.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:12:47.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-24T21:12:47.51Z"
             },
             {
               "$type": "Document",
@@ -223,8 +215,7 @@
               "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\Contratista.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:12:42.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-24T21:12:42.066Z"
             },
             {
               "$type": "Document",
@@ -236,8 +227,7 @@
               "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\Equipo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:12:40.805Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-24T21:12:40.805Z"
             },
             {
               "$type": "Document",
@@ -249,8 +239,7 @@
               "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\OperacionFlete.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-21T15:13:57.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-21T15:13:57.118Z"
             },
             {
               "$type": "Document",
@@ -262,8 +251,7 @@
               "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\OperacionGeneral.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:12:39.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-24T21:12:39.334Z"
             },
             {
               "$type": "Document",
@@ -275,8 +263,7 @@
               "RelativeToolTip": "src\\Multitrac.Application\\DTOs\\EquipoDtos.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:11:33.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-24T21:11:33.837Z"
             },
             {
               "$type": "Document",
@@ -288,8 +275,7 @@
               "RelativeToolTip": "src\\Multitrac.Application\\DTOs\\CatalogDtos.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:11:32.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-24T21:11:32.339Z"
             },
             {
               "$type": "Document",
@@ -301,8 +287,7 @@
               "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\PersonalSupport.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-21T16:07:34.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-21T16:07:34.462Z"
             },
             {
               "$type": "Document",
@@ -314,8 +299,7 @@
               "RelativeToolTip": "src\\Multitrac.Application\\Services\\OperacionServices.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAuwCAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-21T15:14:12.243Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-21T15:14:12.243Z"
             },
             {
               "$type": "Document",

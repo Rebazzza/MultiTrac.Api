@@ -21,6 +21,22 @@ public class Repository<T> : IRepository<T> where T : class
         return await _dbSet.FindAsync(id);
     }
 
+    public async Task<T?> FindAsync(params object[] keyValues)
+    {
+        return await _dbSet.FindAsync(keyValues);
+    }
+
+    public async Task<bool> DeleteByKeysAsync(params object[] keyValues)
+    {
+        var entity = await _dbSet.FindAsync(keyValues);
+        if (entity != null)
+        {
+            _dbSet.Remove(entity);
+            return true;
+        }
+        return false;
+    }
+
     public async Task<IEnumerable<T>> GetAllAsync()
     {
         return await _dbSet.ToListAsync();

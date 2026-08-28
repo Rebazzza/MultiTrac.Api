@@ -8,13 +8,13 @@ namespace Multitrac.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class EquipoDataController : ControllerBase
+public class EquipoController : ControllerBase
 {
-    private readonly IService<EquipoDto, Equipo> _service;
+    private readonly IEquipoService _service;
     private readonly IValidator<EquipoDto> _validator;
 
-    public EquipoDataController(
-        IService<EquipoDto, Equipo> service,
+    public EquipoController(
+        IEquipoService service,
         IValidator<EquipoDto> validator)
     {
         _service = service;
@@ -35,11 +35,10 @@ public class EquipoDataController : ControllerBase
         return Ok(result);
     }
 
-    [HttpGet("{id}")]
-    public async Task<ActionResult<EquipoDto>> GetById(int id)
+    [HttpGet("{tipoEquipo}/{codEquipo}")]
+    public async Task<ActionResult<EquipoDto>> GetByCompositeKey(string tipoEquipo, string codEquipo)
     {
-        var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
+        var result = await _service.GetByCompositeKeyAsync(tipoEquipo, codEquipo);
         return Ok(result);
     }
 
@@ -51,24 +50,25 @@ public class EquipoDataController : ControllerBase
             return BadRequest(validationResult.Errors);
 
         var result = await _service.CreateAsync(dto);
-        return Created(string.Empty, result);
+        return CreatedAtAction(nameof(GetByCompositeKey),
+            new { tipoEquipo = result.TipoEquipo, codEquipo = result.CodEquipo }, result);
     }
 
-    [HttpPut("{id}")]
-    public async Task<IActionResult> Update(int id, [FromBody] EquipoDto dto)
+    [HttpPut("{tipoEquipo}/{codEquipo}")]
+    public async Task<IActionResult> Update(string tipoEquipo, string codEquipo, [FromBody] EquipoDto dto)
     {
         var validationResult = await _validator.ValidateAsync(dto);
         if (!validationResult.IsValid)
             return BadRequest(validationResult.Errors);
 
-        await _service.UpdateAsync(id, dto);
+        await _service.UpdateAsync(tipoEquipo, codEquipo, dto);
         return NoContent();
     }
 
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> Delete(int id)
+    [HttpDelete("{tipoEquipo}/{codEquipo}")]
+    public async Task<IActionResult> Delete(string tipoEquipo, string codEquipo)
     {
-        await _service.DeleteAsync(id);
+        await _service.DeleteAsync(tipoEquipo, codEquipo);
         return NoContent();
     }
 }
@@ -106,7 +106,6 @@ public class EquipoCombustibleController : ControllerBase
     public async Task<ActionResult<EquipoCombustibleDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -173,7 +172,6 @@ public class EquipoKilometrajeController : ControllerBase
     public async Task<ActionResult<EquipoKilometrajeDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -240,7 +238,6 @@ public class EquipoMantenimientoController : ControllerBase
     public async Task<ActionResult<EquipoMantenimientoDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 

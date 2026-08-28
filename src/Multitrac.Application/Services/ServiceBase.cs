@@ -2,6 +2,7 @@ using System.Reflection;
 using AutoMapper;
 using Multitrac.Application.DTOs;
 using Multitrac.Application.Interfaces;
+using Multitrac.Domain.Exceptions;
 using Multitrac.Domain.Interfaces;
 
 namespace Multitrac.Application.Services;
@@ -15,6 +16,49 @@ public abstract class ServiceBase<TDto, TEntity> : IService<TDto, TEntity> where
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
+    }
+
+    protected async Task<TEntity> GetEntityByIdOrThrowAsync(int id)
+    {
+        var entity = await _unitOfWork.Repository<TEntity>().GetByIdAsync(id);
+        if (entity == null)
+            throw new NotFoundException(typeof(TEntity).Name, id);
+        return entity;
+    }
+
+    protected async Task<int> GetNextIdAsync<TEntity>() where TEntity : class
+    {
+        var all = await _unitOfWork.Repository<TEntity>().GetAllAsync();
+        if (!all.Any()) return 1;
+
+        var pkProp = typeof(TEntity).GetProperties()
+            .FirstOrDefault(p => p.PropertyType == typeof(int) && p.CanRead && p.Name.StartsWith("Id"))
+            ?? typeof(TEntity).GetProperties().First(p => p.PropertyType == typeof(int) && p.CanRead);
+
+        var maxId = all.Max(e => (int)(pkProp.GetValue(e) ?? 0));
+        return maxId + 1;
+    }
+
+    protected async Task SetNextIdAsync<TEntity>(TEntity entity) where TEntity : class
+    {
+        var pkProp = typeof(TEntity).GetProperties()
+            .FirstOrDefault(p => p.PropertyType == typeof(int) && p.CanRead && p.Name.StartsWith("Id"))
+            ?? typeof(TEntity).GetProperties().First(p => p.PropertyType == typeof(int) && p.CanRead);
+
+        var currentId = (int)(pkProp.GetValue(entity) ?? 0);
+        if (currentId == 0)
+        {
+            var nextId = await GetNextIdAsync<TEntity>();
+            pkProp.SetValue(entity, nextId);
+        }
+    }
+
+    protected void RestorePrimaryKey<TEntity>(TEntity entity, int originalId) where TEntity : class
+    {
+        var pkProp = typeof(TEntity).GetProperties()
+            .FirstOrDefault(p => p.PropertyType == typeof(int) && p.CanRead && p.Name.StartsWith("Id"))
+            ?? typeof(TEntity).GetProperties().First(p => p.PropertyType == typeof(int) && p.CanRead);
+        pkProp.SetValue(entity, originalId);
     }
 
     public abstract Task<TDto?> GetByIdAsync(int id);

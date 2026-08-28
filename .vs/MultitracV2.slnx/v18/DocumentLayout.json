@@ -3,8 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\fabri\\Downloads\\MultitracV2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\services\\catalogservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\services\\catalogservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\services\\servicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\services\\servicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A4161B-5469-F7B5-7416-0AD4FBA662F5}|src\\Multitrac.Infrastructure\\Multitrac.Infrastructure.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.infrastructure\\data\\bdmultitraccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43A4161B-5469-F7B5-7416-0AD4FBA662F5}|src\\Multitrac.Infrastructure\\Multitrac.Infrastructure.csproj|solutionrelative:src\\multitrac.infrastructure\\data\\bdmultitraccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.domain\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|solutionrelative:src\\multitrac.domain\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.domain\\entities\\personal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|solutionrelative:src\\multitrac.domain\\entities\\personal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\dtos\\storedproceduresdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\dtos\\storedproceduresdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\dtos\\operaciondtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\dtos\\operaciondtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\dtos\\catalogdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\dtos\\catalogdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\interfaces\\ioperacionfletesprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\interfaces\\ioperacionfletesprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\interfaces\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\interfaces\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\services\\personalservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\services\\personalservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\services\\operacionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\services\\operacionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\services\\equiposervices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,6 +61,38 @@
     {
       "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\services\\clienteproveedorservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\services\\clienteproveedorservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\services\\catalogservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\services\\catalogservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.domain\\entities\\equiposupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|solutionrelative:src\\multitrac.domain\\entities\\equiposupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.domain\\entities\\operacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|solutionrelative:src\\multitrac.domain\\entities\\operacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.domain\\entities\\personalsupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|solutionrelative:src\\multitrac.domain\\entities\\personalsupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\dtos\\personaldtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\dtos\\personaldtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\dtos\\paginationdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\dtos\\paginationdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\dtos\\equipodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\dtos\\equipodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\dtos\\clienteproveedordtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\dtos\\clienteproveedordtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.domain\\entities\\clienteproveedorentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,14 +111,6 @@
       "RelativeMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|solutionrelative:src\\multitrac.domain\\entities\\operacionflete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.domain\\entities\\operacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|solutionrelative:src\\multitrac.domain\\entities\\operacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.domain\\entities\\equiposupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|solutionrelative:src\\multitrac.domain\\entities\\equiposupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.domain\\entities\\catalogentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|solutionrelative:src\\multitrac.domain\\entities\\catalogentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -53,22 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.domain\\entities\\operaciongeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|solutionrelative:src\\multitrac.domain\\entities\\operaciongeneral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\dtos\\catalogdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\dtos\\catalogdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\dtos\\equipodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\dtos\\equipodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.domain\\entities\\personalsupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|solutionrelative:src\\multitrac.domain\\entities\\personalsupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.application\\services\\operacionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E515E2AF-C75B-3176-4337-C0558BED5E33}|src\\Multitrac.Application\\Multitrac.Application.csproj|solutionrelative:src\\multitrac.application\\services\\operacionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{89DC5D66-DF6F-7CC2-4157-693CE5E9B3CA}|src\\Multitrac.Domain\\Multitrac.Domain.csproj|c:\\users\\fabri\\downloads\\multitracv2\\src\\multitrac.domain\\entities\\operacionsupport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -95,40 +151,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CatalogServices.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\CatalogServices.cs",
-              "RelativeDocumentMoniker": "src\\Multitrac.Application\\Services\\CatalogServices.cs",
-              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\CatalogServices.cs",
-              "RelativeToolTip": "src\\Multitrac.Application\\Services\\CatalogServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA3AAAAAAAAAA==",
+              "Title": "ServiceBase.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\ServiceBase.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Application\\Services\\ServiceBase.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\ServiceBase.cs",
+              "RelativeToolTip": "src\\Multitrac.Application\\Services\\ServiceBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T22:22:57.952Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EquipoServices.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\EquipoServices.cs",
-              "RelativeDocumentMoniker": "src\\Multitrac.Application\\Services\\EquipoServices.cs",
-              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\EquipoServices.cs",
-              "RelativeToolTip": "src\\Multitrac.Application\\Services\\EquipoServices.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAUwFUAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:39:05.328Z",
+              "WhenOpened": "2026-08-26T21:41:02.916Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ClienteProveedorServices.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\ClienteProveedorServices.cs",
-              "RelativeDocumentMoniker": "src\\Multitrac.Application\\Services\\ClienteProveedorServices.cs",
-              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\ClienteProveedorServices.cs",
-              "RelativeToolTip": "src\\Multitrac.Application\\Services\\ClienteProveedorServices.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Title": "BdmultitracContext.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Infrastructure\\Data\\BdmultitracContext.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Infrastructure\\Data\\BdmultitracContext.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Infrastructure\\Data\\BdmultitracContext.cs",
+              "RelativeToolTip": "src\\Multitrac.Infrastructure\\Data\\BdmultitracContext.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:38:50.681Z",
+              "WhenOpened": "2026-08-26T20:50:50.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Personal.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Personal.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\Personal.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Personal.cs",
+              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\Personal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T19:49:26.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StoredProceduresDtos.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\StoredProceduresDtos.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Application\\DTOs\\StoredProceduresDtos.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\StoredProceduresDtos.cs",
+              "RelativeToolTip": "src\\Multitrac.Application\\DTOs\\StoredProceduresDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T19:43:29.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IOperacionFleteSpRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Interfaces\\IOperacionFleteSpRepository.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Application\\Interfaces\\IOperacionFleteSpRepository.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Interfaces\\IOperacionFleteSpRepository.cs",
+              "RelativeToolTip": "src\\Multitrac.Application\\Interfaces\\IOperacionFleteSpRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T19:39:19.973Z",
               "EditorCaption": ""
             },
             {
@@ -137,150 +219,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Interfaces\\IRepository.cs",
-              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Interfaces\\IRepository.cs",
-              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Interfaces\\IRepository.cs",
-              "RelativeToolTip": "src\\Multitrac.Domain\\Interfaces\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:16:14.049Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Interfaces\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Interfaces\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Interfaces\\IUnitOfWork.cs",
-              "RelativeToolTip": "src\\Multitrac.Domain\\Interfaces\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:16:12.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Operacion.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Operacion.cs",
-              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\Operacion.cs",
-              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Operacion.cs",
-              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\Operacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:16:01.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "EquipoSupport.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\EquipoSupport.cs",
-              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\EquipoSupport.cs",
-              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\EquipoSupport.cs",
-              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\EquipoSupport.cs",
+              "Title": "AuthDtos.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\AuthDtos.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Application\\DTOs\\AuthDtos.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\AuthDtos.cs",
+              "RelativeToolTip": "src\\Multitrac.Application\\DTOs\\AuthDtos.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:13:03.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CatalogEntities.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\CatalogEntities.cs",
-              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\CatalogEntities.cs",
-              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\CatalogEntities.cs",
-              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\CatalogEntities.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:12:50.668Z",
+              "WhenOpened": "2026-08-26T19:15:05.318Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ClienteProveedorEntities.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\ClienteProveedorEntities.cs",
-              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\ClienteProveedorEntities.cs",
-              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\ClienteProveedorEntities.cs",
-              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\ClienteProveedorEntities.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Usuario.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\Usuario.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Usuario.cs",
+              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:12:47.51Z",
+              "WhenOpened": "2026-08-26T19:16:10.865Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Contratista.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Contratista.cs",
-              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\Contratista.cs",
-              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Contratista.cs",
-              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\Contratista.cs",
+              "DocumentIndex": 1,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Application\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "src\\Multitrac.Application\\Interfaces\\IAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:12:42.066Z",
+              "WhenOpened": "2026-08-26T19:15:27.319Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Equipo.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Equipo.cs",
-              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\Equipo.cs",
-              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Equipo.cs",
-              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\Equipo.cs",
+              "Title": "PersonalServices.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\PersonalServices.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Application\\Services\\PersonalServices.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\PersonalServices.cs",
+              "RelativeToolTip": "src\\Multitrac.Application\\Services\\PersonalServices.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:12:40.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "OperacionFlete.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\OperacionFlete.cs",
-              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\OperacionFlete.cs",
-              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\OperacionFlete.cs",
-              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\OperacionFlete.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-21T15:13:57.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "OperacionGeneral.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\OperacionGeneral.cs",
-              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\OperacionGeneral.cs",
-              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\OperacionGeneral.cs",
-              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\OperacionGeneral.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:12:39.334Z",
+              "WhenOpened": "2026-08-26T19:17:40.3Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "EquipoDtos.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\EquipoDtos.cs",
-              "RelativeDocumentMoniker": "src\\Multitrac.Application\\DTOs\\EquipoDtos.cs",
-              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\EquipoDtos.cs",
-              "RelativeToolTip": "src\\Multitrac.Application\\DTOs\\EquipoDtos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ClienteProveedorServices.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\ClienteProveedorServices.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Application\\Services\\ClienteProveedorServices.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\ClienteProveedorServices.cs",
+              "RelativeToolTip": "src\\Multitrac.Application\\Services\\ClienteProveedorServices.cs",
+              "ViewState": "AgIAAAABAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T21:11:33.837Z",
+              "WhenOpened": "2026-08-24T21:38:50.681Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 7,
               "Title": "CatalogDtos.cs",
               "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\CatalogDtos.cs",
               "RelativeDocumentMoniker": "src\\Multitrac.Application\\DTOs\\CatalogDtos.cs",
@@ -293,33 +297,259 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "PersonalSupport.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\PersonalSupport.cs",
-              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\PersonalSupport.cs",
-              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\PersonalSupport.cs",
-              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\PersonalSupport.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "OperacionDtos.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\OperacionDtos.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Application\\DTOs\\OperacionDtos.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\OperacionDtos.cs",
+              "RelativeToolTip": "src\\Multitrac.Application\\DTOs\\OperacionDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-21T16:07:34.462Z",
+              "WhenOpened": "2026-08-26T19:15:16.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CatalogServices.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\CatalogServices.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Application\\Services\\CatalogServices.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\CatalogServices.cs",
+              "RelativeToolTip": "src\\Multitrac.Application\\Services\\CatalogServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T22:22:57.952Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "EquipoSupport.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\EquipoSupport.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\EquipoSupport.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\EquipoSupport.cs",
+              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\EquipoSupport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T21:13:03.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Operacion.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Operacion.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\Operacion.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Operacion.cs",
+              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\Operacion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T21:16:01.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EquipoServices.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\EquipoServices.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Application\\Services\\EquipoServices.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\EquipoServices.cs",
+              "RelativeToolTip": "src\\Multitrac.Application\\Services\\EquipoServices.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAgwLcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T21:39:05.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IService.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Interfaces\\IService.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Application\\Interfaces\\IService.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Interfaces\\IService.cs",
+              "RelativeToolTip": "src\\Multitrac.Application\\Interfaces\\IService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T19:15:31.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "OperacionServices.cs",
               "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\OperacionServices.cs",
               "RelativeDocumentMoniker": "src\\Multitrac.Application\\Services\\OperacionServices.cs",
               "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Services\\OperacionServices.cs",
               "RelativeToolTip": "src\\Multitrac.Application\\Services\\OperacionServices.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAuwCAAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAuwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-21T15:14:12.243Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
+              "Title": "PersonalSupport.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\PersonalSupport.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\PersonalSupport.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\PersonalSupport.cs",
+              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\PersonalSupport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-21T16:07:34.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PersonalDtos.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\PersonalDtos.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Application\\DTOs\\PersonalDtos.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\PersonalDtos.cs",
+              "RelativeToolTip": "src\\Multitrac.Application\\DTOs\\PersonalDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T19:15:24.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PaginationDtos.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\PaginationDtos.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Application\\DTOs\\PaginationDtos.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\PaginationDtos.cs",
+              "RelativeToolTip": "src\\Multitrac.Application\\DTOs\\PaginationDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T19:15:21.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ClienteProveedorDtos.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\ClienteProveedorDtos.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Application\\DTOs\\ClienteProveedorDtos.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\ClienteProveedorDtos.cs",
+              "RelativeToolTip": "src\\Multitrac.Application\\DTOs\\ClienteProveedorDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T19:15:10.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Interfaces\\IRepository.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "src\\Multitrac.Domain\\Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T21:16:14.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "src\\Multitrac.Domain\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T21:16:12.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "EquipoDtos.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\EquipoDtos.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Application\\DTOs\\EquipoDtos.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\DTOs\\EquipoDtos.cs",
+              "RelativeToolTip": "src\\Multitrac.Application\\DTOs\\EquipoDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T21:11:33.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CatalogEntities.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\CatalogEntities.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\CatalogEntities.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\CatalogEntities.cs",
+              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\CatalogEntities.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T21:12:50.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ClienteProveedorEntities.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\ClienteProveedorEntities.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\ClienteProveedorEntities.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\ClienteProveedorEntities.cs",
+              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\ClienteProveedorEntities.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T21:12:47.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Contratista.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Contratista.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\Contratista.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Contratista.cs",
+              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\Contratista.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T21:12:42.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Equipo.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Equipo.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\Equipo.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Equipo.cs",
+              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\Equipo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T21:12:40.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "OperacionFlete.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\OperacionFlete.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\OperacionFlete.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\OperacionFlete.cs",
+              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\OperacionFlete.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-21T15:13:57.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "OperacionGeneral.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\OperacionGeneral.cs",
+              "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\OperacionGeneral.cs",
+              "ToolTip": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\OperacionGeneral.cs",
+              "RelativeToolTip": "src\\Multitrac.Domain\\Entities\\OperacionGeneral.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T21:12:39.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "OperacionSupport.cs",
               "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\OperacionSupport.cs",
               "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\OperacionSupport.cs",
@@ -331,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 33,
               "Title": "Moneda.cs",
               "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Domain\\Entities\\Moneda.cs",
               "RelativeDocumentMoniker": "src\\Multitrac.Domain\\Entities\\Moneda.cs",
@@ -343,7 +573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 32,
               "Title": "Multitrac.Application.csproj",
               "DocumentMoniker": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Multitrac.Application.csproj",
               "RelativeDocumentMoniker": "src\\Multitrac.Application\\Multitrac.Application.csproj",

@@ -2,6 +2,7 @@ using AutoMapper;
 using Multitrac.Application.DTOs;
 using Multitrac.Application.Interfaces;
 using Multitrac.Domain.Entities;
+using Multitrac.Domain.Exceptions;
 using Multitrac.Domain.Interfaces;
 
 namespace Multitrac.Application.Services;
@@ -12,8 +13,8 @@ public class MonedaService : ServiceBase<MonedaDto, Moneda>
 
     public override async Task<MonedaDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Moneda>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<MonedaDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<MonedaDto>(entity);
     }
 
     public override async Task<IEnumerable<MonedaDto>> GetAllAsync()
@@ -25,6 +26,7 @@ public class MonedaService : ServiceBase<MonedaDto, Moneda>
     public override async Task<MonedaDto> CreateAsync(MonedaDto dto)
     {
         var entity = _mapper.Map<Moneda>(dto);
+        await SetNextIdAsync(entity);
         await _unitOfWork.Repository<Moneda>().CreateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
         return _mapper.Map<MonedaDto>(entity);
@@ -32,9 +34,9 @@ public class MonedaService : ServiceBase<MonedaDto, Moneda>
 
     public override async Task UpdateAsync(int id, MonedaDto dto)
     {
-        var entity = await _unitOfWork.Repository<Moneda>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Moneda>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -57,8 +59,8 @@ public class BancoService : ServiceBase<BancoDto, Banco>
 
     public override async Task<BancoDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Banco>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<BancoDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<BancoDto>(entity);
     }
 
     public override async Task<IEnumerable<BancoDto>> GetAllAsync()
@@ -77,9 +79,9 @@ public class BancoService : ServiceBase<BancoDto, Banco>
 
     public override async Task UpdateAsync(int id, BancoDto dto)
     {
-        var entity = await _unitOfWork.Repository<Banco>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Banco>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -102,8 +104,8 @@ public class CargoService : ServiceBase<CargoDto, Cargo>
 
     public override async Task<CargoDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Cargo>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<CargoDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<CargoDto>(entity);
     }
 
     public override async Task<IEnumerable<CargoDto>> GetAllAsync()
@@ -122,9 +124,9 @@ public class CargoService : ServiceBase<CargoDto, Cargo>
 
     public override async Task UpdateAsync(int id, CargoDto dto)
     {
-        var entity = await _unitOfWork.Repository<Cargo>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Cargo>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -147,8 +149,8 @@ public class NivelEducativoService : ServiceBase<NivelEducativoDto, NivelEducati
 
     public override async Task<NivelEducativoDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<NivelEducativo>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<NivelEducativoDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<NivelEducativoDto>(entity);
     }
 
     public override async Task<IEnumerable<NivelEducativoDto>> GetAllAsync()
@@ -160,6 +162,7 @@ public class NivelEducativoService : ServiceBase<NivelEducativoDto, NivelEducati
     public override async Task<NivelEducativoDto> CreateAsync(NivelEducativoDto dto)
     {
         var entity = _mapper.Map<NivelEducativo>(dto);
+        await SetNextIdAsync(entity);
         await _unitOfWork.Repository<NivelEducativo>().CreateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
         return _mapper.Map<NivelEducativoDto>(entity);
@@ -167,9 +170,9 @@ public class NivelEducativoService : ServiceBase<NivelEducativoDto, NivelEducati
 
     public override async Task UpdateAsync(int id, NivelEducativoDto dto)
     {
-        var entity = await _unitOfWork.Repository<NivelEducativo>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<NivelEducativo>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -192,8 +195,8 @@ public class AfpService : ServiceBase<AfpDto, Afp>
 
     public override async Task<AfpDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Afp>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<AfpDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<AfpDto>(entity);
     }
 
     public override async Task<IEnumerable<AfpDto>> GetAllAsync()
@@ -212,9 +215,9 @@ public class AfpService : ServiceBase<AfpDto, Afp>
 
     public override async Task UpdateAsync(int id, AfpDto dto)
     {
-        var entity = await _unitOfWork.Repository<Afp>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Afp>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -237,8 +240,8 @@ public class FlotaService : ServiceBase<FlotaDto, Flota>
 
     public override async Task<FlotaDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Flota>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<FlotaDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<FlotaDto>(entity);
     }
 
     public override async Task<IEnumerable<FlotaDto>> GetAllAsync()
@@ -257,9 +260,9 @@ public class FlotaService : ServiceBase<FlotaDto, Flota>
 
     public override async Task UpdateAsync(int id, FlotaDto dto)
     {
-        var entity = await _unitOfWork.Repository<Flota>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Flota>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -282,8 +285,8 @@ public class ActividadService : ServiceBase<ActividadDto, Actividad>
 
     public override async Task<ActividadDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Actividad>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<ActividadDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<ActividadDto>(entity);
     }
 
     public override async Task<IEnumerable<ActividadDto>> GetAllAsync()
@@ -302,9 +305,9 @@ public class ActividadService : ServiceBase<ActividadDto, Actividad>
 
     public override async Task UpdateAsync(int id, ActividadDto dto)
     {
-        var entity = await _unitOfWork.Repository<Actividad>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Actividad>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -327,8 +330,8 @@ public class TurnoService : ServiceBase<TurnoDto, Turno>
 
     public override async Task<TurnoDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Turno>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<TurnoDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<TurnoDto>(entity);
     }
 
     public override async Task<IEnumerable<TurnoDto>> GetAllAsync()
@@ -347,9 +350,9 @@ public class TurnoService : ServiceBase<TurnoDto, Turno>
 
     public override async Task UpdateAsync(int id, TurnoDto dto)
     {
-        var entity = await _unitOfWork.Repository<Turno>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<Turno>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -372,8 +375,8 @@ public class TipoPagoService : ServiceBase<TipoPagoDto, TipoPago>
 
     public override async Task<TipoPagoDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<TipoPago>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<TipoPagoDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<TipoPagoDto>(entity);
     }
 
     public override async Task<IEnumerable<TipoPagoDto>> GetAllAsync()
@@ -385,6 +388,7 @@ public class TipoPagoService : ServiceBase<TipoPagoDto, TipoPago>
     public override async Task<TipoPagoDto> CreateAsync(TipoPagoDto dto)
     {
         var entity = _mapper.Map<TipoPago>(dto);
+        await SetNextIdAsync(entity);
         await _unitOfWork.Repository<TipoPago>().CreateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
         return _mapper.Map<TipoPagoDto>(entity);
@@ -392,9 +396,9 @@ public class TipoPagoService : ServiceBase<TipoPagoDto, TipoPago>
 
     public override async Task UpdateAsync(int id, TipoPagoDto dto)
     {
-        var entity = await _unitOfWork.Repository<TipoPago>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<TipoPago>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -417,8 +421,8 @@ public class TipoOcurrenciaService : ServiceBase<TipoOcurrenciaDto, TipoOcurrenc
 
     public override async Task<TipoOcurrenciaDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<TipoOcurrencia>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<TipoOcurrenciaDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<TipoOcurrenciaDto>(entity);
     }
 
     public override async Task<IEnumerable<TipoOcurrenciaDto>> GetAllAsync()
@@ -437,9 +441,9 @@ public class TipoOcurrenciaService : ServiceBase<TipoOcurrenciaDto, TipoOcurrenc
 
     public override async Task UpdateAsync(int id, TipoOcurrenciaDto dto)
     {
-        var entity = await _unitOfWork.Repository<TipoOcurrencia>().GetByIdAsync(id);
-        if (entity == null) return;
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<TipoOcurrencia>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }

@@ -2,6 +2,7 @@ using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Multitrac.Application.DTOs;
 using Multitrac.Application.Interfaces;
+using Multitrac.Application.Services;
 using Multitrac.Domain.Entities;
 
 namespace Multitrac.Api.Controllers;
@@ -39,7 +40,6 @@ public class OperacionController : ControllerBase
     public async Task<ActionResult<OperacionDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -106,7 +106,6 @@ public class OperacionGeneralController : ControllerBase
     public async Task<ActionResult<OperacionGeneralDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -173,7 +172,6 @@ public class OperacionGeneralEquipoController : ControllerBase
     public async Task<ActionResult<OperacionGeneralEquipoDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -240,7 +238,6 @@ public class TipoCargaController : ControllerBase
     public async Task<ActionResult<TipoCargaDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -307,7 +304,6 @@ public class UnidadController : ControllerBase
     public async Task<ActionResult<UnidadDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -347,13 +343,16 @@ public class OperacionFleteController : ControllerBase
 {
     private readonly IService<OperacionFleteDto, OperacionFlete> _service;
     private readonly IValidator<OperacionFleteDto> _validator;
+    private readonly OperacionFleteService _fleteService;
 
     public OperacionFleteController(
         IService<OperacionFleteDto, OperacionFlete> service,
-        IValidator<OperacionFleteDto> validator)
+        IValidator<OperacionFleteDto> validator,
+        OperacionFleteService fleteService)
     {
         _service = service;
         _validator = validator;
+        _fleteService = fleteService;
     }
 
     [HttpGet]
@@ -374,7 +373,48 @@ public class OperacionFleteController : ControllerBase
     public async Task<ActionResult<OperacionFleteDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
+        return Ok(result);
+    }
+
+    [HttpGet("by-operacion/{idOperacion}")]
+    public async Task<ActionResult<CalcularFleteResponseDto>> GetFleteByIdOperacion(int idOperacion)
+    {
+        var result = await _fleteService.GetFleteByIdOperacionAsync(idOperacion);
+        if (result == null)
+            return NotFound();
+        return Ok(result);
+    }
+
+    [HttpGet("by-cliente-tipo-carga")]
+    public async Task<ActionResult<IEnumerable<CalcularFleteResponseDto>>> GetFletesByClienteAndTipoCarga(
+        [FromQuery] int idCliente = 0,
+        [FromQuery] int idTipoCarga = 0)
+    {
+        var result = await _fleteService.GetFletesByClienteAndTipoCargaAsync(idCliente, idTipoCarga);
+        return Ok(result);
+    }
+
+    [HttpGet("reporte-facturacion")]
+    public async Task<ActionResult<IEnumerable<ReporteFacturacionResponseDto>>> GetReporteFacturacion(
+        [FromQuery] ReporteFacturacionRequestDto request)
+    {
+        var result = await _fleteService.GetReporteFacturacionAsync(request);
+        return Ok(result);
+    }
+
+    [HttpGet("indicadores")]
+    public async Task<ActionResult<IEnumerable<IndicadoresResponseDto>>> CalcularIndicadores(
+        [FromQuery] int anio,
+        [FromQuery] int mes)
+    {
+        var result = await _fleteService.CalcularIndicadoresAsync(anio, mes);
+        return Ok(result);
+    }
+
+    [HttpGet("contratista-descuentos/{idOperacionGeneral}")]
+    public async Task<ActionResult<IEnumerable<ContratistaDescuentoDto>>> GetContratistaDescuentos(int idOperacionGeneral)
+    {
+        var result = await _fleteService.GetContratistaDescuentosAsync(idOperacionGeneral);
         return Ok(result);
     }
 
@@ -441,7 +481,6 @@ public class OperacionInformeController : ControllerBase
     public async Task<ActionResult<OperacionInformeDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 

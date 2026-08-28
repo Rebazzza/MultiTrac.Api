@@ -1,5 +1,8 @@
+using System.Text;
 using FluentValidation;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Multitrac.Application.DTOs;
 using Multitrac.Application.Interfaces;
 using Multitrac.Application.Mappings;
@@ -8,6 +11,7 @@ using Multitrac.Domain.Entities;
 using Multitrac.Domain.Interfaces;
 using Multitrac.Infrastructure.Data;
 using Multitrac.Infrastructure.Repositories;
+using Multitrac.Api.Middleware;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,13 +27,17 @@ Log.Logger = new LoggerConfiguration()
 builder.Host.UseSerilog();
 
 // Add services to the container
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add(new Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter());
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Configure Entity Framework
 builder.Services.AddDbContext<BdmultitracContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+        sql => sql.CommandTimeout(120)));
 
 // Configure AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
@@ -37,9 +45,41 @@ builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 // Configure FluentValidation
 builder.Services.AddValidatorsFromAssembly(typeof(MonedaDto).Assembly);
 
+// Configure JWT Authentication
+var jwtSettings = builder.Configuration.GetSection("Jwt");
+var key = Encoding.UTF8.GetBytes(jwtSettings["Key"] ?? "MultitracSuperSecretKey2024!@#$%^&*()_+AbcdefGhiJKLmNoPqRsTuVwXyZ123");
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = false;
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ValidateIssuer = true,
+        ValidIssuer = jwtSettings["Issuer"] ?? "MultitracAPI",
+        ValidateAudience = true,
+        ValidAudience = jwtSettings["Audience"] ?? "MultitracWeb",
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero
+    };
+});
+
+builder.Services.AddAuthorization();
+
 // Configure Repository Pattern
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IOperacionFleteSpRepository, OperacionFleteSpRepository>();
+
+// Configure Auth Service
+builder.Services.AddScoped<IAuthService, Multitrac.Api.Services.AuthService>();
 
 // Configure Services - Catálogos simples
 builder.Services.AddScoped<IService<MonedaDto, Moneda>, MonedaService>();
@@ -58,6 +98,7 @@ builder.Services.AddScoped<IService<OperacionDto, Operacion>, OperacionService>(
 builder.Services.AddScoped<IService<OperacionGeneralDto, OperacionGeneral>, OperacionGeneralService>();
 builder.Services.AddScoped<IService<OperacionGeneralEquipoDto, OperacionGeneralEquipo>, OperacionGeneralEquipoService>();
 builder.Services.AddScoped<IService<OperacionFleteDto, OperacionFlete>, OperacionFleteService>();
+builder.Services.AddScoped<OperacionFleteService>();
 builder.Services.AddScoped<IService<OperacionInformeDto, OperacionInforme>, OperacionInformeService>();
 builder.Services.AddScoped<IService<TipoCargaDto, TipoCarga>, TipoCargaService>();
 builder.Services.AddScoped<IService<UnidadDto, Unidad>, UnidadService>();
@@ -69,6 +110,7 @@ builder.Services.AddScoped<IService<PersonalVacacionesDto, PersonalVacaciones>, 
 builder.Services.AddScoped<IService<ContratistaDto, Contratista>, ContratistaService>();
 
 // Configure Services - Equipos
+builder.Services.AddScoped<IEquipoService, EquipoService>();
 builder.Services.AddScoped<IService<EquipoDto, Equipo>, EquipoService>();
 builder.Services.AddScoped<IService<EquipoCombustibleDto, EquipoCombustible>, EquipoCombustibleService>();
 builder.Services.AddScoped<IService<EquipoKilometrajeDto, EquipoKilometraje>, EquipoKilometrajeService>();
@@ -84,6 +126,9 @@ builder.Services.AddScoped<IService<ConvoyDto, Convoy>, ConvoyService>();
 
 var app = builder.Build();
 
+// Global exception handling middleware
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
@@ -91,7 +136,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 

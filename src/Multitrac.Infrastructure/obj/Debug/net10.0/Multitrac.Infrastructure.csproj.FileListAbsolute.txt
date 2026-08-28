@@ -16,3 +16,5 @@ C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Infrastructure\obj\Debug\net1
 C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Infrastructure\obj\Debug\net10.0\Multitrac.Infrastructure.genruntimeconfig.cache
 C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Infrastructure\obj\Debug\net10.0\ref\Multitrac.Infrastructure.dll
 C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Infrastructure\obj\Debug\net10.0\Multitrac.Infrastructure.sourcelink.json
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Infrastructure\bin\Debug\net10.0\Multitrac.Application.dll
+C:\Users\fabri\Downloads\MultitracV2\src\Multitrac.Infrastructure\bin\Debug\net10.0\Multitrac.Application.pdb

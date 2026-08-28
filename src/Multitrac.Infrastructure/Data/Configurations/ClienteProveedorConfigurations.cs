@@ -10,7 +10,7 @@ public class ClienteConfiguration : IEntityTypeConfiguration<Cliente>
     {
         builder.HasKey(e => e.IdCliente);
         builder.ToTable("CLIENTE");
-        builder.Property(e => e.IdCliente).HasColumnName("Id_Cliente").ValueGeneratedNever();
+        builder.Property(e => e.IdCliente).HasColumnName("Id_Cliente").ValueGeneratedOnAdd();
         builder.Property(e => e.RazonSocialCliente).HasColumnName("RazonSocial_Cliente").HasMaxLength(300).IsUnicode(false);
         builder.Property(e => e.ClienteNombre).HasColumnName("Cliente").HasMaxLength(300).IsUnicode(false);
         builder.Property(e => e.RucCliente).HasColumnName("RUC_Cliente").HasMaxLength(11).IsUnicode(false);
@@ -83,7 +83,7 @@ public class EmpresaConfiguration : IEntityTypeConfiguration<Empresa>
     {
         builder.HasKey(e => e.IdEmpresa);
         builder.ToTable("EMPRESA");
-        builder.Property(e => e.IdEmpresa).HasColumnName("IdEmpresa").ValueGeneratedNever();
+        builder.Property(e => e.IdEmpresa).HasColumnName("IdEmpresa").ValueGeneratedOnAdd();
         builder.Property(e => e.NomEmpresa).HasColumnName("NomEmpresa").HasMaxLength(255).IsUnicode(false);
         builder.Property(e => e.RucEmpresa).HasColumnName("RucEmpresa");
         builder.Property(e => e.DescEmpresa).HasColumnName("DescEmpresa").HasMaxLength(500).IsUnicode(false);

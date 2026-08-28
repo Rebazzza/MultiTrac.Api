@@ -77,7 +77,28 @@ public class EquipoCombustibleConfiguration : IEntityTypeConfiguration<EquipoCom
     {
         builder.HasKey(e => e.IdCombustibleEquipo);
         builder.ToTable("EQUIPO_COMBUSTIBLE");
-        builder.Property(e => e.IdCombustibleEquipo).ValueGeneratedNever();
+        builder.Property(e => e.IdCombustibleEquipo).HasColumnName("Id_CombustibleEquipo").ValueGeneratedOnAdd();
+        builder.Property(e => e.IdOperacionGeneralEquipo).HasColumnName("Id_OperacionGeneralEquipo");
+        builder.Property(e => e.IdOperacionGeneralPersonal).HasColumnName("Id_OperacionGeneralPersonal");
+        builder.Property(e => e.IdPersonal).HasColumnName("Id_Personal");
+        builder.Property(e => e.CodEquipo).HasColumnName("Cod_Equipo").HasMaxLength(12).IsUnicode(false);
+        builder.Property(e => e.IdGrifo).HasColumnName("Id_Grifo");
+        builder.Property(e => e.NumVale).HasColumnName("Num_Vale").HasMaxLength(50).IsUnicode(false);
+        builder.Property(e => e.NumValeGrifo).HasColumnName("Num_ValeGrifo").HasMaxLength(50).IsUnicode(false);
+        builder.Property(e => e.FechaVale).HasColumnName("Fecha_Vale");
+        builder.Property(e => e.IdCombustible).HasColumnName("Id_Combustible");
+        builder.Property(e => e.IdUnidad).HasColumnName("IdUnidad");
+        builder.Property(e => e.IdContratista).HasColumnName("Id_Contratista");
+        builder.Property(e => e.RUCContratista).HasColumnName("RUC_Contratista").HasMaxLength(20).IsUnicode(false);
+        builder.Property(e => e.IdAutorizado).HasColumnName("Id_Autorizado");
+        builder.Property(e => e.IdVB).HasColumnName("Id_VB");
+        builder.Property(e => e.FechaDespacho).HasColumnName("Fecha_Despacho");
+        builder.Property(e => e.HoraDespacho).HasColumnName("Hora_Despacho").HasMaxLength(20).IsUnicode(false);
+        builder.Property(e => e.KilometrajeDespacho).HasColumnName("Kilometraje_Despacho");
+        builder.Property(e => e.FechaRetorno).HasColumnName("Fecha_Retorno");
+        builder.Property(e => e.IdLiquidacionContratistaDescuento).HasColumnName("Id_LiquidacionContratistaDescuento");
+        builder.Property(e => e.IdCombustibleEquipoFactura).HasColumnName("Id_CombustibleEquipo_Factura");
+        builder.Property(e => e.IdUsuarioRegistro).HasColumnName("Id_UsuarioRegistro");
     }
 }
 
@@ -88,6 +109,11 @@ public class EquipoKilometrajeConfiguration : IEntityTypeConfiguration<EquipoKil
         builder.HasKey(e => e.IdEquipoKilometraje);
         builder.ToTable("EQUIPO_KILOMETRAJE");
         builder.Property(e => e.IdEquipoKilometraje).ValueGeneratedNever();
+        builder.Property(e => e.CodEquipo).HasColumnName("Cod_Equipo").HasMaxLength(12).IsUnicode(false);
+        builder.Property(e => e.Acoplado).HasColumnName("Acoplado").HasMaxLength(12).IsUnicode(false);
+        builder.Property(e => e.Fecha).HasColumnName("Fecha");
+        builder.Property(e => e.Kilometraje).HasColumnName("Kilometraje");
+        builder.Property(e => e.Observacion).HasColumnName("Observacion").HasMaxLength(255).IsUnicode(false);
     }
 }
 
@@ -98,6 +124,23 @@ public class EquipoMantenimientoConfiguration : IEntityTypeConfiguration<EquipoM
         builder.HasKey(e => e.IdEquipoMantenimiento);
         builder.ToTable("EQUIPO_MANTENIMIENTO");
         builder.Property(e => e.IdEquipoMantenimiento).ValueGeneratedNever();
+        builder.Property(e => e.CodEquipo).HasColumnName("Cod_Equipo").HasMaxLength(12).IsUnicode(false);
+        builder.Property(e => e.Acoplado).HasColumnName("Acoplado").HasMaxLength(12).IsUnicode(false);
+        builder.Property(e => e.FechaIngreso).HasColumnName("FechaIngreso");
+        builder.Property(e => e.HoraIngreso).HasColumnName("HoraIngreso").HasMaxLength(20).IsUnicode(false);
+        builder.Property(e => e.FechaEstimadaSalida).HasColumnName("FechaEstimadaSalida");
+        builder.Property(e => e.HoraEstimadaSalida).HasColumnName("HoraEstimadaSaalida").HasMaxLength(20).IsUnicode(false);
+        builder.Property(e => e.FechaSalida).HasColumnName("FechaSalida");
+        builder.Property(e => e.HoraSalida).HasColumnName("HoraSalida").HasMaxLength(20).IsUnicode(false);
+        builder.Property(e => e.KilometrajeIngreso).HasColumnName("KilometrajeIngreso");
+        builder.Property(e => e.IdTipoMantto).HasColumnName("IdTipoMantto");
+        builder.Property(e => e.IdManttoPM).HasColumnName("IdManttoPM");
+        builder.Property(e => e.IdPersonaResponsable).HasColumnName("IdPersonaResponsable");
+        builder.Property(e => e.CantidadTrabajos).HasColumnName("CantidadTrabajos");
+        builder.Property(e => e.IdMarca).HasColumnName("IdMarca");
+        builder.Property(e => e.IdEquipoEstadoGeneral).HasColumnName("IdEquipoEstadoGeneral");
+        builder.Property(e => e.NroOrden).HasColumnName("Nro_Orden").HasMaxLength(50).IsUnicode(false);
+        builder.Property(e => e.Url).HasColumnName("Url").HasMaxLength(500).IsUnicode(false);
     }
 }
 

@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Multitrac.Domain\Multitrac.Domain.csproj" />
+    <ProjectReference Include="..\Multitrac.Application\Multitrac.Application.csproj" />
   </ItemGroup>
 
 </Project>

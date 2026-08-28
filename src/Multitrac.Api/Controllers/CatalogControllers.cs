@@ -37,7 +37,6 @@ public class FlotaController : ControllerBase
     public async Task<ActionResult<FlotaDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -102,7 +101,6 @@ public class ActividadController : ControllerBase
     public async Task<ActionResult<ActividadDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -167,7 +165,6 @@ public class TipoPagoController : ControllerBase
     public async Task<ActionResult<TipoPagoDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -232,7 +229,6 @@ public class TipoOcurrenciaController : ControllerBase
     public async Task<ActionResult<TipoOcurrenciaDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 

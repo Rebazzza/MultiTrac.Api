@@ -2,18 +2,18 @@ using AutoMapper;
 using Multitrac.Application.DTOs;
 using Multitrac.Application.Interfaces;
 using Multitrac.Domain.Entities;
+using Multitrac.Domain.Exceptions;
 using Multitrac.Domain.Interfaces;
 
 namespace Multitrac.Application.Services;
 
-public class EquipoService : ServiceBase<EquipoDto, Equipo>
+public class EquipoService : ServiceBase<EquipoDto, Equipo>, IEquipoService
 {
     public EquipoService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
 
     public override async Task<EquipoDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<Equipo>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<EquipoDto>(entity);
+        throw new NotSupportedException("Equipo uses composite key. Use GetByCompositeKeyAsync instead.");
     }
 
     public override async Task<IEnumerable<EquipoDto>> GetAllAsync()
@@ -32,23 +32,47 @@ public class EquipoService : ServiceBase<EquipoDto, Equipo>
 
     public override async Task UpdateAsync(int id, EquipoDto dto)
     {
-        var entity = await _unitOfWork.Repository<Equipo>().GetByIdAsync(id);
-        if (entity == null) throw new KeyNotFoundException($"Equipo with ID {id} not found");
+        throw new NotSupportedException("Equipo uses composite key. Use UpdateAsync(tipoEquipo, codEquipo, dto) instead.");
+    }
 
+    public override async Task DeleteAsync(int id)
+    {
+        throw new NotSupportedException("Equipo uses composite key. Use DeleteAsync(tipoEquipo, codEquipo) instead.");
+    }
+
+    public override async Task<bool> ExistsAsync(int id)
+    {
+        throw new NotSupportedException("Equipo uses composite key. Use ExistsAsync(tipoEquipo, codEquipo) instead.");
+    }
+
+    public async Task<EquipoDto?> GetByCompositeKeyAsync(string tipoEquipo, string codEquipo)
+    {
+        var entity = await _unitOfWork.Repository<Equipo>().FindAsync(tipoEquipo, codEquipo);
+        if (entity == null)
+            throw new NotFoundException(typeof(Equipo).Name, $"{tipoEquipo}-{codEquipo}");
+        return _mapper.Map<EquipoDto>(entity);
+    }
+
+    public async Task UpdateAsync(string tipoEquipo, string codEquipo, EquipoDto dto)
+    {
+        var entity = await _unitOfWork.Repository<Equipo>().FindAsync(tipoEquipo, codEquipo)
+            ?? throw new NotFoundException(typeof(Equipo).Name, $"{tipoEquipo}-{codEquipo}");
         _mapper.Map(dto, entity);
         await _unitOfWork.Repository<Equipo>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public override async Task DeleteAsync(int id)
+    public async Task DeleteAsync(string tipoEquipo, string codEquipo)
     {
-        await _unitOfWork.Repository<Equipo>().DeleteAsync(id);
+        var deleted = await _unitOfWork.Repository<Equipo>().DeleteByKeysAsync(tipoEquipo, codEquipo);
+        if (!deleted)
+            throw new NotFoundException(typeof(Equipo).Name, $"{tipoEquipo}-{codEquipo}");
         await _unitOfWork.SaveChangesAsync();
     }
 
-    public override async Task<bool> ExistsAsync(int id)
+    public async Task<bool> ExistsAsync(string tipoEquipo, string codEquipo)
     {
-        return await _unitOfWork.Repository<Equipo>().ExistsAsync(id);
+        return await _unitOfWork.Repository<Equipo>().FindAsync(tipoEquipo, codEquipo) != null;
     }
 }
 
@@ -58,8 +82,8 @@ public class EquipoCombustibleService : ServiceBase<EquipoCombustibleDto, Equipo
 
     public override async Task<EquipoCombustibleDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<EquipoCombustible>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<EquipoCombustibleDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<EquipoCombustibleDto>(entity);
     }
 
     public override async Task<IEnumerable<EquipoCombustibleDto>> GetAllAsync()
@@ -78,10 +102,9 @@ public class EquipoCombustibleService : ServiceBase<EquipoCombustibleDto, Equipo
 
     public override async Task UpdateAsync(int id, EquipoCombustibleDto dto)
     {
-        var entity = await _unitOfWork.Repository<EquipoCombustible>().GetByIdAsync(id);
-        if (entity == null) throw new KeyNotFoundException($"EquipoCombustible with ID {id} not found");
-
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<EquipoCombustible>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -104,8 +127,8 @@ public class EquipoKilometrajeService : ServiceBase<EquipoKilometrajeDto, Equipo
 
     public override async Task<EquipoKilometrajeDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<EquipoKilometraje>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<EquipoKilometrajeDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<EquipoKilometrajeDto>(entity);
     }
 
     public override async Task<IEnumerable<EquipoKilometrajeDto>> GetAllAsync()
@@ -117,6 +140,7 @@ public class EquipoKilometrajeService : ServiceBase<EquipoKilometrajeDto, Equipo
     public override async Task<EquipoKilometrajeDto> CreateAsync(EquipoKilometrajeDto dto)
     {
         var entity = _mapper.Map<EquipoKilometraje>(dto);
+        await SetNextIdAsync(entity);
         await _unitOfWork.Repository<EquipoKilometraje>().CreateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
         return _mapper.Map<EquipoKilometrajeDto>(entity);
@@ -124,10 +148,9 @@ public class EquipoKilometrajeService : ServiceBase<EquipoKilometrajeDto, Equipo
 
     public override async Task UpdateAsync(int id, EquipoKilometrajeDto dto)
     {
-        var entity = await _unitOfWork.Repository<EquipoKilometraje>().GetByIdAsync(id);
-        if (entity == null) throw new KeyNotFoundException($"EquipoKilometraje with ID {id} not found");
-
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<EquipoKilometraje>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }
@@ -150,8 +173,8 @@ public class EquipoMantenimientoService : ServiceBase<EquipoMantenimientoDto, Eq
 
     public override async Task<EquipoMantenimientoDto?> GetByIdAsync(int id)
     {
-        var entity = await _unitOfWork.Repository<EquipoMantenimiento>().GetByIdAsync(id);
-        return entity == null ? null : _mapper.Map<EquipoMantenimientoDto>(entity);
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<EquipoMantenimientoDto>(entity);
     }
 
     public override async Task<IEnumerable<EquipoMantenimientoDto>> GetAllAsync()
@@ -163,6 +186,7 @@ public class EquipoMantenimientoService : ServiceBase<EquipoMantenimientoDto, Eq
     public override async Task<EquipoMantenimientoDto> CreateAsync(EquipoMantenimientoDto dto)
     {
         var entity = _mapper.Map<EquipoMantenimiento>(dto);
+        await SetNextIdAsync(entity);
         await _unitOfWork.Repository<EquipoMantenimiento>().CreateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
         return _mapper.Map<EquipoMantenimientoDto>(entity);
@@ -170,10 +194,9 @@ public class EquipoMantenimientoService : ServiceBase<EquipoMantenimientoDto, Eq
 
     public override async Task UpdateAsync(int id, EquipoMantenimientoDto dto)
     {
-        var entity = await _unitOfWork.Repository<EquipoMantenimiento>().GetByIdAsync(id);
-        if (entity == null) throw new KeyNotFoundException($"EquipoMantenimiento with ID {id} not found");
-
+        var entity = await GetEntityByIdOrThrowAsync(id);
         _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
         await _unitOfWork.Repository<EquipoMantenimiento>().UpdateAsync(entity);
         await _unitOfWork.SaveChangesAsync();
     }

@@ -39,7 +39,6 @@ public class ClienteController : ControllerBase
     public async Task<ActionResult<ClienteDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -106,7 +105,6 @@ public class ProveedorController : ControllerBase
     public async Task<ActionResult<ProveedorDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -173,7 +171,6 @@ public class AreaController : ControllerBase
     public async Task<ActionResult<AreaDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -240,7 +237,6 @@ public class TipoDocumentoController : ControllerBase
     public async Task<ActionResult<TipoDocumentoDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -307,7 +303,6 @@ public class EmpresaController : ControllerBase
     public async Task<ActionResult<EmpresaDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -343,12 +338,12 @@ public class EmpresaController : ControllerBase
 
 [ApiController]
 [Route("api/[controller]")]
-public class ConvoyDataController : ControllerBase
+public class ConvoyController : ControllerBase
 {
     private readonly IService<ConvoyDto, Convoy> _service;
     private readonly IValidator<ConvoyDto> _validator;
 
-    public ConvoyDataController(
+    public ConvoyController(
         IService<ConvoyDto, Convoy> service,
         IValidator<ConvoyDto> validator)
     {
@@ -374,7 +369,6 @@ public class ConvoyDataController : ControllerBase
     public async Task<ActionResult<ConvoyDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 
@@ -410,12 +404,12 @@ public class ConvoyDataController : ControllerBase
 
 [ApiController]
 [Route("api/[controller]")]
-public class TurnoDataController : ControllerBase
+public class TurnoController : ControllerBase
 {
     private readonly IService<TurnoDto, Turno> _service;
     private readonly IValidator<TurnoDto> _validator;
 
-    public TurnoDataController(
+    public TurnoController(
         IService<TurnoDto, Turno> service,
         IValidator<TurnoDto> validator)
     {
@@ -441,7 +435,6 @@ public class TurnoDataController : ControllerBase
     public async Task<ActionResult<TurnoDto>> GetById(int id)
     {
         var result = await _service.GetByIdAsync(id);
-        if (result == null) return NotFound();
         return Ok(result);
     }
 

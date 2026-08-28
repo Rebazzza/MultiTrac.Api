@@ -68,6 +68,9 @@ public class BdmultitracContext : DbContext
     public virtual DbSet<TipoDocumento> TipoDocumentos { get; set; } = null!;
     public virtual DbSet<Empresa> Empresas { get; set; } = null!;
 
+    // Auth
+    public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(BdmultitracContext).Assembly);

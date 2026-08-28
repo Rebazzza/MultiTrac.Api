@@ -10,7 +10,7 @@ public class OperacionConfiguration : IEntityTypeConfiguration<Operacion>
     {
         builder.HasKey(e => e.IdOperacion);
         builder.ToTable("OPERACION");
-        builder.Property(e => e.IdOperacion).HasColumnName("Id_Operacion").ValueGeneratedNever();
+        builder.Property(e => e.IdOperacion).HasColumnName("Id_Operacion").ValueGeneratedOnAdd();
         builder.Property(e => e.DescOperacion).HasColumnName("Desc_Operacion").HasMaxLength(200).IsUnicode(false);
         builder.Property(e => e.HhTransporteProm).HasColumnName("HH_Transporte_Prom");
         builder.Property(e => e.HhTrabajoProm).HasColumnName("HH_Trabajo_Prom");
@@ -54,7 +54,7 @@ public class OperacionGeneralConfiguration : IEntityTypeConfiguration<OperacionG
     {
         builder.HasKey(e => e.IdOperacionGeneral);
         builder.ToTable("OPERACION_GENERAL");
-        builder.Property(e => e.IdOperacionGeneral).HasColumnName("Id_OperacionGeneral").ValueGeneratedNever();
+        builder.Property(e => e.IdOperacionGeneral).HasColumnName("Id_OperacionGeneral").ValueGeneratedOnAdd();
         builder.Property(e => e.IdOperacion).HasColumnName("Id_Operacion");
         builder.Property(e => e.IdTipoCarga).HasColumnName("Id_TipoCarga");
         builder.Property(e => e.IdTipoOperacion).HasColumnName("Id_TipoOperacion");
@@ -114,7 +114,7 @@ public class OperacionGeneralEquipoConfiguration : IEntityTypeConfiguration<Oper
     {
         builder.HasKey(e => e.IdOperacionGeneralEquipo);
         builder.ToTable("OPERACION_GENERAL_EQUIPO");
-        builder.Property(e => e.IdOperacionGeneralEquipo).HasColumnName("Id_OperacionGeneralEquipo").ValueGeneratedNever();
+        builder.Property(e => e.IdOperacionGeneralEquipo).HasColumnName("Id_OperacionGeneralEquipo").ValueGeneratedOnAdd();
         builder.Property(e => e.IdOperacionGeneral).HasColumnName("Id_OperacionGeneral");
         builder.Property(e => e.CodEquipoTracto).HasColumnName("Cod_Equipo_Tracto").HasMaxLength(12).IsUnicode(false);
         builder.Property(e => e.CodEquipoCarreta).HasColumnName("Cod_Equipo_Carreta").HasMaxLength(12).IsUnicode(false);
@@ -142,7 +142,7 @@ public class OperacionFleteConfiguration : IEntityTypeConfiguration<OperacionFle
     {
         builder.HasKey(e => e.IdOperacionFlete);
         builder.ToTable("OPERACION_FLETE");
-        builder.Property(e => e.IdOperacionFlete).HasColumnName("Id_Operacion_Flete").ValueGeneratedNever();
+        builder.Property(e => e.IdOperacionFlete).HasColumnName("Id_Operacion_Flete").ValueGeneratedOnAdd();
         builder.Property(e => e.IdOperacion).HasColumnName("Id_Operacion");
         builder.Property(e => e.IdTipoCarga).HasColumnName("Id_TipoCarga");
         builder.Property(e => e.IdMoneda).HasColumnName("Id_Moneda");
@@ -177,7 +177,7 @@ public class OperacionInformeConfiguration : IEntityTypeConfiguration<OperacionI
     {
         builder.HasKey(e => e.IdOperacionInforme);
         builder.ToTable("OPERACION_INFORME");
-        builder.Property(e => e.IdOperacionInforme).HasColumnName("Id_OperacionInforme").ValueGeneratedNever();
+        builder.Property(e => e.IdOperacionInforme).HasColumnName("Id_OperacionInforme").ValueGeneratedOnAdd();
         builder.Property(e => e.IdOperacionGeneral).HasColumnName("Id_OperacionGeneral");
         builder.Property(e => e.Convoy).HasColumnName("Convoy");
         builder.Property(e => e.FechaInforme).HasColumnName("FechaInforme").HasColumnType("datetime");
@@ -220,7 +220,7 @@ public class OperacionTurnoConfiguration : IEntityTypeConfiguration<OperacionTur
     {
         builder.HasKey(e => e.IdOperacionTurno);
         builder.ToTable("OPERACION_TURNO");
-        builder.Property(e => e.IdOperacionTurno).HasColumnName("Id_OperacionTurno").ValueGeneratedNever();
+        builder.Property(e => e.IdOperacionTurno).HasColumnName("Id_OperacionTurno").ValueGeneratedOnAdd();
         builder.Property(e => e.IdPersonalRegistro).HasColumnName("Id_PersonalRegistro");
         builder.Property(e => e.IdTurno).HasColumnName("Id_Turno");
         builder.Property(e => e.IdOperacion).HasColumnName("Id_Operacion");
@@ -236,7 +236,7 @@ public class OperacionCargaConfiguration : IEntityTypeConfiguration<OperacionCar
     {
         builder.HasKey(e => e.IdOperacionCarga);
         builder.ToTable("OPERACION_CARGA");
-        builder.Property(e => e.IdOperacionCarga).HasColumnName("Id_Operacion_Carga").ValueGeneratedNever();
+        builder.Property(e => e.IdOperacionCarga).HasColumnName("Id_Operacion_Carga").ValueGeneratedOnAdd();
         builder.Property(e => e.IdOperacion).HasColumnName("Id_Operacion");
         builder.Property(e => e.IdTipoCarga).HasColumnName("Id_TipoCarga");
         builder.Property(e => e.Estado).HasColumnName("Estado").HasMaxLength(1).IsUnicode(false);
@@ -249,7 +249,7 @@ public class OperacionTipoConfiguration : IEntityTypeConfiguration<OperacionTipo
     {
         builder.HasKey(e => e.IdOperacionTipo);
         builder.ToTable("OPERACION_TIPO");
-        builder.Property(e => e.IdOperacionTipo).ValueGeneratedNever();
+        builder.Property(e => e.IdOperacionTipo).ValueGeneratedOnAdd();
         builder.Property(e => e.OperacionTipoNombre).HasColumnName("OperacionTipo").HasMaxLength(250).IsUnicode(false);
         builder.Property(e => e.ObservacionTipo).HasColumnName("ObservacionTipo").HasMaxLength(250).IsUnicode(false);
     }
@@ -281,7 +281,7 @@ public class UnidadConfiguration : IEntityTypeConfiguration<Unidad>
     {
         builder.HasKey(e => e.IdUnidad);
         builder.ToTable("UNIDAD");
-        builder.Property(e => e.IdUnidad).HasColumnName("Id_Unidad").ValueGeneratedNever();
+        builder.Property(e => e.IdUnidad).HasColumnName("Id_Unidad").ValueGeneratedOnAdd();
         builder.Property(e => e.AbreviaturaUnidad).HasColumnName("Abreviatura_Unidad").HasMaxLength(10).IsUnicode(false);
         builder.Property(e => e.NombreUnidad).HasColumnName("Nombre_Unidad").HasMaxLength(250).IsUnicode(false);
     }
@@ -293,7 +293,7 @@ public class ConvoyConfiguration : IEntityTypeConfiguration<Convoy>
     {
         builder.HasKey(e => e.IdConvoy);
         builder.ToTable("CONVOY");
-        builder.Property(e => e.IdConvoy).ValueGeneratedNever();
+        builder.Property(e => e.IdConvoy).ValueGeneratedOnAdd();
         builder.Property(e => e.IdOperacion).HasColumnName("Id_Operacion");
         builder.Property(e => e.IdCargo).HasColumnName("IdCargo");
         builder.Property(e => e.NroPersonal).HasColumnName("NroPersonal");
