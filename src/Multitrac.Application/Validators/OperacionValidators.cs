@@ -40,8 +40,17 @@ public class OperacionValidator : AbstractValidator<OperacionDto>
         RuleFor(x => x.RutaPrincipal)
             .MaximumLength(500).WithMessage("La ruta principal no puede exceder 500 caracteres");
 
-        RuleFor(x => x.RutaAlterna)
-            .MaximumLength(500).WithMessage("La ruta alterna no puede exceder 500 caracteres");
+        RuleFor(x => x.LatCentroGIda)
+            .InclusiveBetween(-90, 90).When(x => x.LatCentroGIda.HasValue).WithMessage("Latitud de ida inválida");
+
+        RuleFor(x => x.LngCentroGIda)
+            .InclusiveBetween(-180, 180).When(x => x.LngCentroGIda.HasValue).WithMessage("Longitud de ida inválida");
+
+        RuleFor(x => x.LatCentroGVuelta)
+            .InclusiveBetween(-90, 90).When(x => x.LatCentroGVuelta.HasValue).WithMessage("Latitud de vuelta inválida");
+
+        RuleFor(x => x.LngCentroGVuelta)
+            .InclusiveBetween(-180, 180).When(x => x.LngCentroGVuelta.HasValue).WithMessage("Longitud de vuelta inválida");
     }
 }
 

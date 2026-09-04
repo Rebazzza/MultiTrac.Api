@@ -1,0 +1,326 @@
+2026-09-04 10:01:08.314 -05:00 [INF] Starting Multitrac API
+2026-09-04 10:01:08.358 -05:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-04 10:01:08.476 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-04 10:01:08.476 -05:00 [INF] Hosting environment: Development
+2026-09-04 10:01:08.476 -05:00 [INF] Content root path: C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api
+2026-09-04 10:01:08.526 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/register - application/json; charset=utf-8 172
+2026-09-04 10:01:08.627 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.AuthController.Register (Multitrac.Api)'
+2026-09-04 10:01:08.649 -05:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.AuthResponse]] Register(Multitrac.Application.DTOs.RegisterRequest) on controller Multitrac.Api.Controllers.AuthController (Multitrac.Api).
+2026-09-04 10:01:09.565 -05:00 [WRN] No store type was specified for the decimal property 'Comision' on entity type 'Afp'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'PagoxMes' on entity type 'Area'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'Alto' on entity type 'Equipo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'Ancho' on entity type 'Equipo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'CargaUtil' on entity type 'Equipo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'KilometrajeMantto' on entity type 'Equipo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'Largo' on entity type 'Equipo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'Cantidad' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'CantidadContabilidad' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'Costo' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'CostoUnitario' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'Descuento' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'KilometrajeDespacho' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'Kilometraje' on entity type 'EquipoKilometraje'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'Budget' on entity type 'Flota'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'CostoFlete' on entity type 'Operacion'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'Dimension' on entity type 'Operacion'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'KilometrajeRecorrido' on entity type 'Operacion'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'Peso' on entity type 'Operacion'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'ValorRefrencial' on entity type 'Operacion'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'CalculoComision' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'CalculoComisionTerceros' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'CalculoLiquidez' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'ComisionMultitrac' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.566 -05:00 [WRN] No store type was specified for the decimal property 'ComisionTerceros' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.567 -05:00 [WRN] No store type was specified for the decimal property 'PesoPromedioTn' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.567 -05:00 [WRN] No store type was specified for the decimal property 'PorcFlete' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.567 -05:00 [WRN] No store type was specified for the decimal property 'ValorReferencial' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.567 -05:00 [WRN] No store type was specified for the decimal property 'ValorVentaFlete' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.567 -05:00 [WRN] No store type was specified for the decimal property 'Peso' on entity type 'OperacionGeneral'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.567 -05:00 [WRN] No store type was specified for the decimal property 'Cantidad' on entity type 'PersonalEppKardex'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:09.567 -05:00 [WRN] No store type was specified for the decimal property 'Concentracion' on entity type 'TipoCarga'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-04 10:01:10.253 -05:00 [INF] Executed DbCommand (48ms) [Parameters=[@ToLower='?' (Size = 50)], CommandType='"Text"', CommandTimeout='120']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Usuarios] AS [u]
+        WHERE LOWER([u].[Username]) = @ToLower) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-09-04 10:01:10.467 -05:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 200), @p2='?' (Size = 200), @p3='?' (DbType = DateTime2), @p4='?' (Size = 250), @p5='?' (Size = 50), @p6='?' (Size = 50)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Usuarios] ([CreatedAt], [Email], [FullName], [LastLoginAt], [PasswordHash], [Role], [Username])
+OUTPUT INSERTED.[Id], INSERTED.[IsActive]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-09-04 10:01:10.526 -05:00 [INF] Executing OkObjectResult, writing value of type 'Multitrac.Application.DTOs.AuthResponse'.
+2026-09-04 10:01:10.549 -05:00 [INF] Executed action Multitrac.Api.Controllers.AuthController.Register (Multitrac.Api) in 1894.7153ms
+2026-09-04 10:01:10.550 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.AuthController.Register (Multitrac.Api)'
+2026-09-04 10:01:10.561 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/register - 200 null application/json; charset=utf-8 2036.2884ms
+2026-09-04 10:01:10.565 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/tipodocumento - null null
+2026-09-04 10:01:10.619 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.TipoDocumentoController.GetAll (Multitrac.Api)'
+2026-09-04 10:01:10.630 -05:00 [INF] Route matched with {action = "GetAll", controller = "TipoDocumento"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.TipoDocumentoDto]]] GetAll() on controller Multitrac.Api.Controllers.TipoDocumentoController (Multitrac.Api).
+2026-09-04 10:01:10.830 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [t].[TIP_COD], [t].[TIP_DOC]
+FROM [TIPO_DOCUMENTO] AS [t]
+2026-09-04 10:01:10.858 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Multitrac.Application.DTOs.TipoDocumentoDto, Multitrac.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-04 10:01:10.861 -05:00 [INF] Executed action Multitrac.Api.Controllers.TipoDocumentoController.GetAll (Multitrac.Api) in 230.3772ms
+2026-09-04 10:01:10.861 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.TipoDocumentoController.GetAll (Multitrac.Api)'
+2026-09-04 10:01:10.863 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/tipodocumento - 200 null application/json; charset=utf-8 298.0792ms
+2026-09-04 10:01:10.865 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/tipodocumento - application/json; charset=utf-8 35
+2026-09-04 10:01:10.870 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.TipoDocumentoController.Create (Multitrac.Api)'
+2026-09-04 10:01:10.877 -05:00 [INF] Route matched with {action = "Create", controller = "TipoDocumento"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.TipoDocumentoDto]] Create(Multitrac.Application.DTOs.TipoDocumentoDto) on controller Multitrac.Api.Controllers.TipoDocumentoController (Multitrac.Api).
+2026-09-04 10:01:10.962 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [t].[TIP_COD], [t].[TIP_DOC]
+FROM [TIPO_DOCUMENTO] AS [t]
+2026-09-04 10:01:10.991 -05:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 255) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TIPO_DOCUMENTO] ([TIP_COD], [TIP_DOC])
+VALUES (@p0, @p1);
+2026-09-04 10:01:10.995 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'Multitrac.Application.DTOs.TipoDocumentoDto'.
+2026-09-04 10:01:11.008 -05:00 [INF] Executed action Multitrac.Api.Controllers.TipoDocumentoController.Create (Multitrac.Api) in 130.4706ms
+2026-09-04 10:01:11.008 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.TipoDocumentoController.Create (Multitrac.Api)'
+2026-09-04 10:01:11.008 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/tipodocumento - 201 null application/json; charset=utf-8 142.9086ms
+2026-09-04 10:01:11.009 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost/api/tipodocumento/21 - null null
+2026-09-04 10:01:11.009 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.TipoDocumentoController.Delete (Multitrac.Api)'
+2026-09-04 10:01:11.017 -05:00 [INF] Route matched with {action = "Delete", controller = "TipoDocumento"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller Multitrac.Api.Controllers.TipoDocumentoController (Multitrac.Api).
+2026-09-04 10:01:11.052 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [t].[TIP_COD], [t].[TIP_DOC]
+FROM [TIPO_DOCUMENTO] AS [t]
+WHERE [t].[TIP_COD] = @p
+2026-09-04 10:01:11.067 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [TIPO_DOCUMENTO]
+OUTPUT 1
+WHERE [TIP_COD] = @p0;
+2026-09-04 10:01:11.073 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-09-04 10:01:11.073 -05:00 [INF] Executed action Multitrac.Api.Controllers.TipoDocumentoController.Delete (Multitrac.Api) in 55.3889ms
+2026-09-04 10:01:11.073 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.TipoDocumentoController.Delete (Multitrac.Api)'
+2026-09-04 10:01:11.073 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost/api/tipodocumento/21 - 204 null null 64.3511ms
+2026-09-04 10:01:11.084 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/moneda - null null
+2026-09-04 10:01:11.085 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.MonedaController.GetAll (Multitrac.Api)'
+2026-09-04 10:01:11.092 -05:00 [INF] Route matched with {action = "GetAll", controller = "Moneda"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.MonedaDto]]] GetAll() on controller Multitrac.Api.Controllers.MonedaController (Multitrac.Api).
+2026-09-04 10:01:11.093 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-09-04 10:01:11.093 -05:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2026-09-04 10:01:11.094 -05:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2026-09-04 10:01:11.097 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-09-04 10:01:11.098 -05:00 [INF] Executed action Multitrac.Api.Controllers.MonedaController.GetAll (Multitrac.Api) in 5.4985ms
+2026-09-04 10:01:11.098 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.MonedaController.GetAll (Multitrac.Api)'
+2026-09-04 10:01:11.098 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/moneda - 401 null null 13.8993ms
+2026-09-04 10:01:11.103 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/register - application/json; charset=utf-8 166
+2026-09-04 10:01:11.105 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.AuthController.Register (Multitrac.Api)'
+2026-09-04 10:01:11.105 -05:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.AuthResponse]] Register(Multitrac.Application.DTOs.RegisterRequest) on controller Multitrac.Api.Controllers.AuthController (Multitrac.Api).
+2026-09-04 10:01:11.110 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@ToLower='?' (Size = 50)], CommandType='"Text"', CommandTimeout='120']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Usuarios] AS [u]
+        WHERE LOWER([u].[Username]) = @ToLower) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-09-04 10:01:11.121 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 200), @p2='?' (Size = 200), @p3='?' (DbType = DateTime2), @p4='?' (Size = 250), @p5='?' (Size = 50), @p6='?' (Size = 50)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Usuarios] ([CreatedAt], [Email], [FullName], [LastLoginAt], [PasswordHash], [Role], [Username])
+OUTPUT INSERTED.[Id], INSERTED.[IsActive]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-09-04 10:01:11.122 -05:00 [INF] Executing OkObjectResult, writing value of type 'Multitrac.Application.DTOs.AuthResponse'.
+2026-09-04 10:01:11.123 -05:00 [INF] Executed action Multitrac.Api.Controllers.AuthController.Register (Multitrac.Api) in 18.0444ms
+2026-09-04 10:01:11.123 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.AuthController.Register (Multitrac.Api)'
+2026-09-04 10:01:11.123 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/register - 200 null application/json; charset=utf-8 19.8897ms
+2026-09-04 10:01:11.125 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/proveedor - null null
+2026-09-04 10:01:11.125 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.ProveedorController.GetAll (Multitrac.Api)'
+2026-09-04 10:01:11.131 -05:00 [INF] Route matched with {action = "GetAll", controller = "Proveedor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.ProveedorDto]]] GetAll() on controller Multitrac.Api.Controllers.ProveedorController (Multitrac.Api).
+2026-09-04 10:01:11.149 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [p].[PRV_COD], [p].[COD_UBI], [p].[IdBanco], [p].[IdBancoDolares], [p].[NRO_CUENTA], [p].[NRO_CUENTA_DOLARES], [p].[PRV_CRR], [p].[PRV_DIR], [p].[PRV_FAX], [p].[PRV_FEC_ALT], [p].[PRV_FEC_BAJ], [p].[PRV_NOM], [p].[PRV_OBS], [p].[PRV_REP], [p].[PRV_RUC], [p].[PRV_TEL], [p].[PRV_WEB]
+FROM [PROVEEDOR] AS [p]
+2026-09-04 10:01:11.187 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Multitrac.Application.DTOs.ProveedorDto, Multitrac.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-04 10:01:11.197 -05:00 [INF] Executed action Multitrac.Api.Controllers.ProveedorController.GetAll (Multitrac.Api) in 65.2373ms
+2026-09-04 10:01:11.197 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.ProveedorController.GetAll (Multitrac.Api)'
+2026-09-04 10:01:11.197 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/proveedor - 200 null application/json; charset=utf-8 72.0094ms
+2026-09-04 10:01:11.199 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/proveedor - application/json; charset=utf-8 64
+2026-09-04 10:01:11.199 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.ProveedorController.Create (Multitrac.Api)'
+2026-09-04 10:01:11.206 -05:00 [INF] Route matched with {action = "Create", controller = "Proveedor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.ProveedorDto]] Create(Multitrac.Application.DTOs.ProveedorDto) on controller Multitrac.Api.Controllers.ProveedorController (Multitrac.Api).
+2026-09-04 10:01:11.239 -05:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 6) (DbType = AnsiString), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 50) (DbType = AnsiString), @p4='?' (Size = 50) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 500) (DbType = AnsiString), @p7='?' (Size = 50) (DbType = AnsiString), @p8='?' (DbType = DateTime), @p9='?' (DbType = DateTime), @p10='?' (Size = 255) (DbType = AnsiString), @p11='?' (Size = 500) (DbType = AnsiString), @p12='?' (Size = 255) (DbType = AnsiString), @p13='?' (Size = 11) (DbType = AnsiString), @p14='?' (Size = 50) (DbType = AnsiString), @p15='?' (Size = 300) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [PROVEEDOR] ([COD_UBI], [IdBanco], [IdBancoDolares], [NRO_CUENTA], [NRO_CUENTA_DOLARES], [PRV_CRR], [PRV_DIR], [PRV_FAX], [PRV_FEC_ALT], [PRV_FEC_BAJ], [PRV_NOM], [PRV_OBS], [PRV_REP], [PRV_RUC], [PRV_TEL], [PRV_WEB])
+OUTPUT INSERTED.[PRV_COD]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2026-09-04 10:01:11.243 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'Multitrac.Application.DTOs.ProveedorDto'.
+2026-09-04 10:01:11.244 -05:00 [INF] Executed action Multitrac.Api.Controllers.ProveedorController.Create (Multitrac.Api) in 37.306ms
+2026-09-04 10:01:11.244 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.ProveedorController.Create (Multitrac.Api)'
+2026-09-04 10:01:11.244 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/proveedor - 201 null application/json; charset=utf-8 45.3703ms
+2026-09-04 10:01:11.244 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/proveedor/45 - null null
+2026-09-04 10:01:11.245 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.ProveedorController.GetById (Multitrac.Api)'
+2026-09-04 10:01:11.250 -05:00 [INF] Route matched with {action = "GetById", controller = "Proveedor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.ProveedorDto]] GetById(Int32) on controller Multitrac.Api.Controllers.ProveedorController (Multitrac.Api).
+2026-09-04 10:01:11.267 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [p].[PRV_COD], [p].[COD_UBI], [p].[IdBanco], [p].[IdBancoDolares], [p].[NRO_CUENTA], [p].[NRO_CUENTA_DOLARES], [p].[PRV_CRR], [p].[PRV_DIR], [p].[PRV_FAX], [p].[PRV_FEC_ALT], [p].[PRV_FEC_BAJ], [p].[PRV_NOM], [p].[PRV_OBS], [p].[PRV_REP], [p].[PRV_RUC], [p].[PRV_TEL], [p].[PRV_WEB]
+FROM [PROVEEDOR] AS [p]
+WHERE [p].[PRV_COD] = @p
+2026-09-04 10:01:11.270 -05:00 [INF] Executing OkObjectResult, writing value of type 'Multitrac.Application.DTOs.ProveedorDto'.
+2026-09-04 10:01:11.270 -05:00 [INF] Executed action Multitrac.Api.Controllers.ProveedorController.GetById (Multitrac.Api) in 20.0869ms
+2026-09-04 10:01:11.270 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.ProveedorController.GetById (Multitrac.Api)'
+2026-09-04 10:01:11.271 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/proveedor/45 - 200 null application/json; charset=utf-8 26.2227ms
+2026-09-04 10:01:11.271 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost/api/proveedor/45 - application/json; charset=utf-8 73
+2026-09-04 10:01:11.272 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.ProveedorController.Update (Multitrac.Api)'
+2026-09-04 10:01:11.280 -05:00 [INF] Route matched with {action = "Update", controller = "Proveedor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, Multitrac.Application.DTOs.ProveedorDto) on controller Multitrac.Api.Controllers.ProveedorController (Multitrac.Api).
+2026-09-04 10:01:11.283 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [p].[PRV_COD], [p].[COD_UBI], [p].[IdBanco], [p].[IdBancoDolares], [p].[NRO_CUENTA], [p].[NRO_CUENTA_DOLARES], [p].[PRV_CRR], [p].[PRV_DIR], [p].[PRV_FAX], [p].[PRV_FEC_ALT], [p].[PRV_FEC_BAJ], [p].[PRV_NOM], [p].[PRV_OBS], [p].[PRV_REP], [p].[PRV_RUC], [p].[PRV_TEL], [p].[PRV_WEB]
+FROM [PROVEEDOR] AS [p]
+WHERE [p].[PRV_COD] = @p
+2026-09-04 10:01:11.297 -05:00 [INF] Executed DbCommand (9ms) [Parameters=[@p16='?' (DbType = Int32), @p0='?' (Size = 6) (DbType = AnsiString), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 50) (DbType = AnsiString), @p4='?' (Size = 50) (DbType = AnsiString), @p5='?' (Size = 300) (DbType = AnsiString), @p6='?' (Size = 500) (DbType = AnsiString), @p7='?' (Size = 50) (DbType = AnsiString), @p8='?' (DbType = DateTime), @p9='?' (DbType = DateTime), @p10='?' (Size = 255) (DbType = AnsiString), @p11='?' (Size = 500) (DbType = AnsiString), @p12='?' (Size = 255) (DbType = AnsiString), @p13='?' (Size = 11) (DbType = AnsiString), @p14='?' (Size = 50) (DbType = AnsiString), @p15='?' (Size = 300) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [PROVEEDOR] SET [COD_UBI] = @p0, [IdBanco] = @p1, [IdBancoDolares] = @p2, [NRO_CUENTA] = @p3, [NRO_CUENTA_DOLARES] = @p4, [PRV_CRR] = @p5, [PRV_DIR] = @p6, [PRV_FAX] = @p7, [PRV_FEC_ALT] = @p8, [PRV_FEC_BAJ] = @p9, [PRV_NOM] = @p10, [PRV_OBS] = @p11, [PRV_REP] = @p12, [PRV_RUC] = @p13, [PRV_TEL] = @p14, [PRV_WEB] = @p15
+OUTPUT 1
+WHERE [PRV_COD] = @p16;
+2026-09-04 10:01:11.299 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-09-04 10:01:11.299 -05:00 [INF] Executed action Multitrac.Api.Controllers.ProveedorController.Update (Multitrac.Api) in 19.5976ms
+2026-09-04 10:01:11.299 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.ProveedorController.Update (Multitrac.Api)'
+2026-09-04 10:01:11.300 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost/api/proveedor/45 - 204 null null 28.49ms
+2026-09-04 10:01:11.300 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost/api/proveedor/45 - null null
+2026-09-04 10:01:11.300 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.ProveedorController.Delete (Multitrac.Api)'
+2026-09-04 10:01:11.306 -05:00 [INF] Route matched with {action = "Delete", controller = "Proveedor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller Multitrac.Api.Controllers.ProveedorController (Multitrac.Api).
+2026-09-04 10:01:11.309 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [p].[PRV_COD], [p].[COD_UBI], [p].[IdBanco], [p].[IdBancoDolares], [p].[NRO_CUENTA], [p].[NRO_CUENTA_DOLARES], [p].[PRV_CRR], [p].[PRV_DIR], [p].[PRV_FAX], [p].[PRV_FEC_ALT], [p].[PRV_FEC_BAJ], [p].[PRV_NOM], [p].[PRV_OBS], [p].[PRV_REP], [p].[PRV_RUC], [p].[PRV_TEL], [p].[PRV_WEB]
+FROM [PROVEEDOR] AS [p]
+WHERE [p].[PRV_COD] = @p
+2026-09-04 10:01:11.314 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [PROVEEDOR]
+OUTPUT 1
+WHERE [PRV_COD] = @p0;
+2026-09-04 10:01:11.315 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-09-04 10:01:11.315 -05:00 [INF] Executed action Multitrac.Api.Controllers.ProveedorController.Delete (Multitrac.Api) in 9.3342ms
+2026-09-04 10:01:11.315 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.ProveedorController.Delete (Multitrac.Api)'
+2026-09-04 10:01:11.316 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost/api/proveedor/45 - 204 null null 15.5505ms
+2026-09-04 10:01:11.316 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/proveedor/45 - null null
+2026-09-04 10:01:11.316 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.ProveedorController.GetById (Multitrac.Api)'
+2026-09-04 10:01:11.316 -05:00 [INF] Route matched with {action = "GetById", controller = "Proveedor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.ProveedorDto]] GetById(Int32) on controller Multitrac.Api.Controllers.ProveedorController (Multitrac.Api).
+2026-09-04 10:01:11.318 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [p].[PRV_COD], [p].[COD_UBI], [p].[IdBanco], [p].[IdBancoDolares], [p].[NRO_CUENTA], [p].[NRO_CUENTA_DOLARES], [p].[PRV_CRR], [p].[PRV_DIR], [p].[PRV_FAX], [p].[PRV_FEC_ALT], [p].[PRV_FEC_BAJ], [p].[PRV_NOM], [p].[PRV_OBS], [p].[PRV_REP], [p].[PRV_RUC], [p].[PRV_TEL], [p].[PRV_WEB]
+FROM [PROVEEDOR] AS [p]
+WHERE [p].[PRV_COD] = @p
+2026-09-04 10:01:11.320 -05:00 [INF] Executed action Multitrac.Api.Controllers.ProveedorController.GetById (Multitrac.Api) in 3.3163ms
+2026-09-04 10:01:11.320 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.ProveedorController.GetById (Multitrac.Api)'
+2026-09-04 10:01:11.321 -05:00 [WRN] Handled exception: Entity "Proveedor" (45) was not found.
+Multitrac.Domain.Exceptions.NotFoundException: Entity "Proveedor" (45) was not found.
+   at Multitrac.Application.Services.ServiceBase`2.GetEntityByIdOrThrowAsync(Int32 id) in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\Services\ServiceBase.cs:line 25
+   at Multitrac.Application.Services.ProveedorService.GetByIdAsync(Int32 id) in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\Services\ClienteProveedorServices.cs:line 61
+   at Multitrac.Api.Controllers.ProveedorController.GetById(Int32 id) in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Controllers\ClienteProveedorControllers.cs:line 107
+   at lambda_method562(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Multitrac.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Middleware\ExceptionHandlingMiddleware.cs:line 23
+2026-09-04 10:01:11.348 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/proveedor/45 - 404 null application/json 32.2837ms
+2026-09-04 10:01:11.350 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/moneda - null null
+2026-09-04 10:01:11.353 -05:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-09-04 10:01:11.354 -05:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-09-04 10:01:11.354 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.MonedaController.GetAll (Multitrac.Api)'
+2026-09-04 10:01:11.354 -05:00 [INF] Route matched with {action = "GetAll", controller = "Moneda"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.MonedaDto]]] GetAll() on controller Multitrac.Api.Controllers.MonedaController (Multitrac.Api).
+2026-09-04 10:01:11.354 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-09-04 10:01:11.354 -05:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2026-09-04 10:01:11.354 -05:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2026-09-04 10:01:11.356 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-09-04 10:01:11.356 -05:00 [INF] Executed action Multitrac.Api.Controllers.MonedaController.GetAll (Multitrac.Api) in 2.416ms
+2026-09-04 10:01:11.356 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.MonedaController.GetAll (Multitrac.Api)'
+2026-09-04 10:01:11.357 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/moneda - 401 null null 6.902ms
+2026-09-04 10:01:11.364 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/login - application/json; charset=utf-8 29
+2026-09-04 10:01:11.364 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.AuthController.Login (Multitrac.Api)'
+2026-09-04 10:01:11.369 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.AuthResponse]] Login(Multitrac.Application.DTOs.LoginRequest) on controller Multitrac.Api.Controllers.AuthController (Multitrac.Api).
+2026-09-04 10:01:11.381 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@ToLower='?' (Size = 50)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Usuarios] AS [u]
+WHERE LOWER([u].[Username]) = @ToLower
+2026-09-04 10:01:11.384 -05:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'Multitrac.Application.DTOs.AuthResponse'.
+2026-09-04 10:01:11.385 -05:00 [INF] Executed action Multitrac.Api.Controllers.AuthController.Login (Multitrac.Api) in 15.9532ms
+2026-09-04 10:01:11.385 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.AuthController.Login (Multitrac.Api)'
+2026-09-04 10:01:11.385 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/login - 401 null application/json; charset=utf-8 21.297ms
+2026-09-04 10:01:11.389 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/register - application/json; charset=utf-8 166
+2026-09-04 10:01:11.389 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.AuthController.Register (Multitrac.Api)'
+2026-09-04 10:01:11.390 -05:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.AuthResponse]] Register(Multitrac.Application.DTOs.RegisterRequest) on controller Multitrac.Api.Controllers.AuthController (Multitrac.Api).
+2026-09-04 10:01:11.391 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@ToLower='?' (Size = 50)], CommandType='"Text"', CommandTimeout='120']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Usuarios] AS [u]
+        WHERE LOWER([u].[Username]) = @ToLower) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-09-04 10:01:11.393 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 200), @p2='?' (Size = 200), @p3='?' (DbType = DateTime2), @p4='?' (Size = 250), @p5='?' (Size = 50), @p6='?' (Size = 50)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Usuarios] ([CreatedAt], [Email], [FullName], [LastLoginAt], [PasswordHash], [Role], [Username])
+OUTPUT INSERTED.[Id], INSERTED.[IsActive]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-09-04 10:01:11.393 -05:00 [INF] Executing OkObjectResult, writing value of type 'Multitrac.Application.DTOs.AuthResponse'.
+2026-09-04 10:01:11.394 -05:00 [INF] Executed action Multitrac.Api.Controllers.AuthController.Register (Multitrac.Api) in 3.8706ms
+2026-09-04 10:01:11.394 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.AuthController.Register (Multitrac.Api)'
+2026-09-04 10:01:11.394 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/register - 200 null application/json; charset=utf-8 4.4664ms
+2026-09-04 10:01:11.396 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/area - null null
+2026-09-04 10:01:11.396 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.AreaController.GetAll (Multitrac.Api)'
+2026-09-04 10:01:11.401 -05:00 [INF] Route matched with {action = "GetAll", controller = "Area"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.AreaDto]]] GetAll() on controller Multitrac.Api.Controllers.AreaController (Multitrac.Api).
+2026-09-04 10:01:11.422 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [a].[ARE_COD], [a].[ARE_NOM], [a].[DiaxMes], [a].[PagoxMes], [a].[Pertenece], [a].[SUBARE_COD]
+FROM [AREA] AS [a]
+2026-09-04 10:01:11.433 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Multitrac.Application.DTOs.AreaDto, Multitrac.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-04 10:01:11.439 -05:00 [INF] Executed action Multitrac.Api.Controllers.AreaController.GetAll (Multitrac.Api) in 38.1238ms
+2026-09-04 10:01:11.439 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.AreaController.GetAll (Multitrac.Api)'
+2026-09-04 10:01:11.440 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/area - 200 null application/json; charset=utf-8 43.7616ms
+2026-09-04 10:01:11.440 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/area - application/json; charset=utf-8 36
+2026-09-04 10:01:11.441 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.AreaController.Create (Multitrac.Api)'
+2026-09-04 10:01:11.447 -05:00 [INF] Route matched with {action = "Create", controller = "Area"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.AreaDto]] Create(Multitrac.Application.DTOs.AreaDto) on controller Multitrac.Api.Controllers.AreaController (Multitrac.Api).
+2026-09-04 10:01:11.473 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 255) (DbType = AnsiString), @p1='?' (DbType = Int32), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AREA] ([ARE_NOM], [DiaxMes], [PagoxMes], [Pertenece], [SUBARE_COD])
+OUTPUT INSERTED.[ARE_COD]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-09-04 10:01:11.476 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'Multitrac.Application.DTOs.AreaDto'.
+2026-09-04 10:01:11.477 -05:00 [INF] Executed action Multitrac.Api.Controllers.AreaController.Create (Multitrac.Api) in 29.1198ms
+2026-09-04 10:01:11.477 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.AreaController.Create (Multitrac.Api)'
+2026-09-04 10:01:11.477 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/area - 201 null application/json; charset=utf-8 36.418ms
+2026-09-04 10:01:11.477 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost/api/area/22 - null null
+2026-09-04 10:01:11.477 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.AreaController.Delete (Multitrac.Api)'
+2026-09-04 10:01:11.483 -05:00 [INF] Route matched with {action = "Delete", controller = "Area"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller Multitrac.Api.Controllers.AreaController (Multitrac.Api).
+2026-09-04 10:01:11.494 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [a].[ARE_COD], [a].[ARE_NOM], [a].[DiaxMes], [a].[PagoxMes], [a].[Pertenece], [a].[SUBARE_COD]
+FROM [AREA] AS [a]
+WHERE [a].[ARE_COD] = @p
+2026-09-04 10:01:11.498 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [AREA]
+OUTPUT 1
+WHERE [ARE_COD] = @p0;
+2026-09-04 10:01:11.499 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-09-04 10:01:11.499 -05:00 [INF] Executed action Multitrac.Api.Controllers.AreaController.Delete (Multitrac.Api) in 15.7736ms
+2026-09-04 10:01:11.499 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.AreaController.Delete (Multitrac.Api)'
+2026-09-04 10:01:11.499 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost/api/area/22 - 204 null null 21.7549ms
+2026-09-04 10:01:11.505 -05:00 [INF] Application is shutting down...

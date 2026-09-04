@@ -119,24 +119,22 @@ public class EquipoMantenimientoDetalleDto
 
 public class EquipoDocumentoTractoDto
 {
-    public int IdEquipoDocumentoTracto { get; set; }
+    public string? SocioTercero { get; set; }
     public string? CodEquipo { get; set; }
     public int? IdDocumento { get; set; }
-    public DateTime? FechaEmision { get; set; }
-    public DateTime? FechaVencimiento { get; set; }
-    public string? NroDocumento { get; set; }
-    public string? Observaciones { get; set; }
-    public int? Estado { get; set; }
+    public string? NombreDocumento { get; set; }
+    public string? Documento { get; set; }
+    public DateTime? FechaExpedida { get; set; }
+    public DateTime? FechaCaducidad { get; set; }
 }
 
 public class EquipoDocumentoCarretaDto
 {
-    public int IdEquipoDocumentoCarreta { get; set; }
+    public string? SocioTercero { get; set; }
     public string? CodEquipo { get; set; }
     public int? IdDocumento { get; set; }
-    public DateTime? FechaEmision { get; set; }
-    public DateTime? FechaVencimiento { get; set; }
-    public string? NroDocumento { get; set; }
-    public string? Observaciones { get; set; }
-    public int? Estado { get; set; }
+    public string? NombreDocumento { get; set; }
+    public string? Documento { get; set; }
+    public DateTime? FechaExpedida { get; set; }
+    public DateTime? FechaCaducidad { get; set; }
 }

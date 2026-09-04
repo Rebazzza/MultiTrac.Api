@@ -44,7 +44,7 @@ public class ExceptionHandlingMiddleware
             KeyNotFoundException ex => (HttpStatusCode.NotFound, ex.Message),
             ArgumentException ex => (HttpStatusCode.BadRequest, ex.Message),
             InvalidOperationException ex => (HttpStatusCode.Conflict, ex.Message),
-            _ => (HttpStatusCode.InternalServerError, $"An unexpected error occurred: {exception.InnerException?.Message ?? exception.Message}")
+            _ => (HttpStatusCode.InternalServerError, "An unexpected error occurred.")
         };
 
         if (statusCode == HttpStatusCode.InternalServerError)

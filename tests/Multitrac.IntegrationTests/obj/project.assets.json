@@ -127,28 +127,6 @@
           "buildTransitive/net10.0/Microsoft.AspNetCore.Mvc.Testing.targets": {}
         }
       },
-      "Microsoft.AspNetCore.OpenApi/10.0.10": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.OpenApi": "2.0.0"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ],
-        "build": {
-          "build/_._": {}
-        }
-      },
       "Microsoft.AspNetCore.TestHost/10.0.10": {
         "type": "package",
         "compile": {
@@ -1915,7 +1893,6 @@
         "dependencies": {
           "FluentValidation": "11.11.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.11",
-          "Microsoft.AspNetCore.OpenApi": "10.0.10",
           "Multitrac.Application": "1.0.0",
           "Multitrac.Infrastructure": "1.0.0",
           "Serilog.AspNetCore": "8.0.3",
@@ -2108,24 +2085,6 @@
         "microsoft.aspnetcore.mvc.testing.10.0.10.nupkg.sha512",
         "microsoft.aspnetcore.mvc.testing.nuspec",
         "tasks/netstandard2.0/Microsoft.AspNetCore.Mvc.Testing.Tasks.dll"
-      ]
-    },
-    "Microsoft.AspNetCore.OpenApi/10.0.10": {
-      "sha512": "d4Atx9IHq7JgX0F/h7Db+m9zAUzC+cKdI9k+OWnnyQIOUQtfvjIEuhvbjPigVMkAmPUgCbJ8Yp6M9ghUqHtJSQ==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.openapi/10.0.10",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "analyzers/dotnet/cs/Microsoft.AspNetCore.OpenApi.SourceGenerators.dll",
-        "build/Microsoft.AspNetCore.OpenApi.targets",
-        "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll",
-        "lib/net10.0/Microsoft.AspNetCore.OpenApi.xml",
-        "microsoft.aspnetcore.openapi.10.0.10.nupkg.sha512",
-        "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
     "Microsoft.AspNetCore.TestHost/10.0.10": {
@@ -4761,23 +4720,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fabri\\.nuget\\packages\\": {},
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fabri\\Downloads\\MultitracV2\\tests\\Multitrac.IntegrationTests\\Multitrac.IntegrationTests.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\tests\\Multitrac.IntegrationTests\\Multitrac.IntegrationTests.csproj",
       "projectName": "Multitrac.IntegrationTests",
-      "projectPath": "C:\\Users\\fabri\\Downloads\\MultitracV2\\tests\\Multitrac.IntegrationTests\\Multitrac.IntegrationTests.csproj",
-      "packagesPath": "C:\\Users\\fabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fabri\\Downloads\\MultitracV2\\tests\\Multitrac.IntegrationTests\\obj\\",
+      "projectPath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\tests\\Multitrac.IntegrationTests\\Multitrac.IntegrationTests.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\tests\\Multitrac.IntegrationTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\fabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4786,7 +4745,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4794,8 +4752,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Api\\Multitrac.Api.csproj": {
-              "projectPath": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Api\\Multitrac.Api.csproj"
+            "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\Multitrac.Api\\Multitrac.Api.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\Multitrac.Api\\Multitrac.Api.csproj"
             }
           }
         }
@@ -4810,7 +4768,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.300"
+      "SdkAnalysisLevel": "10.0.400"
     },
     "frameworks": {
       "net10.0": {
@@ -4850,7 +4808,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.303/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

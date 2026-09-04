@@ -48,18 +48,6 @@ public class PersonalConfiguration : IEntityTypeConfiguration<Personal>
     }
 }
 
-public class PersonalDocumentoConfiguration : IEntityTypeConfiguration<PersonalDocumento>
-{
-    public void Configure(EntityTypeBuilder<PersonalDocumento> builder)
-    {
-        builder.HasKey(e => e.IdPersonalDocumento);
-        builder.ToTable("PERSONAL_DOCUMENTO");
-        builder.Property(e => e.IdPersonalDocumento).ValueGeneratedNever();
-        builder.Property(e => e.NroDocumento).HasMaxLength(50).IsUnicode(false);
-        builder.Property(e => e.Observaciones).HasMaxLength(250).IsUnicode(false);
-    }
-}
-
 public class PersonalCargoConfiguration : IEntityTypeConfiguration<PersonalCargo>
 {
     public void Configure(EntityTypeBuilder<PersonalCargo> builder)
@@ -81,8 +69,9 @@ public class PersonalEquipoConfiguration : IEntityTypeConfiguration<PersonalEqui
     {
         builder.HasKey(e => e.IdPersonalEquipo);
         builder.ToTable("PERSONAL_EQUIPO");
-        builder.Property(e => e.IdPersonalEquipo).ValueGeneratedOnAdd();
-        builder.Property(e => e.CodEquipo).HasMaxLength(12).IsUnicode(false);
+        builder.Property(e => e.IdPersonalEquipo).HasColumnName("Id_PersonalEquipo").ValueGeneratedOnAdd();
+        builder.Property(e => e.IdPersonal).HasColumnName("Id_Personal");
+        builder.Property(e => e.CodEquipo).HasColumnName("Cod_Equipo").HasMaxLength(12).IsUnicode(false);
         builder.Property(e => e.FechIni).HasColumnName("Fech_Ini").HasColumnType("datetime");
         builder.Property(e => e.FechFin).HasColumnName("Fech_Fin").HasColumnType("datetime");
         builder.Property(e => e.IdRemplazo).HasColumnName("Id_Remplazo");
@@ -97,6 +86,8 @@ public class PersonalEppConfiguration : IEntityTypeConfiguration<PersonalEpp>
         builder.HasKey(e => e.IdPersonalEpp);
         builder.ToTable("PERSONAL_EPP");
         builder.Property(e => e.IdPersonalEpp).HasColumnName("Id_Pesonal_EPP").ValueGeneratedOnAdd();
+        builder.Property(e => e.IdPersonal).HasColumnName("Id_Personal");
+        builder.Property(e => e.IdRequerimientoGeneral).HasColumnName("Id_RequerimientoGeneral");
         builder.Property(e => e.Talla).HasMaxLength(50).IsUnicode(false);
         builder.Property(e => e.Observacion).HasMaxLength(250).IsUnicode(false);
         builder.Property(e => e.Estado).HasMaxLength(1).IsUnicode(false);
@@ -111,6 +102,9 @@ public class PersonalEppKardexConfiguration : IEntityTypeConfiguration<PersonalE
         builder.ToTable("PERSONAL_EPP_KARDEX");
         builder.Property(e => e.IdPersonalEppKardex).HasColumnName("Id_PeronalEPP_Kardex").ValueGeneratedOnAdd();
         builder.Property(e => e.IdPersonalEpp).HasColumnName("Id_Pesonal_EPP");
+        builder.Property(e => e.IdEppCondicionEntrega).HasColumnName("Id_EPP_Condicion_Entrega");
+        builder.Property(e => e.IdEppCondicionRevision).HasColumnName("Id_EPP_Condicion_Revision");
+        builder.Property(e => e.IdEppCondicionReposicion).HasColumnName("Id_EPP_Condicion_Reposicion");
         builder.Property(e => e.Estado).HasMaxLength(1).IsUnicode(false);
     }
 }
@@ -121,9 +115,19 @@ public class PersonalRecordConfiguration : IEntityTypeConfiguration<PersonalReco
     {
         builder.HasKey(e => e.IdPersonalRecord);
         builder.ToTable("PERSONAL_RECORD");
-        builder.Property(e => e.IdPersonalRecord).ValueGeneratedOnAdd();
-        builder.Property(e => e.DescripcionOcurrencia).IsUnicode(false);
-        builder.Property(e => e.MedidasAImplementar).IsUnicode(false);
+        builder.Property(e => e.IdPersonalRecord).HasColumnName("Id_Personal_Record").ValueGeneratedOnAdd();
+        builder.Property(e => e.IdPersonal).HasColumnName("Id_Personal");
+        builder.Property(e => e.IdTipoOcurrencia).HasColumnName("Id_TipoOcurrencia");
+        builder.Property(e => e.FechaOcurrencia).HasColumnName("FechaOcurrencia");
+        builder.Property(e => e.DescripcionOcurrencia).HasColumnName("Descripcion_Ocurrencia").IsUnicode(false);
+        builder.Property(e => e.MedidasAImplementar).HasColumnName("Medidas_A_Implementar").IsUnicode(false);
+        builder.Property(e => e.IdPersonalMedImpl).HasColumnName("Id_Personal_MedImpl");
+        builder.Property(e => e.RecordInicial).HasColumnName("RecordIncial");
+        builder.Property(e => e.RecordFinal).HasColumnName("RecordFinal");
+        builder.Property(e => e.Merito).HasColumnName("Merito");
+        builder.Property(e => e.Demerito).HasColumnName("Demerito");
+        builder.Property(e => e.IdPersonalVerificacion).HasColumnName("Id_Personal_Verificacion");
+        builder.Property(e => e.FechaReporte).HasColumnName("Fecha_Reporte");
     }
 }
 
@@ -158,8 +162,8 @@ public class PersonalLicenciaConducirConfiguration : IEntityTypeConfiguration<Pe
     {
         builder.HasKey(e => e.IdLicPersonal);
         builder.ToTable("PERSONAL_LICENCIA_CONDUCIR");
-        builder.Property(e => e.IdLicPersonal).ValueGeneratedNever();
-        builder.Property(e => e.NombreLicPersonal).HasMaxLength(250).IsUnicode(false);
+        builder.Property(e => e.IdLicPersonal).HasColumnName("Id_Lic_Personal").ValueGeneratedOnAdd();
+        builder.Property(e => e.NombreLicPersonal).HasColumnName("Nombre_Lic_Personal").HasMaxLength(250).IsUnicode(false);
         builder.Property(e => e.Observaciones).HasMaxLength(250).IsUnicode(false);
     }
 }
@@ -170,8 +174,8 @@ public class PersonalSuenoConfiguration : IEntityTypeConfiguration<PersonalSueno
     {
         builder.HasKey(e => e.IdSueno);
         builder.ToTable("PERSONAL_SUEÑO");
-        builder.Property(e => e.IdSueno).ValueGeneratedNever();
-        builder.Property(e => e.Sueno).HasColumnName("Sueñoo").HasMaxLength(5).IsUnicode(false);
+        builder.Property(e => e.IdSueno).HasColumnName("IdSueño").ValueGeneratedNever();
+        builder.Property(e => e.Sueno).HasColumnName("Sueño").HasMaxLength(5).IsUnicode(false);
         builder.Property(e => e.Foto).HasMaxLength(500).IsUnicode(false);
         builder.Property(e => e.Observaciones).HasMaxLength(500).IsUnicode(false);
     }

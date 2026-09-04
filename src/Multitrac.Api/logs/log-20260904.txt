@@ -1,0 +1,12 @@
+2026-09-04 09:41:05.199 -05:00 [INF] Starting Multitrac API
+2026-09-04 09:41:05.280 -05:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-04 09:41:05.422 -05:00 [INF] Now listening on: http://localhost:53927
+2026-09-04 09:41:05.424 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-04 09:41:05.424 -05:00 [INF] Hosting environment: Production
+2026-09-04 09:41:05.425 -05:00 [INF] Content root path: C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api
+2026-09-04 10:01:37.024 -05:00 [INF] Starting Multitrac API
+2026-09-04 10:01:37.102 -05:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-04 10:01:37.216 -05:00 [INF] Now listening on: http://localhost:53927
+2026-09-04 10:01:37.226 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-04 10:01:37.229 -05:00 [INF] Hosting environment: Production
+2026-09-04 10:01:37.230 -05:00 [INF] Content root path: C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api

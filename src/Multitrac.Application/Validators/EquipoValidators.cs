@@ -163,3 +163,57 @@ public class EquipoMantenimientoValidator : AbstractValidator<EquipoMantenimient
             .WithMessage("El kilometraje de ingreso no puede ser negativo");
     }
 }
+
+public class EquipoMantenimientoDetalleValidator : AbstractValidator<EquipoMantenimientoDetalleDto>
+{
+    public EquipoMantenimientoDetalleValidator()
+    {
+        RuleFor(x => x.CodigoSistema)
+            .MaximumLength(50).WithMessage("El código del sistema no puede exceder 50 caracteres");
+
+        RuleFor(x => x.HoraIngreso)
+            .MaximumLength(10).WithMessage("La hora de ingreso no puede exceder 10 caracteres");
+
+        RuleFor(x => x.HoraSalida)
+            .MaximumLength(10).WithMessage("La hora de salida no puede exceder 10 caracteres");
+
+        RuleFor(x => x.DescripcionTrabajo)
+            .MaximumLength(500).WithMessage("La descripción del trabajo no puede exceder 500 caracteres");
+    }
+}
+
+public class EquipoDocumentoTractoValidator : AbstractValidator<EquipoDocumentoTractoDto>
+{
+    public EquipoDocumentoTractoValidator()
+    {
+        RuleFor(x => x.CodEquipo)
+            .MaximumLength(20).WithMessage("El código del equipo no puede exceder 20 caracteres");
+
+        RuleFor(x => x.SocioTercero)
+            .MaximumLength(500).WithMessage("El socio/tercero no puede exceder 500 caracteres");
+
+        RuleFor(x => x.NombreDocumento)
+            .MaximumLength(500).WithMessage("El nombre del documento no puede exceder 500 caracteres");
+
+        RuleFor(x => x.Documento)
+            .MaximumLength(50).WithMessage("El documento no puede exceder 50 caracteres");
+    }
+}
+
+public class EquipoDocumentoCarretaValidator : AbstractValidator<EquipoDocumentoCarretaDto>
+{
+    public EquipoDocumentoCarretaValidator()
+    {
+        RuleFor(x => x.CodEquipo)
+            .MaximumLength(20).WithMessage("El código del equipo no puede exceder 20 caracteres");
+
+        RuleFor(x => x.SocioTercero)
+            .MaximumLength(500).WithMessage("El socio/tercero no puede exceder 500 caracteres");
+
+        RuleFor(x => x.NombreDocumento)
+            .MaximumLength(500).WithMessage("El nombre del documento no puede exceder 500 caracteres");
+
+        RuleFor(x => x.Documento)
+            .MaximumLength(50).WithMessage("El documento no puede exceder 50 caracteres");
+    }
+}

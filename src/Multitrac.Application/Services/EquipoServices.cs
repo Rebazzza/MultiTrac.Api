@@ -212,3 +212,121 @@ public class EquipoMantenimientoService : ServiceBase<EquipoMantenimientoDto, Eq
         return await _unitOfWork.Repository<EquipoMantenimiento>().ExistsAsync(id);
     }
 }
+
+public class EquipoMantenimientoDetalleService : ServiceBase<EquipoMantenimientoDetalleDto, EquipoMantenimientoDetalle>
+{
+    public EquipoMantenimientoDetalleService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
+
+    public override async Task<EquipoMantenimientoDetalleDto?> GetByIdAsync(int id)
+    {
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<EquipoMantenimientoDetalleDto>(entity);
+    }
+
+    public override async Task<IEnumerable<EquipoMantenimientoDetalleDto>> GetAllAsync()
+    {
+        var entities = await _unitOfWork.Repository<EquipoMantenimientoDetalle>().GetAllAsync();
+        return _mapper.Map<IEnumerable<EquipoMantenimientoDetalleDto>>(entities);
+    }
+
+    public override async Task<EquipoMantenimientoDetalleDto> CreateAsync(EquipoMantenimientoDetalleDto dto)
+    {
+        var entity = _mapper.Map<EquipoMantenimientoDetalle>(dto);
+        await SetNextIdAsync(entity);
+        await _unitOfWork.Repository<EquipoMantenimientoDetalle>().CreateAsync(entity);
+        await _unitOfWork.SaveChangesAsync();
+        return _mapper.Map<EquipoMantenimientoDetalleDto>(entity);
+    }
+
+    public override async Task UpdateAsync(int id, EquipoMantenimientoDetalleDto dto)
+    {
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
+        await _unitOfWork.Repository<EquipoMantenimientoDetalle>().UpdateAsync(entity);
+        await _unitOfWork.SaveChangesAsync();
+    }
+
+    public override async Task DeleteAsync(int id)
+    {
+        await _unitOfWork.Repository<EquipoMantenimientoDetalle>().DeleteAsync(id);
+        await _unitOfWork.SaveChangesAsync();
+    }
+
+    public override async Task<bool> ExistsAsync(int id)
+    {
+        return await _unitOfWork.Repository<EquipoMantenimientoDetalle>().ExistsAsync(id);
+    }
+}
+
+public class EquipoDocumentoTractoService : ServiceBase<EquipoDocumentoTractoDto, EquipoDocumentoTracto>
+{
+    public EquipoDocumentoTractoService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
+
+    public override Task<EquipoDocumentoTractoDto?> GetByIdAsync(int id)
+    {
+        throw new NotSupportedException("EquipoDocumentoTracto es una tabla sin llave primaria; solo lectura por lista.");
+    }
+
+    public override async Task<IEnumerable<EquipoDocumentoTractoDto>> GetAllAsync()
+    {
+        var entities = await _unitOfWork.Repository<EquipoDocumentoTracto>().GetAllAsync();
+        return _mapper.Map<IEnumerable<EquipoDocumentoTractoDto>>(entities);
+    }
+
+    public override Task<EquipoDocumentoTractoDto> CreateAsync(EquipoDocumentoTractoDto dto)
+    {
+        throw new NotSupportedException("EquipoDocumentoTracto es una tabla sin llave primaria; solo lectura.");
+    }
+
+    public override Task UpdateAsync(int id, EquipoDocumentoTractoDto dto)
+    {
+        throw new NotSupportedException("EquipoDocumentoTracto es una tabla sin llave primaria; solo lectura.");
+    }
+
+    public override Task DeleteAsync(int id)
+    {
+        throw new NotSupportedException("EquipoDocumentoTracto es una tabla sin llave primaria; solo lectura.");
+    }
+
+    public override Task<bool> ExistsAsync(int id)
+    {
+        throw new NotSupportedException("EquipoDocumentoTracto es una tabla sin llave primaria; solo lectura.");
+    }
+}
+
+public class EquipoDocumentoCarretaService : ServiceBase<EquipoDocumentoCarretaDto, EquipoDocumentoCarreta>
+{
+    public EquipoDocumentoCarretaService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
+
+    public override Task<EquipoDocumentoCarretaDto?> GetByIdAsync(int id)
+    {
+        throw new NotSupportedException("EquipoDocumentoCarreta es una tabla sin llave primaria; solo lectura por lista.");
+    }
+
+    public override async Task<IEnumerable<EquipoDocumentoCarretaDto>> GetAllAsync()
+    {
+        var entities = await _unitOfWork.Repository<EquipoDocumentoCarreta>().GetAllAsync();
+        return _mapper.Map<IEnumerable<EquipoDocumentoCarretaDto>>(entities);
+    }
+
+    public override Task<EquipoDocumentoCarretaDto> CreateAsync(EquipoDocumentoCarretaDto dto)
+    {
+        throw new NotSupportedException("EquipoDocumentoCarreta es una tabla sin llave primaria; solo lectura.");
+    }
+
+    public override Task UpdateAsync(int id, EquipoDocumentoCarretaDto dto)
+    {
+        throw new NotSupportedException("EquipoDocumentoCarreta es una tabla sin llave primaria; solo lectura.");
+    }
+
+    public override Task DeleteAsync(int id)
+    {
+        throw new NotSupportedException("EquipoDocumentoCarreta es una tabla sin llave primaria; solo lectura.");
+    }
+
+    public override Task<bool> ExistsAsync(int id)
+    {
+        throw new NotSupportedException("EquipoDocumentoCarreta es una tabla sin llave primaria; solo lectura.");
+    }
+}

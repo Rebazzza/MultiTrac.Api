@@ -1,0 +1,16 @@
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\bin\Release\net10.0\Multitrac.Application.deps.json
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\bin\Release\net10.0\Multitrac.Application.dll
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\bin\Release\net10.0\Multitrac.Application.pdb
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\bin\Release\net10.0\Multitrac.Domain.dll
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\bin\Release\net10.0\Multitrac.Domain.pdb
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\obj\Release\net10.0\Multitrac.Application.csproj.AssemblyReference.cache
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\obj\Release\net10.0\Multitrac.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\obj\Release\net10.0\Multitrac.Application.AssemblyInfoInputs.cache
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\obj\Release\net10.0\Multitrac.Application.AssemblyInfo.cs
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\obj\Release\net10.0\Multitrac.Application.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\obj\Release\net10.0\Multitrac.Application.sourcelink.json
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\obj\Release\net10.0\Multitra.200C05CD.Up2Date
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\obj\Release\net10.0\Multitrac.Application.dll
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\obj\Release\net10.0\refint\Multitrac.Application.dll
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\obj\Release\net10.0\Multitrac.Application.pdb
+C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\obj\Release\net10.0\ref\Multitrac.Application.dll

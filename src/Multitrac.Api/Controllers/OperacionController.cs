@@ -513,3 +513,267 @@ public class OperacionInformeController : ControllerBase
         return NoContent();
     }
 }
+
+[ApiController]
+[Route("api/[controller]")]
+public class OperacionHorarioController : ControllerBase
+{
+    private readonly IService<OperacionHorarioDto, OperacionHorario> _service;
+    private readonly IValidator<OperacionHorarioDto> _validator;
+
+    public OperacionHorarioController(
+        IService<OperacionHorarioDto, OperacionHorario> service,
+        IValidator<OperacionHorarioDto> validator)
+    {
+        _service = service;
+        _validator = validator;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<OperacionHorarioDto>>> GetAll()
+    {
+        var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<OperacionHorarioDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<OperacionHorarioDto>> GetById(int id)
+    {
+        var result = await _service.GetByIdAsync(id);
+        return Ok(result);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<OperacionHorarioDto>> Create([FromBody] OperacionHorarioDto dto)
+    {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
+        var result = await _service.CreateAsync(dto);
+        return CreatedAtAction(nameof(GetById), new { id = result.IdHorarioOperacion }, result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] OperacionHorarioDto dto)
+    {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
+        await _service.UpdateAsync(id, dto);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _service.DeleteAsync(id);
+        return NoContent();
+    }
+}
+
+[ApiController]
+[Route("api/[controller]")]
+public class OperacionTurnoController : ControllerBase
+{
+    private readonly IService<OperacionTurnoDto, OperacionTurno> _service;
+    private readonly IValidator<OperacionTurnoDto> _validator;
+
+    public OperacionTurnoController(
+        IService<OperacionTurnoDto, OperacionTurno> service,
+        IValidator<OperacionTurnoDto> validator)
+    {
+        _service = service;
+        _validator = validator;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<OperacionTurnoDto>>> GetAll()
+    {
+        var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<OperacionTurnoDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<OperacionTurnoDto>> GetById(int id)
+    {
+        var result = await _service.GetByIdAsync(id);
+        return Ok(result);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<OperacionTurnoDto>> Create([FromBody] OperacionTurnoDto dto)
+    {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
+        var result = await _service.CreateAsync(dto);
+        return CreatedAtAction(nameof(GetById), new { id = result.IdOperacionTurno }, result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] OperacionTurnoDto dto)
+    {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
+        await _service.UpdateAsync(id, dto);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _service.DeleteAsync(id);
+        return NoContent();
+    }
+}
+
+[ApiController]
+[Route("api/[controller]")]
+public class OperacionCargaController : ControllerBase
+{
+    private readonly IService<OperacionCargaDto, OperacionCarga> _service;
+    private readonly IValidator<OperacionCargaDto> _validator;
+
+    public OperacionCargaController(
+        IService<OperacionCargaDto, OperacionCarga> service,
+        IValidator<OperacionCargaDto> validator)
+    {
+        _service = service;
+        _validator = validator;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<OperacionCargaDto>>> GetAll()
+    {
+        var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<OperacionCargaDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<OperacionCargaDto>> GetById(int id)
+    {
+        var result = await _service.GetByIdAsync(id);
+        return Ok(result);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<OperacionCargaDto>> Create([FromBody] OperacionCargaDto dto)
+    {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
+        var result = await _service.CreateAsync(dto);
+        return CreatedAtAction(nameof(GetById), new { id = result.IdOperacionCarga }, result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] OperacionCargaDto dto)
+    {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
+        await _service.UpdateAsync(id, dto);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _service.DeleteAsync(id);
+        return NoContent();
+    }
+}
+
+[ApiController]
+[Route("api/[controller]")]
+public class OperacionTipoController : ControllerBase
+{
+    private readonly IService<OperacionTipoDto, OperacionTipo> _service;
+    private readonly IValidator<OperacionTipoDto> _validator;
+
+    public OperacionTipoController(
+        IService<OperacionTipoDto, OperacionTipo> service,
+        IValidator<OperacionTipoDto> validator)
+    {
+        _service = service;
+        _validator = validator;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<OperacionTipoDto>>> GetAll()
+    {
+        var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
+
+    [HttpGet("paged")]
+    public async Task<ActionResult<PaginatedResult<OperacionTipoDto>>> GetPaged([FromQuery] PaginationRequest request)
+    {
+        var result = await _service.GetPaginatedAsync(request);
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<OperacionTipoDto>> GetById(int id)
+    {
+        var result = await _service.GetByIdAsync(id);
+        return Ok(result);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<OperacionTipoDto>> Create([FromBody] OperacionTipoDto dto)
+    {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
+        var result = await _service.CreateAsync(dto);
+        return CreatedAtAction(nameof(GetById), new { id = result.IdOperacionTipo }, result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] OperacionTipoDto dto)
+    {
+        var validationResult = await _validator.ValidateAsync(dto);
+        if (!validationResult.IsValid)
+            return BadRequest(validationResult.Errors);
+
+        await _service.UpdateAsync(id, dto);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _service.DeleteAsync(id);
+        return NoContent();
+    }
+}

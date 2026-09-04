@@ -1,17 +1,5 @@
 namespace Multitrac.Domain.Entities;
 
-public class PersonalDocumento
-{
-    public int IdPersonalDocumento { get; set; }
-    public int? IdPersonal { get; set; }
-    public int? IdDocumento { get; set; }
-    public DateTime? FechaEmision { get; set; }
-    public DateTime? FechaVencimiento { get; set; }
-    public string? NroDocumento { get; set; }
-    public string? Observaciones { get; set; }
-    public int? Estado { get; set; }
-}
-
 public class PersonalCargo
 {
     public int IdPersonalCargo { get; set; }

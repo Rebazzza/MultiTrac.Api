@@ -351,3 +351,183 @@ public class UnidadService : ServiceBase<UnidadDto, Unidad>
         return await _unitOfWork.Repository<Unidad>().ExistsAsync(id);
     }
 }
+
+public class OperacionHorarioService : ServiceBase<OperacionHorarioDto, OperacionHorario>
+{
+    public OperacionHorarioService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
+
+    public override async Task<OperacionHorarioDto?> GetByIdAsync(int id)
+    {
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<OperacionHorarioDto>(entity);
+    }
+
+    public override async Task<IEnumerable<OperacionHorarioDto>> GetAllAsync()
+    {
+        var entities = await _unitOfWork.Repository<OperacionHorario>().GetAllAsync();
+        return _mapper.Map<IEnumerable<OperacionHorarioDto>>(entities);
+    }
+
+    public override async Task<OperacionHorarioDto> CreateAsync(OperacionHorarioDto dto)
+    {
+        var entity = _mapper.Map<OperacionHorario>(dto);
+        await _unitOfWork.Repository<OperacionHorario>().CreateAsync(entity);
+        await _unitOfWork.SaveChangesAsync();
+        return _mapper.Map<OperacionHorarioDto>(entity);
+    }
+
+    public override async Task UpdateAsync(int id, OperacionHorarioDto dto)
+    {
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
+        await _unitOfWork.Repository<OperacionHorario>().UpdateAsync(entity);
+        await _unitOfWork.SaveChangesAsync();
+    }
+
+    public override async Task DeleteAsync(int id)
+    {
+        await _unitOfWork.Repository<OperacionHorario>().DeleteAsync(id);
+        await _unitOfWork.SaveChangesAsync();
+    }
+
+    public override async Task<bool> ExistsAsync(int id)
+    {
+        return await _unitOfWork.Repository<OperacionHorario>().ExistsAsync(id);
+    }
+}
+
+public class OperacionTurnoService : ServiceBase<OperacionTurnoDto, OperacionTurno>
+{
+    public OperacionTurnoService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
+
+    public override async Task<OperacionTurnoDto?> GetByIdAsync(int id)
+    {
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<OperacionTurnoDto>(entity);
+    }
+
+    public override async Task<IEnumerable<OperacionTurnoDto>> GetAllAsync()
+    {
+        var entities = await _unitOfWork.Repository<OperacionTurno>().GetAllAsync();
+        return _mapper.Map<IEnumerable<OperacionTurnoDto>>(entities);
+    }
+
+    public override async Task<OperacionTurnoDto> CreateAsync(OperacionTurnoDto dto)
+    {
+        var entity = _mapper.Map<OperacionTurno>(dto);
+        await _unitOfWork.Repository<OperacionTurno>().CreateAsync(entity);
+        await _unitOfWork.SaveChangesAsync();
+        return _mapper.Map<OperacionTurnoDto>(entity);
+    }
+
+    public override async Task UpdateAsync(int id, OperacionTurnoDto dto)
+    {
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
+        await _unitOfWork.Repository<OperacionTurno>().UpdateAsync(entity);
+        await _unitOfWork.SaveChangesAsync();
+    }
+
+    public override async Task DeleteAsync(int id)
+    {
+        await _unitOfWork.Repository<OperacionTurno>().DeleteAsync(id);
+        await _unitOfWork.SaveChangesAsync();
+    }
+
+    public override async Task<bool> ExistsAsync(int id)
+    {
+        return await _unitOfWork.Repository<OperacionTurno>().ExistsAsync(id);
+    }
+}
+
+public class OperacionCargaService : ServiceBase<OperacionCargaDto, OperacionCarga>
+{
+    public OperacionCargaService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
+
+    public override async Task<OperacionCargaDto?> GetByIdAsync(int id)
+    {
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<OperacionCargaDto>(entity);
+    }
+
+    public override async Task<IEnumerable<OperacionCargaDto>> GetAllAsync()
+    {
+        var entities = await _unitOfWork.Repository<OperacionCarga>().GetAllAsync();
+        return _mapper.Map<IEnumerable<OperacionCargaDto>>(entities);
+    }
+
+    public override async Task<OperacionCargaDto> CreateAsync(OperacionCargaDto dto)
+    {
+        var entity = _mapper.Map<OperacionCarga>(dto);
+        await _unitOfWork.Repository<OperacionCarga>().CreateAsync(entity);
+        await _unitOfWork.SaveChangesAsync();
+        return _mapper.Map<OperacionCargaDto>(entity);
+    }
+
+    public override async Task UpdateAsync(int id, OperacionCargaDto dto)
+    {
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
+        await _unitOfWork.Repository<OperacionCarga>().UpdateAsync(entity);
+        await _unitOfWork.SaveChangesAsync();
+    }
+
+    public override async Task DeleteAsync(int id)
+    {
+        await _unitOfWork.Repository<OperacionCarga>().DeleteAsync(id);
+        await _unitOfWork.SaveChangesAsync();
+    }
+
+    public override async Task<bool> ExistsAsync(int id)
+    {
+        return await _unitOfWork.Repository<OperacionCarga>().ExistsAsync(id);
+    }
+}
+
+public class OperacionTipoService : ServiceBase<OperacionTipoDto, OperacionTipo>
+{
+    public OperacionTipoService(IUnitOfWork unitOfWork, IMapper mapper) : base(unitOfWork, mapper) { }
+
+    public override async Task<OperacionTipoDto?> GetByIdAsync(int id)
+    {
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        return _mapper.Map<OperacionTipoDto>(entity);
+    }
+
+    public override async Task<IEnumerable<OperacionTipoDto>> GetAllAsync()
+    {
+        var entities = await _unitOfWork.Repository<OperacionTipo>().GetAllAsync();
+        return _mapper.Map<IEnumerable<OperacionTipoDto>>(entities);
+    }
+
+    public override async Task<OperacionTipoDto> CreateAsync(OperacionTipoDto dto)
+    {
+        var entity = _mapper.Map<OperacionTipo>(dto);
+        await _unitOfWork.Repository<OperacionTipo>().CreateAsync(entity);
+        await _unitOfWork.SaveChangesAsync();
+        return _mapper.Map<OperacionTipoDto>(entity);
+    }
+
+    public override async Task UpdateAsync(int id, OperacionTipoDto dto)
+    {
+        var entity = await GetEntityByIdOrThrowAsync(id);
+        _mapper.Map(dto, entity);
+        RestorePrimaryKey(entity, id);
+        await _unitOfWork.Repository<OperacionTipo>().UpdateAsync(entity);
+        await _unitOfWork.SaveChangesAsync();
+    }
+
+    public override async Task DeleteAsync(int id)
+    {
+        await _unitOfWork.Repository<OperacionTipo>().DeleteAsync(id);
+        await _unitOfWork.SaveChangesAsync();
+    }
+
+    public override async Task<bool> ExistsAsync(int id)
+    {
+        return await _unitOfWork.Repository<OperacionTipo>().ExistsAsync(id);
+    }
+}

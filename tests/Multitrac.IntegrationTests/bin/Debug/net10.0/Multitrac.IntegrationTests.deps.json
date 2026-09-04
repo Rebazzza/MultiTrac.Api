@@ -460,20 +460,6 @@
           "lib/net10.0/Microsoft.AspNetCore.Mvc.Testing.dll": {}
         }
       },
-      "Microsoft.AspNetCore.OpenApi/10.0.10": {
-        "dependencies": {
-          "Microsoft.OpenApi": "2.7.5"
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "assemblyVersion": "10.0.10.0",
-            "fileVersion": "10.0.1026.32716"
-          }
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {}
-        }
-      },
       "Microsoft.AspNetCore.TestHost/10.0.10": {
         "runtime": {
           "lib/net10.0/Microsoft.AspNetCore.TestHost.dll": {
@@ -1414,7 +1400,6 @@
         "dependencies": {
           "FluentValidation": "11.11.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.11",
-          "Microsoft.AspNetCore.OpenApi": "10.0.10",
           "Multitrac.Application": "1.0.0",
           "Multitrac.Infrastructure": "1.0.0",
           "Serilog.AspNetCore": "8.0.3",
@@ -3637,13 +3622,6 @@
       "sha512": "sha512-pTWE4RtRbb9sl/U9QjZA5oapEZ01ZEMfRilZvvh55ZW97caTQ2XuAF6sgc+7ojKWBbR2qrcWVo5P80gMPuW/tQ==",
       "path": "microsoft.aspnetcore.mvc.testing/10.0.10",
       "hashPath": "microsoft.aspnetcore.mvc.testing.10.0.10.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.OpenApi/10.0.10": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-d4Atx9IHq7JgX0F/h7Db+m9zAUzC+cKdI9k+OWnnyQIOUQtfvjIEuhvbjPigVMkAmPUgCbJ8Yp6M9ghUqHtJSQ==",
-      "path": "microsoft.aspnetcore.openapi/10.0.10",
-      "hashPath": "microsoft.aspnetcore.openapi.10.0.10.nupkg.sha512"
     },
     "Microsoft.AspNetCore.TestHost/10.0.10": {
       "type": "package",

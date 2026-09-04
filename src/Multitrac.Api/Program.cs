@@ -32,7 +32,34 @@ builder.Services.AddControllers(options =>
     options.Filters.Add(new Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter());
 });
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173", "http://localhost:3000")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
+
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new global::Microsoft.OpenApi.OpenApiInfo { Title = "Multitrac API", Version = "v1" });
+    c.AddSecurityDefinition("Bearer", new global::Microsoft.OpenApi.OpenApiSecurityScheme
+    {
+        Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+        Name = "Authorization",
+        In = global::Microsoft.OpenApi.ParameterLocation.Header,
+        Type = global::Microsoft.OpenApi.SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        BearerFormat = "JWT"
+    });
+    c.AddSecurityRequirement(document => new global::Microsoft.OpenApi.OpenApiSecurityRequirement
+    {
+        [new global::Microsoft.OpenApi.OpenApiSecuritySchemeReference("Bearer", document)] = new List<string>()
+    });
+});
 
 // Configure Entity Framework
 builder.Services.AddDbContext<BdmultitracContext>(options =>
@@ -102,12 +129,23 @@ builder.Services.AddScoped<OperacionFleteService>();
 builder.Services.AddScoped<IService<OperacionInformeDto, OperacionInforme>, OperacionInformeService>();
 builder.Services.AddScoped<IService<TipoCargaDto, TipoCarga>, TipoCargaService>();
 builder.Services.AddScoped<IService<UnidadDto, Unidad>, UnidadService>();
+builder.Services.AddScoped<IService<OperacionHorarioDto, OperacionHorario>, OperacionHorarioService>();
+builder.Services.AddScoped<IService<OperacionTurnoDto, OperacionTurno>, OperacionTurnoService>();
+builder.Services.AddScoped<IService<OperacionCargaDto, OperacionCarga>, OperacionCargaService>();
+builder.Services.AddScoped<IService<OperacionTipoDto, OperacionTipo>, OperacionTipoService>();
 
 // Configure Services - Personal
 builder.Services.AddScoped<IService<PersonalDto, Multitrac.Domain.Entities.Personal>, PersonalService>();
+builder.Services.AddScoped<IService<PersonalRecordDto, PersonalRecord>, PersonalRecordService>();
 builder.Services.AddScoped<IService<PersonalCargoDto, PersonalCargo>, PersonalCargoService>();
 builder.Services.AddScoped<IService<PersonalVacacionesDto, PersonalVacaciones>, PersonalVacacionesService>();
 builder.Services.AddScoped<IService<ContratistaDto, Contratista>, ContratistaService>();
+builder.Services.AddScoped<IService<PersonalEquipoDto, PersonalEquipo>, PersonalEquipoService>();
+builder.Services.AddScoped<IService<PersonalEppDto, PersonalEpp>, PersonalEppService>();
+builder.Services.AddScoped<IService<PersonalEppKardexDto, PersonalEppKardex>, PersonalEppKardexService>();
+builder.Services.AddScoped<IService<PersonalVacacionesRegistroDto, PersonalVacacionesRegistro>, PersonalVacacionesRegistroService>();
+builder.Services.AddScoped<IService<PersonalLicenciaConducirDto, PersonalLicenciaConducir>, PersonalLicenciaConducirService>();
+builder.Services.AddScoped<IService<PersonalSuenoDto, PersonalSueno>, PersonalSuenoService>();
 
 // Configure Services - Equipos
 builder.Services.AddScoped<IEquipoService, EquipoService>();
@@ -115,6 +153,9 @@ builder.Services.AddScoped<IService<EquipoDto, Equipo>, EquipoService>();
 builder.Services.AddScoped<IService<EquipoCombustibleDto, EquipoCombustible>, EquipoCombustibleService>();
 builder.Services.AddScoped<IService<EquipoKilometrajeDto, EquipoKilometraje>, EquipoKilometrajeService>();
 builder.Services.AddScoped<IService<EquipoMantenimientoDto, EquipoMantenimiento>, EquipoMantenimientoService>();
+builder.Services.AddScoped<IService<EquipoMantenimientoDetalleDto, EquipoMantenimientoDetalle>, EquipoMantenimientoDetalleService>();
+builder.Services.AddScoped<IService<EquipoDocumentoTractoDto, EquipoDocumentoTracto>, EquipoDocumentoTractoService>();
+builder.Services.AddScoped<IService<EquipoDocumentoCarretaDto, EquipoDocumentoCarreta>, EquipoDocumentoCarretaService>();
 
 // Configure Services - Cliente/Proveedor/Area/Empresa/Convoy
 builder.Services.AddScoped<IService<ClienteDto, Cliente>, ClienteService>();
@@ -124,10 +165,16 @@ builder.Services.AddScoped<IService<TipoDocumentoDto, TipoDocumento>, TipoDocume
 builder.Services.AddScoped<IService<EmpresaDto, Empresa>, EmpresaService>();
 builder.Services.AddScoped<IService<ConvoyDto, Convoy>, ConvoyService>();
 
+// Configure Services - Contabilidad
+builder.Services.AddScoped<IService<BaucherCajaDto, BaucherCaja>, BaucherCajaService>();
+builder.Services.AddScoped<IService<BaucherEgresoDto, BaucherEgreso>, BaucherEgresoService>();
+
 var app = builder.Build();
 
 // Global exception handling middleware
 app.UseMiddleware<ExceptionHandlingMiddleware>();
+
+app.UseCors("CorsPolicy");
 
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())

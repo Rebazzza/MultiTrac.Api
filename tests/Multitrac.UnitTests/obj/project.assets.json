@@ -1293,23 +1293,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fabri\\.nuget\\packages\\": {},
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fabri\\Downloads\\MultitracV2\\tests\\Multitrac.UnitTests\\Multitrac.UnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\tests\\Multitrac.UnitTests\\Multitrac.UnitTests.csproj",
       "projectName": "Multitrac.UnitTests",
-      "projectPath": "C:\\Users\\fabri\\Downloads\\MultitracV2\\tests\\Multitrac.UnitTests\\Multitrac.UnitTests.csproj",
-      "packagesPath": "C:\\Users\\fabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fabri\\Downloads\\MultitracV2\\tests\\Multitrac.UnitTests\\obj\\",
+      "projectPath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\tests\\Multitrac.UnitTests\\Multitrac.UnitTests.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\tests\\Multitrac.UnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\fabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1318,7 +1318,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1326,8 +1325,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Multitrac.Application.csproj": {
-              "projectPath": "C:\\Users\\fabri\\Downloads\\MultitracV2\\src\\Multitrac.Application\\Multitrac.Application.csproj"
+            "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\Multitrac.Application\\Multitrac.Application.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\Multitrac.Application\\Multitrac.Application.csproj"
             }
           }
         }
@@ -1342,7 +1341,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.300"
+      "SdkAnalysisLevel": "10.0.400"
     },
     "frameworks": {
       "net10.0": {
@@ -1386,7 +1385,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.303/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

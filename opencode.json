@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "bash": {
+      "*Start-Process*": "deny",
+      "*dotnet run*": "deny",
+      "*dotnet MultiTrac.Api.dll*": "deny"
+    }
+  }
+}

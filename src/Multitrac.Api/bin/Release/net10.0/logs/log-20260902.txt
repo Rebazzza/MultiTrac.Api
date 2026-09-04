@@ -1,0 +1,793 @@
+2026-09-02 12:23:38.234 -05:00 [INF] Starting Multitrac API
+2026-09-02 12:23:38.271 -05:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-02 12:23:38.323 -05:00 [INF] Now listening on: http://localhost:53927
+2026-09-02 12:23:38.325 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-02 12:23:38.326 -05:00 [INF] Hosting environment: Production
+2026-09-02 12:23:38.326 -05:00 [INF] Content root path: C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\bin\Release\net10.0
+2026-09-02 15:17:18.903 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:53927/swagger/v1/swagger.json - null null
+2026-09-02 15:17:19.009 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:53927/swagger/v1/swagger.json - 404 0 null 109.833ms
+2026-09-02 15:17:19.014 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:53927/swagger/v1/swagger.json, Response status code: 404
+2026-09-02 15:17:25.438 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:53927/api/auth/login - application/json 45
+2026-09-02 15:17:25.444 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.AuthController.Login (Multitrac.Api)'
+2026-09-02 15:17:25.486 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Multitrac.Application.DTOs.AuthResponse]] Login(Multitrac.Application.DTOs.LoginRequest) on controller Multitrac.Api.Controllers.AuthController (Multitrac.Api).
+2026-09-02 15:17:26.280 -05:00 [WRN] No store type was specified for the decimal property 'Comision' on entity type 'Afp'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.281 -05:00 [WRN] No store type was specified for the decimal property 'PagoxMes' on entity type 'Area'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.282 -05:00 [WRN] No store type was specified for the decimal property 'Alto' on entity type 'Equipo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.282 -05:00 [WRN] No store type was specified for the decimal property 'Ancho' on entity type 'Equipo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.282 -05:00 [WRN] No store type was specified for the decimal property 'CargaUtil' on entity type 'Equipo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.283 -05:00 [WRN] No store type was specified for the decimal property 'KilometrajeMantto' on entity type 'Equipo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.283 -05:00 [WRN] No store type was specified for the decimal property 'Largo' on entity type 'Equipo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.284 -05:00 [WRN] No store type was specified for the decimal property 'Cantidad' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.284 -05:00 [WRN] No store type was specified for the decimal property 'CantidadContabilidad' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.284 -05:00 [WRN] No store type was specified for the decimal property 'Costo' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.284 -05:00 [WRN] No store type was specified for the decimal property 'CostoUnitario' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.285 -05:00 [WRN] No store type was specified for the decimal property 'Descuento' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.285 -05:00 [WRN] No store type was specified for the decimal property 'KilometrajeDespacho' on entity type 'EquipoCombustible'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.285 -05:00 [WRN] No store type was specified for the decimal property 'Kilometraje' on entity type 'EquipoKilometraje'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.286 -05:00 [WRN] No store type was specified for the decimal property 'Budget' on entity type 'Flota'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.286 -05:00 [WRN] No store type was specified for the decimal property 'CostoFlete' on entity type 'Operacion'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.286 -05:00 [WRN] No store type was specified for the decimal property 'Dimension' on entity type 'Operacion'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.286 -05:00 [WRN] No store type was specified for the decimal property 'KilometrajeRecorrido' on entity type 'Operacion'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.287 -05:00 [WRN] No store type was specified for the decimal property 'Peso' on entity type 'Operacion'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.287 -05:00 [WRN] No store type was specified for the decimal property 'ValorRefrencial' on entity type 'Operacion'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.288 -05:00 [WRN] No store type was specified for the decimal property 'CalculoComision' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.288 -05:00 [WRN] No store type was specified for the decimal property 'CalculoComisionTerceros' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.288 -05:00 [WRN] No store type was specified for the decimal property 'CalculoLiquidez' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.289 -05:00 [WRN] No store type was specified for the decimal property 'ComisionMultitrac' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.289 -05:00 [WRN] No store type was specified for the decimal property 'ComisionTerceros' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.289 -05:00 [WRN] No store type was specified for the decimal property 'PesoPromedioTn' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.289 -05:00 [WRN] No store type was specified for the decimal property 'PorcFlete' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.290 -05:00 [WRN] No store type was specified for the decimal property 'ValorReferencial' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.290 -05:00 [WRN] No store type was specified for the decimal property 'ValorVentaFlete' on entity type 'OperacionFlete'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.290 -05:00 [WRN] No store type was specified for the decimal property 'Peso' on entity type 'OperacionGeneral'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.291 -05:00 [WRN] No store type was specified for the decimal property 'Cantidad' on entity type 'PersonalEppKardex'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:26.291 -05:00 [WRN] No store type was specified for the decimal property 'Concentracion' on entity type 'TipoCarga'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-09-02 15:17:27.173 -05:00 [INF] Executed DbCommand (59ms) [Parameters=[@ToLower='?' (Size = 50)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsActive], [u].[LastLoginAt], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Usuarios] AS [u]
+WHERE LOWER([u].[Username]) = @ToLower
+2026-09-02 15:17:27.320 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Usuarios] SET [LastLoginAt] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2026-09-02 15:17:27.357 -05:00 [INF] Executing OkObjectResult, writing value of type 'Multitrac.Application.DTOs.AuthResponse'.
+2026-09-02 15:17:27.372 -05:00 [INF] Executed action Multitrac.Api.Controllers.AuthController.Login (Multitrac.Api) in 1882.6592ms
+2026-09-02 15:17:27.373 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.AuthController.Login (Multitrac.Api)'
+2026-09-02 15:17:27.381 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:53927/api/auth/login - 200 null application/json; charset=utf-8 1942.7449ms
+2026-09-02 15:17:36.163 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:53927/api/personalrecord - null null
+2026-09-02 15:17:36.234 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.PersonalRecordController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:36.248 -05:00 [INF] Route matched with {action = "GetAll", controller = "PersonalRecord"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.PersonalRecordDto]]] GetAll() on controller Multitrac.Api.Controllers.PersonalRecordController (Multitrac.Api).
+2026-09-02 15:17:36.445 -05:00 [ERR] Failed executing DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [p].[IdPersonalRecord], [p].[Demerito], [p].[DescripcionOcurrencia], [p].[FechaOcurrencia], [p].[FechaReporte], [p].[IdPersonal], [p].[IdPersonalMedImpl], [p].[IdPersonalVerificacion], [p].[IdTipoOcurrencia], [p].[MedidasAImplementar], [p].[Merito], [p].[RecordFinal], [p].[RecordInicial]
+FROM [PERSONAL_RECORD] AS [p]
+2026-09-02 15:17:36.467 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Multitrac.Infrastructure.Data.BdmultitracContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdPersonalRecord'.
+Invalid column name 'DescripcionOcurrencia'.
+Invalid column name 'FechaReporte'.
+Invalid column name 'IdPersonal'.
+Invalid column name 'IdPersonalMedImpl'.
+Invalid column name 'IdPersonalVerificacion'.
+Invalid column name 'IdTipoOcurrencia'.
+Invalid column name 'MedidasAImplementar'.
+Invalid column name 'RecordInicial'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdPersonalRecord'.
+Invalid column name 'DescripcionOcurrencia'.
+Invalid column name 'FechaReporte'.
+Invalid column name 'IdPersonal'.
+Invalid column name 'IdPersonalMedImpl'.
+Invalid column name 'IdPersonalVerificacion'.
+Invalid column name 'IdTipoOcurrencia'.
+Invalid column name 'MedidasAImplementar'.
+Invalid column name 'RecordInicial'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:36.474 -05:00 [INF] Executed action Multitrac.Api.Controllers.PersonalRecordController.GetAll (Multitrac.Api) in 224.8357ms
+2026-09-02 15:17:36.474 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.PersonalRecordController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:36.476 -05:00 [ERR] Unhandled exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdPersonalRecord'.
+Invalid column name 'DescripcionOcurrencia'.
+Invalid column name 'FechaReporte'.
+Invalid column name 'IdPersonal'.
+Invalid column name 'IdPersonalMedImpl'.
+Invalid column name 'IdPersonalVerificacion'.
+Invalid column name 'IdTipoOcurrencia'.
+Invalid column name 'MedidasAImplementar'.
+Invalid column name 'RecordInicial'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Multitrac.Infrastructure.Repositories.Repository`1.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Infrastructure\Repositories\Repository.cs:line 42
+   at Multitrac.Application.Services.PersonalRecordService.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\Services\PersonalServices.cs:line 252
+   at Multitrac.Api.Controllers.PersonalRecordController.GetAll() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Controllers\PersonalController.cs:line 357
+   at lambda_method206(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Multitrac.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Middleware\ExceptionHandlingMiddleware.cs:line 23
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:36.500 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:53927/api/personalrecord - 500 null application/json 337.1728ms
+2026-09-02 15:17:36.517 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:53927/api/Personalequipo - null null
+2026-09-02 15:17:36.518 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.PersonalEquipoController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:36.525 -05:00 [INF] Route matched with {action = "GetAll", controller = "PersonalEquipo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.PersonalEquipoDto]]] GetAll() on controller Multitrac.Api.Controllers.PersonalEquipoController (Multitrac.Api).
+2026-09-02 15:17:36.618 -05:00 [ERR] Failed executing DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [p].[IdPersonalEquipo], [p].[CodEquipo], [p].[Estado], [p].[Fech_Fin], [p].[Fech_Ini], [p].[IdPersonal], [p].[Id_Remplazo]
+FROM [PERSONAL_EQUIPO] AS [p]
+2026-09-02 15:17:36.619 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Multitrac.Infrastructure.Data.BdmultitracContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdPersonalEquipo'.
+Invalid column name 'CodEquipo'.
+Invalid column name 'IdPersonal'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdPersonalEquipo'.
+Invalid column name 'CodEquipo'.
+Invalid column name 'IdPersonal'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:36.626 -05:00 [INF] Executed action Multitrac.Api.Controllers.PersonalEquipoController.GetAll (Multitrac.Api) in 99.3873ms
+2026-09-02 15:17:36.626 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.PersonalEquipoController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:36.626 -05:00 [ERR] Unhandled exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdPersonalEquipo'.
+Invalid column name 'CodEquipo'.
+Invalid column name 'IdPersonal'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Multitrac.Infrastructure.Repositories.Repository`1.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Infrastructure\Repositories\Repository.cs:line 42
+   at Multitrac.Application.Services.PersonalEquipoService.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\Services\PersonalServices.cs:line 298
+   at Multitrac.Api.Controllers.PersonalEquipoController.GetAll() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Controllers\PersonalController.cs:line 423
+   at lambda_method231(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Multitrac.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Middleware\ExceptionHandlingMiddleware.cs:line 23
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:36.633 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:53927/api/Personalequipo - 500 null application/json 116.109ms
+2026-09-02 15:17:36.635 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:53927/api/Personalepp - null null
+2026-09-02 15:17:36.636 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.PersonalEppController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:36.643 -05:00 [INF] Route matched with {action = "GetAll", controller = "PersonalEpp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.PersonalEppDto]]] GetAll() on controller Multitrac.Api.Controllers.PersonalEppController (Multitrac.Api).
+2026-09-02 15:17:36.662 -05:00 [ERR] Failed executing DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [p].[Id_Pesonal_EPP], [p].[Estado], [p].[IdPersonal], [p].[IdRequerimientoGeneral], [p].[Observacion], [p].[Talla]
+FROM [PERSONAL_EPP] AS [p]
+2026-09-02 15:17:36.663 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Multitrac.Infrastructure.Data.BdmultitracContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdPersonal'.
+Invalid column name 'IdRequerimientoGeneral'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdPersonal'.
+Invalid column name 'IdRequerimientoGeneral'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:36.667 -05:00 [INF] Executed action Multitrac.Api.Controllers.PersonalEppController.GetAll (Multitrac.Api) in 22.6431ms
+2026-09-02 15:17:36.667 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.PersonalEppController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:36.667 -05:00 [ERR] Unhandled exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdPersonal'.
+Invalid column name 'IdRequerimientoGeneral'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Multitrac.Infrastructure.Repositories.Repository`1.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Infrastructure\Repositories\Repository.cs:line 42
+   at Multitrac.Application.Services.PersonalEppService.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\Services\PersonalServices.cs:line 343
+   at Multitrac.Api.Controllers.PersonalEppController.GetAll() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Controllers\PersonalController.cs:line 489
+   at lambda_method252(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Multitrac.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Middleware\ExceptionHandlingMiddleware.cs:line 23
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:36.672 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:53927/api/Personalepp - 500 null application/json 37.3175ms
+2026-09-02 15:17:36.674 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:53927/api/Personaleppkardex - null null
+2026-09-02 15:17:36.675 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.PersonalEppKardexController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:36.681 -05:00 [INF] Route matched with {action = "GetAll", controller = "PersonalEppKardex"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.PersonalEppKardexDto]]] GetAll() on controller Multitrac.Api.Controllers.PersonalEppKardexController (Multitrac.Api).
+2026-09-02 15:17:36.707 -05:00 [ERR] Failed executing DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [p].[Id_PeronalEPP_Kardex], [p].[Cantidad], [p].[Estado], [p].[FechaEntrega], [p].[FechaReposicion], [p].[FechaRevision], [p].[IdEppCondicionEntrega], [p].[IdEppCondicionReposicion], [p].[IdEppCondicionRevision], [p].[Id_Pesonal_EPP], [p].[IdUndidadCantidad]
+FROM [PERSONAL_EPP_KARDEX] AS [p]
+2026-09-02 15:17:36.708 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Multitrac.Infrastructure.Data.BdmultitracContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdEppCondicionEntrega'.
+Invalid column name 'IdEppCondicionReposicion'.
+Invalid column name 'IdEppCondicionRevision'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdEppCondicionEntrega'.
+Invalid column name 'IdEppCondicionReposicion'.
+Invalid column name 'IdEppCondicionRevision'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:36.712 -05:00 [INF] Executed action Multitrac.Api.Controllers.PersonalEppKardexController.GetAll (Multitrac.Api) in 29.7713ms
+2026-09-02 15:17:36.712 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.PersonalEppKardexController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:36.712 -05:00 [ERR] Unhandled exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdEppCondicionEntrega'.
+Invalid column name 'IdEppCondicionReposicion'.
+Invalid column name 'IdEppCondicionRevision'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Multitrac.Infrastructure.Repositories.Repository`1.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Infrastructure\Repositories\Repository.cs:line 42
+   at Multitrac.Application.Services.PersonalEppKardexService.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\Services\PersonalServices.cs:line 388
+   at Multitrac.Api.Controllers.PersonalEppKardexController.GetAll() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Controllers\PersonalController.cs:line 555
+   at lambda_method275(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Multitrac.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Middleware\ExceptionHandlingMiddleware.cs:line 23
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:36.718 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:53927/api/Personaleppkardex - 500 null application/json 44.1143ms
+2026-09-02 15:17:36.719 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:53927/api/Personalvacacionesregistro - null null
+2026-09-02 15:17:36.720 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.PersonalVacacionesRegistroController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:36.728 -05:00 [INF] Route matched with {action = "GetAll", controller = "PersonalVacacionesRegistro"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.PersonalVacacionesRegistroDto]]] GetAll() on controller Multitrac.Api.Controllers.PersonalVacacionesRegistroController (Multitrac.Api).
+2026-09-02 15:17:36.752 -05:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [p].[IdPersonalVacacionesReg], [p].[Archivo], [p].[DiasVac], [p].[FechaRetVac], [p].[FechaSalVac], [p].[IdPersonalVacaciones], [p].[Memo], [p].[Observaciones]
+FROM [PERSONAL_VACACIONES_REGISTRO] AS [p]
+2026-09-02 15:17:36.787 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Multitrac.Application.DTOs.PersonalVacacionesRegistroDto, Multitrac.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-02 15:17:36.801 -05:00 [INF] Executed action Multitrac.Api.Controllers.PersonalVacacionesRegistroController.GetAll (Multitrac.Api) in 72.5137ms
+2026-09-02 15:17:36.801 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.PersonalVacacionesRegistroController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:36.802 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:53927/api/Personalvacacionesregistro - 200 null application/json; charset=utf-8 82.3712ms
+2026-09-02 15:17:36.850 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:53927/api/Personallicenciaconducir - null null
+2026-09-02 15:17:36.851 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.PersonalLicenciaConducirController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:36.858 -05:00 [INF] Route matched with {action = "GetAll", controller = "PersonalLicenciaConducir"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.PersonalLicenciaConducirDto]]] GetAll() on controller Multitrac.Api.Controllers.PersonalLicenciaConducirController (Multitrac.Api).
+2026-09-02 15:17:36.872 -05:00 [ERR] Failed executing DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [p].[IdLicPersonal], [p].[NombreLicPersonal], [p].[Observaciones]
+FROM [PERSONAL_LICENCIA_CONDUCIR] AS [p]
+2026-09-02 15:17:36.873 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Multitrac.Infrastructure.Data.BdmultitracContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdLicPersonal'.
+Invalid column name 'NombreLicPersonal'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdLicPersonal'.
+Invalid column name 'NombreLicPersonal'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:36.876 -05:00 [INF] Executed action Multitrac.Api.Controllers.PersonalLicenciaConducirController.GetAll (Multitrac.Api) in 18.0904ms
+2026-09-02 15:17:36.877 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.PersonalLicenciaConducirController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:36.877 -05:00 [ERR] Unhandled exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdLicPersonal'.
+Invalid column name 'NombreLicPersonal'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Multitrac.Infrastructure.Repositories.Repository`1.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Infrastructure\Repositories\Repository.cs:line 42
+   at Multitrac.Application.Services.PersonalLicenciaConducirService.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\Services\PersonalServices.cs:line 479
+   at Multitrac.Api.Controllers.PersonalLicenciaConducirController.GetAll() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Controllers\PersonalController.cs:line 687
+   at lambda_method363(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Multitrac.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Middleware\ExceptionHandlingMiddleware.cs:line 23
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:36.882 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:53927/api/Personallicenciaconducir - 500 null application/json 32.5417ms
+2026-09-02 15:17:36.884 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:53927/api/Personalsueno - null null
+2026-09-02 15:17:36.884 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.PersonalSuenoController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:36.891 -05:00 [INF] Route matched with {action = "GetAll", controller = "PersonalSueno"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.PersonalSuenoDto]]] GetAll() on controller Multitrac.Api.Controllers.PersonalSuenoController (Multitrac.Api).
+2026-09-02 15:17:36.909 -05:00 [ERR] Failed executing DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [p].[IdSueno], [p].[CHM], [p].[Estado], [p].[Fecha], [p].[Foto], [p].[IdEmpresa], [p].[IdOperacionGeneral], [p].[IdPersonal], [p].[Observaciones], [p].[Sueñoo]
+FROM [PERSONAL_SUEÑO] AS [p]
+2026-09-02 15:17:36.910 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Multitrac.Infrastructure.Data.BdmultitracContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdSueno'.
+Invalid column name 'Sueñoo'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdSueno'.
+Invalid column name 'Sueñoo'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:36.914 -05:00 [INF] Executed action Multitrac.Api.Controllers.PersonalSuenoController.GetAll (Multitrac.Api) in 21.7988ms
+2026-09-02 15:17:36.914 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.PersonalSuenoController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:36.914 -05:00 [ERR] Unhandled exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdSueno'.
+Invalid column name 'Sueñoo'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Multitrac.Infrastructure.Repositories.Repository`1.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Infrastructure\Repositories\Repository.cs:line 42
+   at Multitrac.Application.Services.PersonalSuenoService.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\Services\PersonalServices.cs:line 525
+   at Multitrac.Api.Controllers.PersonalSuenoController.GetAll() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Controllers\PersonalController.cs:line 753
+   at lambda_method383(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Multitrac.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Middleware\ExceptionHandlingMiddleware.cs:line 23
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:36.921 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:53927/api/Personalsueno - 500 null application/json 37.2139ms
+2026-09-02 15:17:36.922 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:53927/api/Equipomantenimientodetalle - null null
+2026-09-02 15:17:36.923 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.EquipoMantenimientoDetalleController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:36.930 -05:00 [INF] Route matched with {action = "GetAll", controller = "EquipoMantenimientoDetalle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.EquipoMantenimientoDetalleDto]]] GetAll() on controller Multitrac.Api.Controllers.EquipoMantenimientoDetalleController (Multitrac.Api).
+2026-09-02 15:17:36.958 -05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [e].[IdEquipoMantenimientoDetalle], [e].[CheckPMCartilla], [e].[CodigoSistema], [e].[DescripcionTrabajo], [e].[FechaIngreso], [e].[FechaSalida], [e].[HoraIngreso], [e].[HoraSalida], [e].[IdEquipoEstadoGeneral], [e].[IdEquipoMantenimiento], [e].[IdEquipoUbicacionMantto], [e].[IdManttoPMCartilla], [e].[IdPersonaTrabajo], [e].[IdTipoMantto]
+FROM [EQUIPO_MANTENIMIENTO_DETALLE] AS [e]
+2026-09-02 15:17:37.163 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Multitrac.Application.DTOs.EquipoMantenimientoDetalleDto, Multitrac.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-02 15:17:42.884 -05:00 [INF] Executed action Multitrac.Api.Controllers.EquipoMantenimientoDetalleController.GetAll (Multitrac.Api) in 5953.348ms
+2026-09-02 15:17:42.885 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.EquipoMantenimientoDetalleController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:42.886 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:53927/api/Equipomantenimientodetalle - 200 null application/json; charset=utf-8 5963.3864ms
+2026-09-02 15:17:43.416 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:53927/api/Equipodocumentotracto - null null
+2026-09-02 15:17:43.417 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.EquipoDocumentoTractoController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:43.424 -05:00 [INF] Route matched with {action = "GetAll", controller = "EquipoDocumentoTracto"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.EquipoDocumentoTractoDto]]] GetAll() on controller Multitrac.Api.Controllers.EquipoDocumentoTractoController (Multitrac.Api).
+2026-09-02 15:17:43.444 -05:00 [ERR] Failed executing DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [e].[IdEquipoDocumentoTracto], [e].[CodEquipo], [e].[Estado], [e].[FechaEmision], [e].[FechaVencimiento], [e].[IdDocumento], [e].[NroDocumento], [e].[Observaciones]
+FROM [EQUIPO_DOCUMENTO_TRACTO] AS [e]
+2026-09-02 15:17:43.445 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Multitrac.Infrastructure.Data.BdmultitracContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdEquipoDocumentoTracto'.
+Invalid column name 'Estado'.
+Invalid column name 'FechaEmision'.
+Invalid column name 'FechaVencimiento'.
+Invalid column name 'NroDocumento'.
+Invalid column name 'Observaciones'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdEquipoDocumentoTracto'.
+Invalid column name 'Estado'.
+Invalid column name 'FechaEmision'.
+Invalid column name 'FechaVencimiento'.
+Invalid column name 'NroDocumento'.
+Invalid column name 'Observaciones'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:43.449 -05:00 [INF] Executed action Multitrac.Api.Controllers.EquipoDocumentoTractoController.GetAll (Multitrac.Api) in 24.421ms
+2026-09-02 15:17:43.449 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.EquipoDocumentoTractoController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:43.450 -05:00 [ERR] Unhandled exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdEquipoDocumentoTracto'.
+Invalid column name 'Estado'.
+Invalid column name 'FechaEmision'.
+Invalid column name 'FechaVencimiento'.
+Invalid column name 'NroDocumento'.
+Invalid column name 'Observaciones'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Multitrac.Infrastructure.Repositories.Repository`1.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Infrastructure\Repositories\Repository.cs:line 42
+   at Multitrac.Application.Services.EquipoDocumentoTractoService.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\Services\EquipoServices.cs:line 274
+   at Multitrac.Api.Controllers.EquipoDocumentoTractoController.GetAll() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Controllers\EquipoController.cs:line 358
+   at lambda_method498(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Multitrac.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Middleware\ExceptionHandlingMiddleware.cs:line 23
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:43.455 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:53927/api/Equipodocumentotracto - 500 null application/json 39.7228ms
+2026-09-02 15:17:43.457 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:53927/api/Equipodocumentocarreta - null null
+2026-09-02 15:17:43.458 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.EquipoDocumentoCarretaController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:43.464 -05:00 [INF] Route matched with {action = "GetAll", controller = "EquipoDocumentoCarreta"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.EquipoDocumentoCarretaDto]]] GetAll() on controller Multitrac.Api.Controllers.EquipoDocumentoCarretaController (Multitrac.Api).
+2026-09-02 15:17:43.479 -05:00 [ERR] Failed executing DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [e].[IdEquipoDocumentoCarreta], [e].[CodEquipo], [e].[Estado], [e].[FechaEmision], [e].[FechaVencimiento], [e].[IdDocumento], [e].[NroDocumento], [e].[Observaciones]
+FROM [EQUIPO_DOCUMENTO_CARRETA] AS [e]
+2026-09-02 15:17:43.480 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Multitrac.Infrastructure.Data.BdmultitracContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdEquipoDocumentoCarreta'.
+Invalid column name 'Estado'.
+Invalid column name 'FechaEmision'.
+Invalid column name 'FechaVencimiento'.
+Invalid column name 'NroDocumento'.
+Invalid column name 'Observaciones'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdEquipoDocumentoCarreta'.
+Invalid column name 'Estado'.
+Invalid column name 'FechaEmision'.
+Invalid column name 'FechaVencimiento'.
+Invalid column name 'NroDocumento'.
+Invalid column name 'Observaciones'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:43.483 -05:00 [INF] Executed action Multitrac.Api.Controllers.EquipoDocumentoCarretaController.GetAll (Multitrac.Api) in 19.134ms
+2026-09-02 15:17:43.484 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.EquipoDocumentoCarretaController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:43.484 -05:00 [ERR] Unhandled exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'IdEquipoDocumentoCarreta'.
+Invalid column name 'Estado'.
+Invalid column name 'FechaEmision'.
+Invalid column name 'FechaVencimiento'.
+Invalid column name 'NroDocumento'.
+Invalid column name 'Observaciones'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Multitrac.Infrastructure.Repositories.Repository`1.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Infrastructure\Repositories\Repository.cs:line 42
+   at Multitrac.Application.Services.EquipoDocumentoCarretaService.GetAllAsync() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Application\Services\EquipoServices.cs:line 320
+   at Multitrac.Api.Controllers.EquipoDocumentoCarretaController.GetAll() in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Controllers\EquipoController.cs:line 424
+   at lambda_method519(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Multitrac.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api\Middleware\ExceptionHandlingMiddleware.cs:line 23
+ClientConnectionId:3eb5e09d-2f62-4952-b970-3d5f106c3bd8
+Error Number:207,State:1,Class:16
+2026-09-02 15:17:43.489 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:53927/api/Equipodocumentocarreta - 500 null application/json 31.5272ms
+2026-09-02 15:17:43.490 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:53927/api/Operacionhorario - null null
+2026-09-02 15:17:43.491 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.OperacionHorarioController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:43.496 -05:00 [INF] Route matched with {action = "GetAll", controller = "OperacionHorario"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.OperacionHorarioDto]]] GetAll() on controller Multitrac.Api.Controllers.OperacionHorarioController (Multitrac.Api).
+2026-09-02 15:17:43.518 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [o].[Id_HorarioOperacion], [o].[Estado], [o].[Fecha_Fin], [o].[Fecha_Inicio], [o].[Hora_Fin], [o].[Hora_Inicio], [o].[Id_Operacion], [o].[Id_UbicacionOP], [o].[Tipo]
+FROM [OPERACION_HORARIO] AS [o]
+2026-09-02 15:17:43.541 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Multitrac.Application.DTOs.OperacionHorarioDto, Multitrac.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-02 15:17:43.543 -05:00 [INF] Executed action Multitrac.Api.Controllers.OperacionHorarioController.GetAll (Multitrac.Api) in 46.58ms
+2026-09-02 15:17:43.544 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.OperacionHorarioController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:43.544 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:53927/api/Operacionhorario - 200 null application/json; charset=utf-8 54.1162ms
+2026-09-02 15:17:43.783 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:53927/api/Operacionturno - null null
+2026-09-02 15:17:43.784 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.OperacionTurnoController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:43.791 -05:00 [INF] Route matched with {action = "GetAll", controller = "OperacionTurno"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.OperacionTurnoDto]]] GetAll() on controller Multitrac.Api.Controllers.OperacionTurnoController (Multitrac.Api).
+2026-09-02 15:17:43.810 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [o].[Id_OperacionTurno], [o].[FechaRegistro], [o].[Id_Operacion], [o].[Id_PersonalRegistro], [o].[Id_Turno], [o].[Observacion], [o].[Turno]
+FROM [OPERACION_TURNO] AS [o]
+2026-09-02 15:17:43.834 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Multitrac.Application.DTOs.OperacionTurnoDto, Multitrac.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-02 15:17:43.836 -05:00 [INF] Executed action Multitrac.Api.Controllers.OperacionTurnoController.GetAll (Multitrac.Api) in 44.1759ms
+2026-09-02 15:17:43.836 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.OperacionTurnoController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:43.837 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:53927/api/Operacionturno - 200 null application/json; charset=utf-8 53.93ms
+2026-09-02 15:17:44.121 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:53927/api/Operacioncarga - null null
+2026-09-02 15:17:44.122 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.OperacionCargaController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:44.128 -05:00 [INF] Route matched with {action = "GetAll", controller = "OperacionCarga"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.OperacionCargaDto]]] GetAll() on controller Multitrac.Api.Controllers.OperacionCargaController (Multitrac.Api).
+2026-09-02 15:17:44.148 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [o].[Id_Operacion_Carga], [o].[Estado], [o].[Id_Operacion], [o].[Id_TipoCarga]
+FROM [OPERACION_CARGA] AS [o]
+2026-09-02 15:17:44.168 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Multitrac.Application.DTOs.OperacionCargaDto, Multitrac.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-02 15:17:44.170 -05:00 [INF] Executed action Multitrac.Api.Controllers.OperacionCargaController.GetAll (Multitrac.Api) in 40.701ms
+2026-09-02 15:17:44.170 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.OperacionCargaController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:44.171 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:53927/api/Operacioncarga - 200 null application/json; charset=utf-8 49.0988ms
+2026-09-02 15:17:44.303 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:53927/api/Operaciontipo - null null
+2026-09-02 15:17:44.304 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.OperacionTipoController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:44.309 -05:00 [INF] Route matched with {action = "GetAll", controller = "OperacionTipo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.OperacionTipoDto]]] GetAll() on controller Multitrac.Api.Controllers.OperacionTipoController (Multitrac.Api).
+2026-09-02 15:17:44.325 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [o].[IdOperacionTipo], [o].[ObservacionTipo], [o].[OperacionTipo]
+FROM [OPERACION_TIPO] AS [o]
+2026-09-02 15:17:44.334 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Multitrac.Application.DTOs.OperacionTipoDto, Multitrac.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-02 15:17:44.336 -05:00 [INF] Executed action Multitrac.Api.Controllers.OperacionTipoController.GetAll (Multitrac.Api) in 26.5367ms
+2026-09-02 15:17:44.337 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.OperacionTipoController.GetAll (Multitrac.Api)'
+2026-09-02 15:17:44.337 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:53927/api/Operaciontipo - 200 null application/json; charset=utf-8 33.6188ms

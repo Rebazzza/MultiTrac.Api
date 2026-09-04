@@ -55,9 +55,15 @@ public class EquipoDocumentoTractoConfiguration : IEntityTypeConfiguration<Equip
 {
     public void Configure(EntityTypeBuilder<EquipoDocumentoTracto> builder)
     {
-        builder.HasKey(e => e.IdEquipoDocumentoTracto);
-        builder.ToTable("EQUIPO_DOCUMENTO_TRACTO");
-        builder.Property(e => e.IdEquipoDocumentoTracto).ValueGeneratedNever();
+        builder.HasNoKey();
+        builder.ToTable("EQUIPO_DOCUMENTO_TRACTO", t => t.ExcludeFromMigrations());
+        builder.Property(e => e.SocioTercero).HasColumnName("SocioTercero").HasMaxLength(500).IsUnicode(false);
+        builder.Property(e => e.CodEquipo).HasColumnName("CodEquipo").HasMaxLength(20).IsUnicode(false);
+        builder.Property(e => e.IdDocumento).HasColumnName("IdDocumento");
+        builder.Property(e => e.NombreDocumento).HasColumnName("NombreDocumento").HasMaxLength(500).IsUnicode(false);
+        builder.Property(e => e.Documento).HasColumnName("Documento").HasMaxLength(50).IsUnicode(false);
+        builder.Property(e => e.FechaExpedida).HasColumnName("FechaExpedida");
+        builder.Property(e => e.FechaCaducidad).HasColumnName("FechaCaducidad");
     }
 }
 
@@ -65,9 +71,15 @@ public class EquipoDocumentoCarretaConfiguration : IEntityTypeConfiguration<Equi
 {
     public void Configure(EntityTypeBuilder<EquipoDocumentoCarreta> builder)
     {
-        builder.HasKey(e => e.IdEquipoDocumentoCarreta);
-        builder.ToTable("EQUIPO_DOCUMENTO_CARRETA");
-        builder.Property(e => e.IdEquipoDocumentoCarreta).ValueGeneratedNever();
+        builder.HasNoKey();
+        builder.ToTable("EQUIPO_DOCUMENTO_CARRETA", t => t.ExcludeFromMigrations());
+        builder.Property(e => e.SocioTercero).HasColumnName("SocioTercero").HasMaxLength(500).IsUnicode(false);
+        builder.Property(e => e.CodEquipo).HasColumnName("CodEquipo").HasMaxLength(20).IsUnicode(false);
+        builder.Property(e => e.IdDocumento).HasColumnName("IdDocumento");
+        builder.Property(e => e.NombreDocumento).HasColumnName("NombreDocumento").HasMaxLength(500).IsUnicode(false);
+        builder.Property(e => e.Documento).HasColumnName("Documento").HasMaxLength(50).IsUnicode(false);
+        builder.Property(e => e.FechaExpedida).HasColumnName("FechaExpedida");
+        builder.Property(e => e.FechaCaducidad).HasColumnName("FechaCaducidad");
     }
 }
 

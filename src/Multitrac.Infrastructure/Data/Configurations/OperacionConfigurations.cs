@@ -202,7 +202,7 @@ public class OperacionHorarioConfiguration : IEntityTypeConfiguration<OperacionH
     {
         builder.HasKey(e => e.IdHorarioOperacion);
         builder.ToTable("OPERACION_HORARIO");
-        builder.Property(e => e.IdHorarioOperacion).HasColumnName("Id_HorarioOperacion").ValueGeneratedNever();
+        builder.Property(e => e.IdHorarioOperacion).HasColumnName("Id_HorarioOperacion").ValueGeneratedOnAdd();
         builder.Property(e => e.IdOperacion).HasColumnName("Id_Operacion");
         builder.Property(e => e.HoraInicio).HasColumnName("Hora_Inicio").HasMaxLength(5).IsUnicode(false);
         builder.Property(e => e.HoraFin).HasColumnName("Hora_Fin").HasMaxLength(5).IsUnicode(false);
@@ -281,7 +281,7 @@ public class UnidadConfiguration : IEntityTypeConfiguration<Unidad>
     {
         builder.HasKey(e => e.IdUnidad);
         builder.ToTable("UNIDAD");
-        builder.Property(e => e.IdUnidad).HasColumnName("Id_Unidad").ValueGeneratedOnAdd();
+        builder.Property(e => e.IdUnidad).HasColumnName("Id_Unidad").ValueGeneratedNever();
         builder.Property(e => e.AbreviaturaUnidad).HasColumnName("Abreviatura_Unidad").HasMaxLength(10).IsUnicode(false);
         builder.Property(e => e.NombreUnidad).HasColumnName("Nombre_Unidad").HasMaxLength(250).IsUnicode(false);
     }

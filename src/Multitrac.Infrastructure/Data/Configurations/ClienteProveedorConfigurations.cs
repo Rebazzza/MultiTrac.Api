@@ -31,7 +31,7 @@ public class ProveedorConfiguration : IEntityTypeConfiguration<Proveedor>
     {
         builder.HasKey(e => e.PrvCod);
         builder.ToTable("PROVEEDOR");
-        builder.Property(e => e.PrvCod).HasColumnName("PRV_COD").ValueGeneratedNever();
+        builder.Property(e => e.PrvCod).HasColumnName("PRV_COD").ValueGeneratedOnAdd();
         builder.Property(e => e.PrvNom).HasColumnName("PRV_NOM").HasMaxLength(255).IsUnicode(false);
         builder.Property(e => e.PrvRuc).HasColumnName("PRV_RUC").HasMaxLength(11).IsUnicode(false);
         builder.Property(e => e.CodUbi).HasColumnName("COD_UBI").HasMaxLength(6).IsUnicode(false);
@@ -57,7 +57,7 @@ public class AreaConfiguration : IEntityTypeConfiguration<Area>
     {
         builder.HasKey(e => e.AreCod);
         builder.ToTable("AREA");
-        builder.Property(e => e.AreCod).HasColumnName("ARE_COD").ValueGeneratedNever();
+        builder.Property(e => e.AreCod).HasColumnName("ARE_COD").ValueGeneratedOnAdd();
         builder.Property(e => e.AreNom).HasColumnName("ARE_NOM").HasMaxLength(255).IsUnicode(false);
         builder.Property(e => e.SubareCod).HasColumnName("SUBARE_COD");
         builder.Property(e => e.DiaxMes).HasColumnName("DiaxMes");

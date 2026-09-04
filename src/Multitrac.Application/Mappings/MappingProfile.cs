@@ -36,7 +36,6 @@ public class MappingProfile : Profile
 
         // Personal
         CreateMap<Personal, PersonalDto>().ReverseMap();
-        CreateMap<PersonalDocumento, PersonalDocumentoDto>().ReverseMap();
         CreateMap<PersonalCargo, PersonalCargoDto>().ReverseMap();
         CreateMap<PersonalEquipo, PersonalEquipoDto>().ReverseMap();
         CreateMap<PersonalEpp, PersonalEppDto>().ReverseMap();
@@ -63,5 +62,9 @@ public class MappingProfile : Profile
         CreateMap<Area, AreaDto>().ReverseMap();
         CreateMap<TipoDocumento, TipoDocumentoDto>().ReverseMap();
         CreateMap<Empresa, EmpresaDto>().ReverseMap();
+
+        // Contabilidad
+        CreateMap<BaucherCaja, BaucherCajaDto>().ReverseMap();
+        CreateMap<BaucherEgreso, BaucherEgresoDto>().ReverseMap();
     }
 }

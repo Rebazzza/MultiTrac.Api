@@ -38,7 +38,6 @@ public class BdmultitracContext : DbContext
 
     // Personal
     public virtual DbSet<Personal> Personals { get; set; } = null!;
-    public virtual DbSet<PersonalDocumento> PersonalDocumentos { get; set; } = null!;
     public virtual DbSet<PersonalCargo> PersonalCargos { get; set; } = null!;
     public virtual DbSet<PersonalEquipo> PersonalEquipos { get; set; } = null!;
     public virtual DbSet<PersonalEpp> PersonalEpps { get; set; } = null!;
@@ -70,6 +69,10 @@ public class BdmultitracContext : DbContext
 
     // Auth
     public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
+
+    // Contabilidad
+    public virtual DbSet<BaucherCaja> BaucherCajas { get; set; } = null!;
+    public virtual DbSet<BaucherEgreso> BaucherEgresos { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

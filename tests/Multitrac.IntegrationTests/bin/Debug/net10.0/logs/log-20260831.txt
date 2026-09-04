@@ -1,0 +1,36 @@
+2026-08-31 17:07:11.454 -05:00 [INF] Starting Multitrac API
+2026-08-31 17:07:11.491 -05:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-08-31 17:07:11.506 -05:00 [INF] Creating key {718361b7-27c4-425d-a19a-5338c3d8bef1} with creation date 2026-08-31 22:07:11Z, activation date 2026-08-31 22:07:11Z, and expiration date 2026-11-29 22:07:11Z.
+2026-08-31 17:07:11.517 -05:00 [INF] Writing data to file 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys\key-718361b7-27c4-425d-a19a-5338c3d8bef1.xml'.
+2026-08-31 17:07:11.589 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-31 17:07:11.589 -05:00 [INF] Hosting environment: Development
+2026-08-31 17:07:11.589 -05:00 [INF] Content root path: C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api
+2026-08-31 17:07:11.618 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/moneda - null null
+2026-08-31 17:07:11.687 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.MonedaController.GetAll (Multitrac.Api)'
+2026-08-31 17:07:11.698 -05:00 [INF] Route matched with {action = "GetAll", controller = "Moneda"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.MonedaDto]]] GetAll() on controller Multitrac.Api.Controllers.MonedaController (Multitrac.Api).
+2026-08-31 17:07:11.702 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-08-31 17:07:11.702 -05:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2026-08-31 17:07:11.703 -05:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2026-08-31 17:07:11.706 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-08-31 17:07:11.708 -05:00 [INF] Executed action Multitrac.Api.Controllers.MonedaController.GetAll (Multitrac.Api) in 8.5275ms
+2026-08-31 17:07:11.709 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.MonedaController.GetAll (Multitrac.Api)'
+2026-08-31 17:07:11.712 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/moneda - 401 null null 94.9408ms
+2026-08-31 17:07:11.733 -05:00 [INF] Application is shutting down...
+2026-08-31 22:42:23.788 -05:00 [INF] Starting Multitrac API
+2026-08-31 22:42:23.831 -05:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-08-31 22:42:23.926 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-31 22:42:23.927 -05:00 [INF] Hosting environment: Development
+2026-08-31 22:42:23.927 -05:00 [INF] Content root path: C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api
+2026-08-31 22:42:23.951 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/moneda - null null
+2026-08-31 22:42:24.032 -05:00 [INF] Executing endpoint 'Multitrac.Api.Controllers.MonedaController.GetAll (Multitrac.Api)'
+2026-08-31 22:42:24.045 -05:00 [INF] Route matched with {action = "GetAll", controller = "Moneda"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Multitrac.Application.DTOs.MonedaDto]]] GetAll() on controller Multitrac.Api.Controllers.MonedaController (Multitrac.Api).
+2026-08-31 22:42:24.051 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-08-31 22:42:24.051 -05:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2026-08-31 22:42:24.052 -05:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2026-08-31 22:42:24.055 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-08-31 22:42:24.058 -05:00 [INF] Executed action Multitrac.Api.Controllers.MonedaController.GetAll (Multitrac.Api) in 10.2498ms
+2026-08-31 22:42:24.059 -05:00 [INF] Executed endpoint 'Multitrac.Api.Controllers.MonedaController.GetAll (Multitrac.Api)'
+2026-08-31 22:42:24.064 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/moneda - 401 null null 114.3087ms
+2026-08-31 22:42:24.086 -05:00 [INF] Application is shutting down...
