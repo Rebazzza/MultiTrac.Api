@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Multitrac.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a215d62e7fc03aaee6d0d91039f9cb66fbcf3ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2569d7a4ddb6004a05d57eae1ce0713a54579de5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Multitrac.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Multitrac.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

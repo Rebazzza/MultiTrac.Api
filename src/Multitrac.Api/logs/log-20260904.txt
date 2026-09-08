@@ -10,3 +10,6 @@
 2026-09-04 10:01:37.226 -05:00 [INF] Application started. Press Ctrl+C to shut down.
 2026-09-04 10:01:37.229 -05:00 [INF] Hosting environment: Production
 2026-09-04 10:01:37.230 -05:00 [INF] Content root path: C:\Users\ASUS\Documents\Multitrac\Multitrac\MultiTrac.Api\src\Multitrac.Api
+2026-09-04 12:00:45.548 -05:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:53927/ - null null
+2026-09-04 12:00:45.727 -05:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:53927/ - 404 0 null 182.6603ms
+2026-09-04 12:00:45.736 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:53927/, Response status code: 404

@@ -2186,11 +2186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\Multitrac.Api\\Multitrac.Api.csproj",
-      "projectName": "Multitrac.Api",
-      "projectPath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\Multitrac.Api\\Multitrac.Api.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\MultiTrac.Api\\MultiTrac.Api.csproj",
+      "projectName": "MultiTrac.Api",
+      "projectPath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\MultiTrac.Api\\MultiTrac.Api.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\Multitrac.Api\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\MultiTrac.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

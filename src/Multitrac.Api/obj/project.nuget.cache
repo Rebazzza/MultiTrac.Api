@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VMrQRrGoFo4=",
+  "dgSpecHash": "1L/7CnQS8YQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\Multitrac.Api\\Multitrac.Api.csproj",
+  "projectFilePath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\MultiTrac.Api\\MultiTrac.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
@@ -56,9 +56,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "El paquete \"AutoMapper\" 13.0.1 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-rvv3-g6hj-g44x",
-      "projectPath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\Multitrac.Api\\Multitrac.Api.csproj",
+      "projectPath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\MultiTrac.Api\\MultiTrac.Api.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\Multitrac.Api\\Multitrac.Api.csproj",
+      "filePath": "C:\\Users\\ASUS\\Documents\\Multitrac\\Multitrac\\MultiTrac.Api\\src\\MultiTrac.Api\\MultiTrac.Api.csproj",
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net10.0"
